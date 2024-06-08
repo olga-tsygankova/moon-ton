@@ -1,0 +1,25 @@
+.main{
+    background-image: url("../../../public/backgroind image main.png");
+    background-repeat: no-repeat;
+    border-radius:0;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+.main-container{
+    margin: 232px 164px 58px 163px;
+
+    color: #4B4A4D;
+}
+
+.main-btn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.main-subtitle{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+
+
