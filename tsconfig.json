@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["react-spring"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
