@@ -1,0 +1,16 @@
+.join {
+    margin: 0 208px;
+
+    h2 {
+        color: #F1F1F1;
+
+        span {
+            color: #47BCFC;
+        }
+    }
+}
+
+.join-btn {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,29 @@
+.char{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.char-item{
+    display: flex;
+    gap: 25px;
+}
+.rectangle {
+    background: linear-gradient(-90deg, #47BCFC 0%, rgba(71, 188, 252, 0) 100%);
+    border-radius: 7.52px ;
+}
+.rectangle-value{
+    color: #F1F1F1;
+    display: flex;
+    gap: 13px;
+    align-self: center;
+}
+.percent{
+    font-weight: 700;
+    font-size: 25px;
+}
+.percent-title{
+    font-weight: 400;
+    font-size: 20px;
+    align-self: center;
+
+}

@@ -1,4 +1,4 @@
-.explore-btn{
+.blue-btn{
     display: flex;
     justify-content: space-between;
     gap:10px;
@@ -11,24 +11,25 @@
 
     color: #F1F1F1;
     font-weight: 600;
+    font-family: "Poppins Regular";
 
     height: 55px;
     transition: background-color 0.5s, box-shadow 0.5s;
-
 }
 
-.explore-btn p{
+.blue-btn p{
     margin: 0;
     font-size: 16px;
+    align-self: center;
+
 }
 
-.explore-btn:hover{
-    background: #F1F1F1;
-    color: #1D1D1D;
-}
-
-.explore-btn:active
+.blue-btn:hover
 {
-    box-shadow: 0 0 16.7px 0 #FFFFFF96;
+    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
+}
+.blue-btn:active
+{
+    box-shadow: 0 0 16.7px 0 #47BCFC94;
 }
 

@@ -1,0 +1,14 @@
+.social-links{
+    display: flex;
+    gap: 15px;
+}
+ a svg path{
+    fill: #434343;
+
+}
+ a:hover svg path{
+    fill: #47BCFC;
+}
+ a:active svg path{
+    fill: #F1F1F1;
+}

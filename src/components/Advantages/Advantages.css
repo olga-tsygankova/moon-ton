@@ -1,0 +1,26 @@
+.advantages{
+    margin: 471px 38px 0 75px;
+    display: flex;
+    flex-direction: column;
+}
+.big-planet{
+    margin-left: auto;
+}
+.small-planet{
+    margin-right: auto;
+
+}
+.beam{
+    color: #F1F1F1;
+    top:50%
+}
+.advantages .text{
+    color: #F1F1F1;
+}
+.text h4{
+    font-size: 64px;
+    margin: 0;
+}
+.text p{
+    font-size: 24px;
+}

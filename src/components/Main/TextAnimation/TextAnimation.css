@@ -1,5 +1,6 @@
 
 .text-container {
+    font-family: "Poppins Regular";
     animation: scale 3s ease-in-out;
     justify-content: center;
 }

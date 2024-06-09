@@ -1,0 +1,41 @@
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+.ca_coming-soon{
+    display: flex;
+    padding: 10px 10px 10px 20px ;
+    background: #0A0A0A;
+    border-radius: 50px;
+    height: 60px;
+    box-sizing: border-box;
+    gap: 189px;
+    .ca_text{
+        display: flex;
+        gap: 5px;
+        align-self: center;
+    }
+    .coming-soon{
+        font-weight: 400;
+        font-size: 15px ;
+    }
+    .coming-soon .ca{
+        font-weight: 600;
+        font-size: 18px ;
+        vertical-align: center;
+    }
+}
+.copy{
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    border-radius: 23px;
+}
+.copy svg{
+    width: 16px;
+    height: 16px;
+    margin: 12px;
+
+}
