@@ -1,8 +1,7 @@
 import "./Main.css"
 import {Header} from "../Header/Header";
 import {TextAnimation} from "./TextAnimation/TextAnimation";
-import {BridgeBtn} from "../../ui";
-import {ExploreBtn} from "../../ui";
+import {BridgeBtn, WhiteBtn} from "../../ui";
 import {PortalTop} from "./PortalTop";
 
 export const Main = () => {
@@ -12,11 +11,12 @@ export const Main = () => {
             <div className="main-container">
 
                 <TextAnimation text={"integrate.empower.bridge."}/>
-                <p className="main-subtitle" >Advanced omnichain interoperability solutions<br/> for decentralized ecosystems</p>
+                <p className="main-subtitle">Advanced omnichain interoperability solutions<br/> for decentralized
+                    ecosystems</p>
 
                 <div className="main-btn">
                     <BridgeBtn/>
-                    <ExploreBtn/>
+                    <WhiteBtn>Explore ecosystem</WhiteBtn>
                 </div>
                 <div>
                     <PortalTop/>

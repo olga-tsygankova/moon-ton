@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: #F1F1F1;
+    height: 260px;
+    box-sizing: border-box;
+    border: 1px solid #2B2B2B;
+    border-radius: 30px;
+    margin: 132px 75px 40px 75px;
+    padding: 40px;
+    background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
+}

@@ -1,0 +1,43 @@
+.roadmap{
+    margin: 227px 75px 0 0;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.q2, .q3, .q4, .q2025{
+    display: flex;
+    flex-direction: column;
+    color: #F1F1F1;
+    margin-left:185px ;
+    gap: 20px;
+}
+.roadmap-title{
+    display: flex;
+    gap: 10px;
+}
+h5, .year{
+    font-size: 35.2px;
+    margin: 0;
+    font-weight: 500;
+}
+.year{
+    color: #36B0F1;
+}
+.points{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+
+}
+.points-item{
+    border-radius: 700px;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 18px;
+    padding: 20px 35px;
+    background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
+}
