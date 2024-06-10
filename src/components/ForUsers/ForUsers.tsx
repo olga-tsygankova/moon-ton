@@ -7,14 +7,14 @@ export const ForUsers = () => {
         <div className="for-users">
             <h2>For Users</h2>
                 <div className="card">
-                <h5>MoonTON Omnichain Swap</h5>
+                <div>MoonTON Omnichain Swap</div>
                 <p>
                     Swap assets cross-chain in one click
                 </p>
                 <WhiteBtn>Coming soon</WhiteBtn>
                 </div>
             <div className="card">
-                <h5>NCY</h5>
+                <div>NCY</div>
                 <p>
                     Earn passive income and rewards
                     <br/>
@@ -23,7 +23,7 @@ export const ForUsers = () => {
                 <WhiteBtn>Coming soon</WhiteBtn>
             </div>
             <div className="card">
-                <h5>AI Omnichain Arbitrage Analyser</h5>
+                <div>AI Omnichain Arbitrage Analyser</div>
                 <p>
                     Get advanced insights into omnichain
                     <br/>
@@ -33,7 +33,7 @@ export const ForUsers = () => {
             </div>
 
             <div className="card-bridge">
-                <h5>Bridge</h5>
+                <div>Bridge</div>
                 <p>
                     Use our multisignature bridge protocol to transfer
                     <br/>

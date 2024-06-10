@@ -26,7 +26,7 @@
     border-radius: 35px;
     padding: 34px 42px;
     background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
-    h5{
+    .content-title{
         margin: 0;
         font-size: 22px;
     }

@@ -9,7 +9,7 @@ export const Product=()=>{
                 <h4>For Developers</h4>
                 <p>(Build on MoonTon)</p>
                 <div className="content">
-                    <h5>Bridge API</h5>
+                    <div className="content-title">Bridge API</div>
                     <p>
                         Integrate MoonTON Omnichain
                         <br/>
@@ -24,7 +24,7 @@ export const Product=()=>{
                 <div className="for-partners">
                     <h4>For Partners</h4>
                     <div className="content">
-                        <h5>IOLO (Initial Omnichain Liquidity Offering)</h5>
+                        <div className="content-title" >IOLO (Initial Omnichain Liquidity Offering)</div>
                         <p>
                             Expose your project to new ecosystems
                             <br/>
@@ -33,7 +33,7 @@ export const Product=()=>{
                         <WhiteBtn>Make Us IOLO</WhiteBtn>
                     </div>
                     <div className="content">
-                        <h5>OAS (Omnichain Airdrop System)</h5>
+                        <div className="content-title" >OAS (Omnichain Airdrop System)</div>
                         <p>
                             Level up your community engagement
                             <br/>

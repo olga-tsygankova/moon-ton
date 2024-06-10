@@ -3,26 +3,30 @@ import {Header} from "../Header/Header";
 import {TextAnimation} from "./TextAnimation/TextAnimation";
 import {BridgeBtn, WhiteBtn} from "../../ui";
 import {PortalTop} from "./PortalTop";
+import {motion,useAnimation} from "framer-motion";
+import {useEffect} from "react";
 
 export const Main = () => {
     return (
         <div className="main">
-            <Header/>
+            <Header />
             <div className="main-container">
+                    <TextAnimation
+                        text="integrate.empower.bridge."
+                    />
 
-                <TextAnimation text={"integrate.empower.bridge."}/>
-                <p className="main-subtitle">Advanced omnichain interoperability solutions<br/> for decentralized
-                    ecosystems</p>
-
-                <div className="main-btn">
-                    <BridgeBtn/>
+                <p className="main-subtitle">
+                    Advanced omnichain interoperability solutions
+                    <br /> for decentralized ecosystems
+                </p>
+                <div className="main-btn" >
+                    <BridgeBtn />
                     <WhiteBtn>Explore ecosystem</WhiteBtn>
                 </div>
                 <div>
-                    <PortalTop/>
+                    <PortalTop />
                 </div>
-
             </div>
         </div>
-    )
-}
+    );
+};
