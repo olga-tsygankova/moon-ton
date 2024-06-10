@@ -3,9 +3,8 @@ import {Right} from "./Right";
 import "./Footer.css"
 import {useEffect, useRef} from "react";
 
-export const Footer=()=>{
+export const Footer = () => {
     const footerRef = useRef(null);
-
 
 
     useEffect(() => {
@@ -35,10 +34,13 @@ export const Footer=()=>{
         };
     }, []);
 
-    return(
+    return (
+
         <div className="footer" ref={footerRef}>
             <Left/>
             <Right/>
         </div>
+
+
     )
 }
