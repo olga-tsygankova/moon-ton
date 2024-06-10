@@ -21,17 +21,22 @@
     box-sizing: border-box;
     max-width: 1113px;
     color: #4B4A4D;
+    z-index: 200;
 }
 
 .main-title{
     font-size: 73px;
     font-weight: 300;
+    z-index: 20;
+
 }
 
 .main-btn{
     display: flex;
     justify-content: center;
     gap: 20px;
+    z-index: 200;
+
 }
 .main-subtitle{
     margin-bottom: 30px;
@@ -41,6 +46,15 @@
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 2s 5s ease forwards;
+    z-index: 200;
+
+}
+.portal-up{
+    position: absolute;
+    top:20%;
+    left: 35%;
+    z-index: 0;
+
 }
    /*---------------------------------------------------------------------------------------------*/
    /*                                  ANIMATION                                                  */

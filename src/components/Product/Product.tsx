@@ -1,11 +1,11 @@
 import "./Product.css"
 import {WhiteBtn} from "../../ui";
 import {useEffect, useRef} from "react";
+import {PortalDown} from "../../ui/PortalDown";
 
 export const Product = () => {
     const forDevelopersRef = useRef(null);
     const forPartnersRef = useRef(null);
-
 
 
     useEffect(() => {
@@ -40,7 +40,6 @@ export const Product = () => {
     }, []);
     return (
         <div className="product">
-            <div className="portal-bottom"> Тут будет портал</div>
 
             <div className="for-developers" ref={forDevelopersRef}>
                 <h4>For Developers</h4>
@@ -57,6 +56,8 @@ export const Product = () => {
                     <WhiteBtn>Get API</WhiteBtn>
                 </div>
             </div>
+            <div className="portal-bottom"><PortalDown/></div>
+
             <div className="partners-wrapper">
                 <div className="for-partners" ref={forPartnersRef}>
                     <h4>For Partners</h4>

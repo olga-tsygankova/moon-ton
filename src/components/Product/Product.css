@@ -4,9 +4,11 @@
     max-width: 1290px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
 }
 
 .for-developers {
+    margin-top: 450px;
     display: flex;
     text-align: start;
     flex-direction: column;
@@ -54,6 +56,7 @@
     width: 410px;
     gap: 20px;
     opacity: 40%;
+    margin-top: 889px;
 
     h4 {
         font-size: 32px;
@@ -66,4 +69,6 @@
 .for-partners.visible {
     opacity: 1 !important;
 }
+
+
 
