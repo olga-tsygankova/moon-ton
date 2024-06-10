@@ -1,10 +1,75 @@
 import "./Advantages.css"
+import {useEffect, useRef} from "react";
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 export const Advantages = () => {
-    //TODO анимация с пролистыванием блоков
-    return(
-        <div className="advantages">
-            <div className="big-planet">
+    //TODO анимация с пролистыванием блоков и планетами
+
+    const bigPlanetRef = useRef(null);
+    const smallPlanetRef = useRef(null);
+    const ref = useRef<HTMLDivElement>(null);
+
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ref.current,
+    //             start: "top 0",
+    //             end: "bottom 0%",
+    //             scrub: true,
+    //         },
+    //     });
+    //
+    //     tl.to(bigPlanetRef.current, {
+    //         x: "0",
+    //         y: "0",
+    //         rotation: "0deg",
+    //         duration: 1,
+    //     })
+    //         .to(smallPlanetRef.current, {
+    //             x: "0",
+    //             y: "0",
+    //             rotation: "0deg",
+    //             duration: 1,
+    //         }, "<")
+    //         .to(bigPlanetRef.current, {
+    //             x: "-100%",
+    //             y: "0",
+    //             rotation: "-30deg",
+    //             duration: 1,
+    //         })
+    //         .to(smallPlanetRef.current, {
+    //             x: "200%",
+    //             y: "0",
+    //             rotation: "0deg",
+    //             duration: 1,
+    //         }, "<")
+    //
+    //         .to(bigPlanetRef.current, {
+    //             x: "-110%",
+    //             y: "100%",
+    //             rotation: "-30deg",
+    //             duration: 1,
+    //         })
+    //         .to(smallPlanetRef.current, {
+    //             x: "250%",
+    //             y: "-200%",
+    //             rotation: "0deg",
+    //             duration: 1,
+    //         }, "<");
+    //
+    //
+    //
+    //     return () => {
+    //         tl.kill();
+    //         ScrollTrigger.getAll().forEach(t => t.kill());
+    //     };
+    // }, []);
+    return (
+        <div className="advantages" ref={ref}>
+            <div className="big-planet" ref={bigPlanetRef}>
                 <svg width="672" height="372" viewBox="0 0 672 372" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M491.664 215.985C475.078 301.917 391.922 358.154 305.928 341.593C219.935 325.033 163.67 241.946 180.255 156.015C196.841 70.0833 279.998 13.8464 365.991 30.4068C451.985 46.9672 508.25 130.054 491.664 215.985Z"
@@ -47,7 +112,6 @@ export const Advantages = () => {
                     </defs>
                 </svg>
             </div>
-            <div className="beam"> тут лучи ------ </div>
             <div className="text">
                 <h4>Integrability.</h4>
                 <p>
@@ -58,7 +122,7 @@ export const Advantages = () => {
                     web3 application
                 </p>
             </div>
-            <div className="small-planet">
+            <div className="small-planet" ref={smallPlanetRef}>
                 <svg width="343" height="184" viewBox="0 0 343 184" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M332.844 43.4057C334.155 49.1988 331.037 55.7975 324.05 62.808C317.077 69.8037 306.329 77.1272 292.601 84.3454C265.149 98.7794 225.855 112.754 181.225 122.838C136.596 132.923 95.1072 137.202 64.1114 135.975C48.6107 135.362 35.7554 133.372 26.4489 130.054C17.1227 126.73 11.467 122.114 10.156 116.321C8.84498 110.528 11.9628 103.929 18.9502 96.9185C25.9229 89.9227 36.6706 82.5993 50.3989 75.381C77.8506 60.947 117.145 46.9725 161.775 36.888C206.404 26.8035 247.893 22.524 278.889 23.7511C294.389 24.3647 307.245 26.3548 316.551 29.6721C325.877 32.9963 331.533 37.6125 332.844 43.4057Z"
@@ -95,7 +159,6 @@ export const Advantages = () => {
                         </linearGradient>
                     </defs>
                 </svg>
-
             </div>
         </div>
 

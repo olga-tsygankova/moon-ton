@@ -1,7 +1,11 @@
 .advantages{
-    margin: 471px 38px 0 75px;
+    margin: 471px auto 0 auto;
     display: flex;
     flex-direction: column;
+    position: relative;
+    color: #F1F1F1;
+    max-width: 1327px;
+
 }
 .big-planet{
     margin-left: auto;
@@ -10,13 +14,7 @@
     margin-right: auto;
 
 }
-.beam{
-    color: #F1F1F1;
-    top:50%
-}
-.advantages .text{
-    color: #F1F1F1;
-}
+
 .text h4{
     font-size: 64px;
     margin: 0;
@@ -24,3 +22,18 @@
 .text p{
     font-size: 24px;
 }
+
+.text {
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+    position: absolute;
+    top:40%;
+    left: 30%;
+
+}
+
+.text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

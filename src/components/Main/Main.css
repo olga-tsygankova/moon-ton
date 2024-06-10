@@ -4,11 +4,28 @@
     border-radius:0;
     background-size: 100% 100%;
     background-position: 50% 50%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .main-container{
-    margin: 232px 164px 58px 163px;
-
+    margin: 232px auto 58px auto;
+    box-sizing: border-box;
+    max-width: 1113px;
     color: #4B4A4D;
+}
+
+.main-title{
+    font-size: 73px;
+    font-weight: 300;
 }
 
 .main-btn{
@@ -21,7 +38,54 @@
     margin-top: 20px;
     font-size: 20px;
     color: #CDCDCD;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s 5s ease forwards;
+}
+   /*---------------------------------------------------------------------------------------------*/
+   /*                                  ANIMATION                                                  */
+   /*---------------------------------------------------------------------------------------------*/
+
+
+.main-subtitle br {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
+.main-btn > * {
+    opacity: 0;
+    animation: fadeInButton 2s forwards;
+}
+
+.main-btn > *:nth-child(1) {
+    animation-delay: 5s;
+}
+
+.main-btn > *:nth-child(2) {
+    animation-delay: 5.5s;
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 

@@ -1,6 +1,9 @@
 .product {
     color: #FFFFFF;
-    padding: 0 75px ;
+    padding: 0 75px;
+    max-width: 1290px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .for-developers {
@@ -8,6 +11,7 @@
     text-align: start;
     flex-direction: column;
     width: 410px;
+    opacity: 40%;
 
     h4 {
         font-size: 32px;
@@ -26,30 +30,40 @@
     border-radius: 35px;
     padding: 34px 42px;
     background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
-    h5{
+
+    .content-title {
         margin: 0;
         font-size: 22px;
     }
-    p{
+
+    p {
         font-size: 16px;
     }
 }
-.partners-wrapper{
+
+.partners-wrapper {
     display: flex;
     justify-content: end;
     margin-top: 94px;
 }
-.for-partners{
+
+.for-partners {
     display: flex;
     text-align: start;
     flex-direction: column;
     width: 410px;
     gap: 20px;
+    opacity: 40%;
 
     h4 {
         font-size: 32px;
         font-weight: 500;
         margin: 0;
     }
+}
+
+.for-developers.visible,
+.for-partners.visible {
+    opacity: 1 !important;
 }
 

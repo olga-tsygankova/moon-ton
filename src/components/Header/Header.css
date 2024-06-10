@@ -3,4 +3,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 35px 75px 0 75px;
+    max-width: 1290px;
+    margin-right: auto;
+    margin-left: auto;
+
+    animation: fadeIn 2s 4s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

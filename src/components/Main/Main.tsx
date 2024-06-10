@@ -7,22 +7,24 @@ import {PortalTop} from "./PortalTop";
 export const Main = () => {
     return (
         <div className="main">
-            <Header/>
+            <Header />
             <div className="main-container">
-
-                <TextAnimation text={"integrate.empower.bridge."}/>
-                <p className="main-subtitle">Advanced omnichain interoperability solutions<br/> for decentralized
-                    ecosystems</p>
-
-                <div className="main-btn">
-                    <BridgeBtn/>
+                    <TextAnimation
+                        text="integrate.empower.bridge."
+                    />
+                <p className="main-subtitle">
+                    Advanced omnichain interoperability solutions
+                    <br />
+                    for decentralized ecosystems
+                </p>
+                <div className="main-btn" >
+                    <BridgeBtn />
                     <WhiteBtn>Explore ecosystem</WhiteBtn>
                 </div>
                 <div>
-                    <PortalTop/>
+                    <PortalTop />
                 </div>
-
             </div>
         </div>
-    )
-}
+    );
+};

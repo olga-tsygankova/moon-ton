@@ -1,11 +1,32 @@
 .for-users {
     color: #F1F1F1;
-
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 349px;
 }
 
 h2 {
     font-size: 96px;
     font-weight: 500;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.card-wrapper {
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .card {
@@ -17,15 +38,6 @@ h2 {
     box-sizing: border-box;
 
     background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
-
-    h5 {
-        margin: 0;
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-    }
 }
 
 .card-bridge {
@@ -35,18 +47,38 @@ h2 {
     text-align: start;
     border-radius: 20px;
     box-sizing: border-box;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
 
-    background: linear-gradient(356.2deg, rgba(23, 67, 94, 0.6) 34.52%, rgba(17, 17, 21, 0.6) 88.11%);
 
-    h5{
-       font-size: 22px;
-       margin: 0 0 10px 0;
-   }
-    p{
-        font-size:16px ;
-    }
+    background: linear-gradient(356.2deg, #0E2939 34.52%, #0B0B0D 88.11%);
+
 }
-.card-bridge__btn{
+.card-title{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.card-title p {
+    font-size: 16px;
+}
+
+.card-bridge__btn {
     display: flex;
     gap: 15px;
+    justify-content: center;
+}
+
+.card-wrapper .card:nth-child(1) {
+    margin-left: 110px;
+}
+
+.card-wrapper .card:nth-child(2) {
+    margin-left: auto;
+}
+
+.card-wrapper .card:nth-child(3) {
+    margin-right: auto;
 }

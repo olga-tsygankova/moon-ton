@@ -1,5 +1,53 @@
 import "./Token.css"
 import {Char} from "./Char/Char";
+import {useEffect, useRef} from "react";
+
+const TokenText = () => {
+    const textRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            },
+            { threshold: 0.5 } // Триггерить анимацию, когда элемент виден на 50%
+        );
+
+        if (textRef.current) {
+            observer.observe(textRef.current);
+        }
+
+        return () => {
+            if (textRef.current) {
+                observer.unobserve(textRef.current);
+            }
+        };
+    }, []);
+
+    return (
+        <p ref={textRef} className="token-text">
+            The $MOON token is integral to the Moon TON ecosystem,
+            <br />
+            ensuring economic equilibrium through token
+            burning,
+            <br />
+            rewarding active participants, and fostering decentralized
+            <br />
+            development. It supports NCY incentives and acts
+            <br />
+            as a governance tool, enabling stakeholder participation
+            <br />
+            in decision-making
+        </p>
+    );
+};
+
 
 export const Token = () => {
     return (
@@ -72,12 +120,7 @@ export const Token = () => {
                         </linearGradient>
                     </defs>
                 </svg>
-                <p>
-                    The $MOON token is integral to the Moon TON ecosystem, ensuring economic equilibrium through token
-                    burning, rewarding active participants, and fostering decentralized development. It supports NCY
-                    incentives and acts as a governance tool, enabling stakeholder participation in decision-making
-                </p>
-
+                <TokenText />
             </div>
         </div>
     )
