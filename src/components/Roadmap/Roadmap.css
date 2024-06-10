@@ -1,6 +1,14 @@
 .roadmap{
-    margin: 227px 75px 0 0;
-    max-width: 1200px;
+    display: flex;
+    max-width: 1304px;
+    padding: 0 75px 0 61px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 227px;
+    gap: 90px;
+}
+.roadmap-info{
+    max-width: 1180px;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -10,8 +18,8 @@
     display: flex;
     flex-direction: column;
     color: #F1F1F1;
-    margin-left:185px ;
     gap: 20px;
+    opacity: 20%;
 }
 .roadmap-title{
     display: flex;

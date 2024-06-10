@@ -6,6 +6,7 @@
 .char-item{
     display: flex;
     gap: 25px;
+    opacity: 10%;
 }
 .rectangle {
     background: linear-gradient(-90deg, #47BCFC 0%, rgba(71, 188, 252, 0) 100%);
@@ -16,6 +17,7 @@
     display: flex;
     gap: 13px;
     align-self: center;
+    text-align: start;
 }
 .percent{
     font-weight: 700;

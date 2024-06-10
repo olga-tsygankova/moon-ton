@@ -1,12 +1,34 @@
 .token{
     display: flex;
-    gap: 104px;
-    margin: 386px 75px 71px;
+    justify-content: space-between;
+    margin: 386px auto 0 auto;
+    padding: 0 70px;
+    gap: 103px;
+    max-width: 1294px;
 }
-.token-info p{
+
+.token-text {
     color: #F1F1F1;
     font-size: 16px;
     line-height: 24px;
     text-align: end;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s , transform 1s;
+}
 
+.token-text.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.token-text br {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s , transform 1s;
+}
+
+.token-text.animate br {
+    opacity: 1;
+    transform: translateY(0);
 }

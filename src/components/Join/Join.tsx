@@ -1,16 +1,93 @@
 import {BlueBtn} from "../../ui/BlueBtn";
 import "./Join.css"
+import {useEffect, useRef} from "react";
 
 export const Join = () => {
+
+    const joinRef = useRef(null);
+    const joinBtnRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    } else {
+                        entry.target.classList.remove('fade-in');
+                    }
+                });
+            },
+            { threshold: 0.5 } // Элемент должен быть виден на 50% или более, чтобы считаться видимым
+        );
+
+        if (joinBtnRef.current) {
+            observer.observe(joinBtnRef.current);
+        }
+
+        return () => {
+            if (joinBtnRef.current) {
+                observer.unobserve(joinBtnRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const headings = entry.target.querySelectorAll('h2');
+                        if (headings) {
+                            headings.forEach((heading) => {
+                                const textContent = heading.textContent;
+                                if (textContent) {
+                                    const letters = textContent.split('');
+                                    heading.innerHTML = '';
+
+                                    letters.forEach((letter, index) => {
+                                        const span = document.createElement('span');
+                                        span.textContent = letter;
+                                        if (letter === ' ') {
+                                            span.style.color = 'white';
+                                        } else if (letter === 'T') {
+                                            span.style.color = '#00b0ff'; // Голубой цвет для "T"
+                                        } else if (letter === 'O') {
+                                            span.style.color = '#00b0ff'; // Голубой цвет для "O"
+                                        } else if (letter === 'N') {
+                                            span.style.color = '#00b0ff'; // Голубой цвет для "N"
+                                        }
+                                        span.style.animationDelay = `${Math.random() * 1}s`;
+                                        heading.appendChild(span);
+                                    });
+                                }
+                            });
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px',
+                threshold: 0.5,
+            }
+        );
+
+        if (joinRef.current) {
+            observer.observe(joinRef.current);
+        }
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
     return (
-        <div className="join">
-            <h2>
-                Join Moon
-                <span>TON</span>
-                <br/>
-                Ecosystem
-            </h2>
-            <div className="join-btn">
+        <div className="join" ref={joinRef}>
+            <div className="join-title">
+                <h2>
+                    Join  <span style={{display:"inline-block", marginLeft: '20px' }}>Moon</span> <span style={{ padding: '0 5px' }}>TON </span> <span style={{ padding: '0 5px' }}>Ecosystem</span>                </h2>
+            </div>
+
+            <div className="join-btn" ref={joinBtnRef}>
                 <BlueBtn>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

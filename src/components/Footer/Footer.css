@@ -6,7 +6,10 @@
     box-sizing: border-box;
     border: 1px solid #2B2B2B;
     border-radius: 30px;
-    margin: 132px 75px 40px 75px;
+    margin: 132px auto 40px auto;
     padding: 40px;
+    max-width: 1290px;
+
+    opacity: 0;
     background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
 }

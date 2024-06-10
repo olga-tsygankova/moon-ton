@@ -11,10 +11,13 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "framer-motion": "^11.2.10",
+    "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.10.3",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-scroll-motion": "^0.3.3",
     "react-spring": "^9.7.3",
     "react-transition-group": "^4.4.5",
     "styled-components": "^6.1.11",
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.10",
     "@types/react-transition-group": "^4.4.10"
   }
 }

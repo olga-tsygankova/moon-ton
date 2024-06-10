@@ -38,10 +38,31 @@
     margin-top: 20px;
     font-size: 20px;
     color: #CDCDCD;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s 5s ease forwards;
 }
    /*---------------------------------------------------------------------------------------------*/
    /*                                  ANIMATION                                                  */
    /*---------------------------------------------------------------------------------------------*/
+
+
+.main-subtitle br {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 .main-btn > * {

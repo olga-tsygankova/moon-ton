@@ -1,11 +1,48 @@
 import "./Product.css"
 import {WhiteBtn} from "../../ui";
+import {useEffect, useRef} from "react";
 
-export const Product=()=>{
-    return(
+export const Product = () => {
+    const forDevelopersRef = useRef(null);
+    const forPartnersRef = useRef(null);
+
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        (entry.target as HTMLElement).style.opacity = '1';
+                        (entry.target as HTMLElement).style.transition = 'opacity 1s ease-in-out';
+                    } else {
+                        (entry.target as HTMLElement).style.opacity = '0.4';
+                    }
+                });
+            },
+            {
+                rootMargin: '0px',
+                threshold: 0.5, // Элемент должен быть виден на 50% или больше, чтобы анимация запустилась
+            }
+        );
+
+        if (forDevelopersRef.current) {
+            observer.observe(forDevelopersRef.current);
+        }
+
+        if (forPartnersRef.current) {
+            observer.observe(forPartnersRef.current);
+        }
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+    return (
         <div className="product">
             <div className="portal-bottom"> Тут будет портал</div>
-            <div className="for-developers">
+
+            <div className="for-developers" ref={forDevelopersRef}>
                 <h4>For Developers</h4>
                 <p>(Build on MoonTon)</p>
                 <div className="content">
@@ -20,11 +57,11 @@ export const Product=()=>{
                     <WhiteBtn>Get API</WhiteBtn>
                 </div>
             </div>
-            <div className="partners-wrapper" >
-                <div className="for-partners">
+            <div className="partners-wrapper">
+                <div className="for-partners" ref={forPartnersRef}>
                     <h4>For Partners</h4>
                     <div className="content">
-                        <div className="content-title" >IOLO (Initial Omnichain Liquidity Offering)</div>
+                        <div className="content-title">IOLO (Initial Omnichain Liquidity Offering)</div>
                         <p>
                             Expose your project to new ecosystems
                             <br/>
@@ -33,7 +70,7 @@ export const Product=()=>{
                         <WhiteBtn>Make Us IOLO</WhiteBtn>
                     </div>
                     <div className="content">
-                        <div className="content-title" >OAS (Omnichain Airdrop System)</div>
+                        <div className="content-title">OAS (Omnichain Airdrop System)</div>
                         <p>
                             Level up your community engagement
                             <br/>
