@@ -1,11 +1,24 @@
 .main{
-    background-image: url("../../../public/backgroind image main.png");
-    background-repeat: no-repeat;
-    border-radius:0;
-    background-size: 100% 100%;
-    background-position: 50% 50%;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
+    background-image: url("../../../public/backgroind image main.png");
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: 720px) {
+
+    }
+
+    @media (min-width: 1000px) {
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+        background-image: url("../../../public/backgroind image main.png");
+        border-radius:0;
+
+    }
+
+
 }
 
 @keyframes fadeIn {
@@ -28,13 +41,13 @@
     font-size: 73px;
     font-weight: 300;
     z-index: 20;
-
 }
 
 .main-btn{
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
     z-index: 200;
 
 }
@@ -50,11 +63,19 @@
 
 }
 .portal-up{
-    position: absolute;
-    top:20%;
-    left: 35%;
-    z-index: 0;
 
+
+    position: absolute;
+
+    @media (min-width: 720px) {
+
+    }
+    @media (min-width: 1440px) {
+        top: 80%;
+        transform: translateY(-50%);
+        left: 35%;
+
+    }
 }
    /*---------------------------------------------------------------------------------------------*/
    /*                                  ANIMATION                                                  */

@@ -1,7 +1,8 @@
 import {Logo} from "./Logo/Logo";
 import {Menu} from "./Menu/Menu";
-import {BridgeHeader} from "./BridgeHeader/BridgeHeader";
+import {BridgeHeader} from "../../ui/Buttons/BridgeHeader/BridgeHeader";
 import "./Header.css"
+import {BurgerMenu} from "../../ui/Buttons/BurgerMenu";
 
 export const Header=()=>{
     return(
@@ -9,6 +10,7 @@ export const Header=()=>{
             <Logo/>
             <Menu/>
             <BridgeHeader/>
+            <BurgerMenu/>
         </div>
     )
 }

@@ -1,9 +1,11 @@
 import "./ForUsers.css"
 import {WhiteBtn} from "../../ui";
-import {BlueBtn} from "../../ui/BlueBtn";
+import {BlueBtn} from "../../ui/Buttons/BlueBtn";
 import {useEffect, useRef, useState} from "react";
 import { useInView } from 'react-intersection-observer'
 import { scroller } from 'react-scroll'
+import {OverviewButton} from "../../ui/Buttons/OverviewButton";
+import {LearnMore} from "../../ui/Buttons/LearnMore";
 
 export const ForUsers = () => {
     const [isInView, setIsInView] = useState(false);
@@ -65,7 +67,7 @@ export const ForUsers = () => {
                         assets between ecosystems
                     </p>
                     <div className="card-bridge__btn">
-                        <WhiteBtn>Learn More</WhiteBtn>
+                        <LearnMore>Learn More</LearnMore>
                         <BlueBtn>Use Bridge (App)</BlueBtn>
                     </div>
                 </div>

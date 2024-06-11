@@ -1,13 +1,24 @@
 .menu{
-    display: flex;
-    gap: 30px;
+    display: none;
+    @media (min-width: 1000px) {
+        display: block;
 
-    background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
+    }
 
-    border: 1px solid #2B2B2B;
-    border-radius: 83px;
+    @media (min-width: 720px) {
 
-    padding: 20px 40px;
+    }
+    @media (min-width: 1440px) {
+        gap: 30px;
+
+        background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
+
+        border: 1px solid #2B2B2B;
+        border-radius: 83px;
+
+        padding: 20px 40px;
+
+    }
 }
 
 .menu a{
