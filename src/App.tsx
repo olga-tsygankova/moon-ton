@@ -9,7 +9,6 @@ import { Footer } from './components/Footer';
 import { Advantages } from './components/Advantages';
 import { Roadmap } from './components/Roadmap';
 import { Token } from './components/Token';
-import { LineFooter } from './ui/svg/LineFooter';
 
 function App() {
   return (
@@ -21,8 +20,8 @@ function App() {
       <Advantages/>
       <Roadmap/>
       <Token/>
-      {/*<Join/>*/}
-      {/*<Footer/>*/}
+      <Join/>
+      <Footer/>
     </div>
   );
 }

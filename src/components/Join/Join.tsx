@@ -55,7 +55,7 @@ export const Join = () => {
           const span = document.createElement('span');
           span.textContent = letter;
           if (letter === ' ') {
-            span.style.color = 'white';
+            span.style.color = '#F1F1F1';
           }
           if (['T', 'O', 'N'].includes(letter)) {
             span.style.color = '#00b0ff'; // Голубой цвет для "T", "O", "N"
