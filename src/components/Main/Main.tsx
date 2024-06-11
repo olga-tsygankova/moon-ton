@@ -1,8 +1,7 @@
 import "./Main.css"
 import {Header} from "../Header/Header";
 import {TextAnimation} from "./TextAnimation/TextAnimation";
-import {BridgeBtn, WhiteBtn} from "../../ui";
-import {PortalUp} from "../../ui/svg/PortalUp";
+import {BridgeBtn} from "../../ui";
 import {OverviewButton} from "../../ui/Buttons/OverviewButton";
 
 export const Main = () => {
@@ -15,7 +14,7 @@ export const Main = () => {
                 />
                 <p className="main-subtitle">
                     Advanced omnichain interoperability solutions
-                    <br/>
+
                     for decentralized ecosystems
                 </p>
                 <div className="main-btn">
@@ -25,7 +24,6 @@ export const Main = () => {
 
             </div>
             <div className="portal-up">
-                <PortalUp/>
             </div>
         </div>
     );

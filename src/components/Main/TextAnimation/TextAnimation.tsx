@@ -11,12 +11,9 @@ interface TextAnimationProps {
 
 export const TextAnimation: React.FC<TextAnimationProps> = ({ text }) => {
     const [charOpacities, setCharOpacities] = useState<number[]>([]);
-    const [isScaled, setIsScaled] = useState(false);
 
-    const { scale } = useSpring({
-        scale: isScaled ? 1.3 : 1,
-        config: { duration: 1000 },
-    });
+    //TODO: разбить по контейнерам каждое слово, на мобилке кривое
+
 
     useEffect(() => {
         const opacities = text.split('').map(() => 0);
@@ -29,23 +26,18 @@ export const TextAnimation: React.FC<TextAnimationProps> = ({ text }) => {
                 setCharOpacities([...opacities]);
             }
             if (opacities.every((o) => o >= 1)) {
-                setIsScaled(true);
                 clearInterval(timer);
             }
         }, 20);
 
-        const scaleTimer = setTimeout(() => {
-            setIsScaled(true);
-        }, 3000);
 
         return () => {
             clearInterval(timer);
-            clearTimeout(scaleTimer);
         };
     }, [text]);
 
     return (
-        <animated.span style={{ transform: scale.to((s) => `scale(${s})`) }}>
+        <animated.span className="text-container">
             {text.split('').map((char, index) => (
                 <span
                     key={index}
@@ -53,7 +45,6 @@ export const TextAnimation: React.FC<TextAnimationProps> = ({ text }) => {
                         opacity: charOpacities[index],
                         display: 'inline-block',
                         textWrap: "nowrap",
-                        fontSize: "73px",
                         marginRight: char === '.' ? '0.3em' : '0'
                     }}
                 >

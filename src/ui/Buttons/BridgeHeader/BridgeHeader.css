@@ -1,4 +1,4 @@
-.bridge-header{
+.bridge-header {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -18,29 +18,40 @@
         margin-top: 0;
     }
     @media (min-width: 1000px) {
-        background:none;
+        background: none;
+        width: 77px;
+
+
     }
 
 }
 
-.bridge-header p{
+.bridge-header p {
     margin: 0;
     font-size: 16px;
 }
-.bridge-header:hover{
+
+.bridge-header:hover {
     box-shadow: 0 0 16.7px 0 #47BCFC94;
+    @media (min-width: 1000px) {
+        box-shadow: none;
+    }
 }
+
 
 .bridge-header:hover svg path,
-.bridge-header:hover p
-{
-
-    @media (min-width: 1440px) {
+.bridge-header:hover p {
+    @media (min-width: 1000px) {
         fill: #47BCFC;
         color: #47BCFC;
-
     }
-
-
 }
+.bridge-header:active svg path,
+.bridge-header:active p {
+    @media (min-width: 1000px) {
+        fill: #47BCFC;
+        color: #47BCFC;
+    }
+}
+
 
