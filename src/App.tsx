@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 import { Main, Join } from './components';
 import { Mission } from './components/Mission/Mission';
 import { Product } from './components/Product';
@@ -9,7 +10,6 @@ import { Advantages } from './components/Advantages';
 import { Roadmap } from './components/Roadmap';
 import { Token } from './components/Token';
 import { LineFooter } from './ui/svg/LineFooter';
-
 
 function App() {
   return (

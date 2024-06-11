@@ -1,24 +1,20 @@
 .main{
+    position: relative;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
     background-image: url("../../../public/backgroind image main.png");
-    background-size: 100% 100%;
-    background-position: 50% 50%;
+    background-size: contain;
     background-repeat: no-repeat;
+    padding: 27px 15px 0 15px ;
 
-    @media (min-width: 720px) {
-
+    @media (min-width: 620px) {
+        background-size: 100% 100%;
+        background-position: 50% 50%;
     }
 
     @media (min-width: 1000px) {
-        background-size: 100% 100%;
-        background-position: 50% 50%;
-        background-image: url("../../../public/backgroind image main.png");
-        border-radius:0;
-
+        padding: 0;
     }
-
-
 }
 
 @keyframes fadeIn {
@@ -30,53 +26,57 @@
     }
 }
 .main-container{
-    margin: 232px auto 58px auto;
     box-sizing: border-box;
     max-width: 1113px;
     color: #4B4A4D;
-    z-index: 200;
-}
+    margin: 118px auto 0 auto;
 
-.main-title{
-    font-size: 73px;
-    font-weight: 300;
-    z-index: 20;
+    @media (min-width: 620px) {
+        margin-top: 108px;
+    }
+    @media (min-width: 1000px) {
+        margin: 232px auto 58px auto;
+    }
 }
 
 .main-btn{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 20px;
     position: relative;
-    z-index: 200;
+    @media (min-width: 620px) {
+        flex-direction: row;
+    }
+    @media (min-width: 1000px) {
+    }
 
 }
 .main-subtitle{
-    margin-bottom: 30px;
-    margin-top: 20px;
-    font-size: 20px;
+    display: inline-block;
+    max-width: 330px;
+
     color: #CDCDCD;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 2s 5s ease forwards;
-    z-index: 200;
-
-}
-.portal-up{
-
-
-    position: absolute;
-
-    @media (min-width: 720px) {
+    font-size: 16px;
+    @media (min-width: 620px) {
+        max-width: 600px;
+        font-size: 20px;
 
     }
-    @media (min-width: 1440px) {
-        top: 80%;
-        transform: translateY(-50%);
-        left: 35%;
+    @media (min-width: 1000px) {
+        max-width: 482px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        font-size: 20px;
+
 
     }
+
 }
+
    /*---------------------------------------------------------------------------------------------*/
    /*                                  ANIMATION                                                  */
    /*---------------------------------------------------------------------------------------------*/
