@@ -3,14 +3,16 @@
   justify-content: space-between;
   flex-direction: column-reverse;
   margin-top: 92px;
+  margin-bottom: 432px;
   overflow-x: hidden;
 
   @media (min-width: 620px) {
+    margin-bottom: 469px;
     margin-top: 82px;
     gap:70px;
   }
   @media (min-width: 1000px) {
-    margin: 386px auto 0 auto;
+    margin: 386px auto 425px auto;
     padding: 0 70px;
     gap: 103px;
     max-width: 1294px;

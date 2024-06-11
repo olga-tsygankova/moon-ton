@@ -1,8 +1,8 @@
 .logo{
-    margin-right: 218px;
+    margin-right: auto;
 
     @media (min-width: 620px) {
-        margin-right: auto;
+        margin-right: 0;
 
     }
     @media (min-width: 1000px) {

@@ -4,7 +4,7 @@
     gap:10px;
 
     outline: none;
-    background: #1D1D1D;
+    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
     border: none;
     border-radius: 71px;
     padding: 20px 35px 20px 35px;
@@ -19,7 +19,7 @@
 
     }
     @media (min-width: 1440px) {
-        padding: 35px 75px 0 75px;
+        padding: 20px 75px 20px 75px;
 
     }
 }
@@ -33,10 +33,11 @@
 
 .blue-btn:hover
 {
-    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
+    box-shadow: 0 0 16.7px 0 #47BCFC94;
+
 }
 .blue-btn:active
 {
-    box-shadow: 0 0 16.7px 0 #47BCFC94;
+    box-shadow: 0 0 40px 0 #47BCFC94;
 }
 

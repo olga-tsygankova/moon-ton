@@ -2,6 +2,7 @@
     text-align: start;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .left h6{
     font-size: 18px;
