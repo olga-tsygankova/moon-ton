@@ -33,16 +33,11 @@ const TokenText = () => {
     return (
         <p ref={textRef} className="token-text">
             The $MOON token is integral to the Moon TON ecosystem,
-            <br />
             ensuring economic equilibrium through token
             burning,
-            <br />
             rewarding active participants, and fostering decentralized
-            <br />
             development. It supports NCY incentives and acts
-            <br />
             as a governance tool, enabling stakeholder participation
-            <br />
             in decision-making
         </p>
     );
