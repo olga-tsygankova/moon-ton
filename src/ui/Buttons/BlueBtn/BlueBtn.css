@@ -1,0 +1,42 @@
+.blue-btn{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+
+    outline: none;
+    background: #1D1D1D;
+    border: none;
+    border-radius: 71px;
+    padding: 20px 35px 20px 35px;
+
+    color: #F1F1F1;
+    font-weight: 600;
+    font-family: "Poppins Regular";
+
+    height: 55px;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    @media (min-width: 720px) {
+
+    }
+    @media (min-width: 1440px) {
+        padding: 35px 75px 0 75px;
+
+    }
+}
+
+.blue-btn p{
+    margin: 0;
+    font-size: 16px;
+    align-self: center;
+
+}
+
+.blue-btn:hover
+{
+    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
+}
+.blue-btn:active
+{
+    box-shadow: 0 0 16.7px 0 #47BCFC94;
+}
+

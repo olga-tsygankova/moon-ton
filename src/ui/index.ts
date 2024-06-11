@@ -1,2 +1,2 @@
-export * from './BridgeBtn'
-export * from './WhiteBtn'
+export * from './Buttons/BridgeBtn'
+export * from './Buttons/WhiteBtn'

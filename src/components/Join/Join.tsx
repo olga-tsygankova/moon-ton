@@ -1,4 +1,4 @@
-import {BlueBtn} from "../../ui/BlueBtn";
+import {BlueBtn} from "../../ui/Buttons/BlueBtn";
 import "./Join.css"
 import {useEffect, useRef} from "react";
 

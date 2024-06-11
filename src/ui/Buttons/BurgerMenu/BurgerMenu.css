@@ -1,0 +1,19 @@
+.burger-menu{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    outline: none;
+    border: none;
+    margin-top: 28px;
+    @media (min-width: 620px) {
+        margin-top: 0;
+    }
+    @media (min-width: 1000px) {
+        display: none;
+    }
+
+}
+.burger-menu:active{
+    box-shadow: 0 0 16.7px 0 #47BCFC94;
+}

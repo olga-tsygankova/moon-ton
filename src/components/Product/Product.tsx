@@ -1,7 +1,7 @@
 import "./Product.css"
 import {WhiteBtn} from "../../ui";
 import {useEffect, useRef} from "react";
-import {PortalDown} from "../../ui/PortalDown";
+import {PortalDown} from "../../ui/svg/PortalDown";
 
 export const Product = () => {
     const forDevelopersRef = useRef(null);

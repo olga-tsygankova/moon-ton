@@ -6,9 +6,9 @@ export const Left = () => {
         <div className="left">
             <h6>Links</h6>
             <div className="links">
-                <a>Etherscan</a>
-                <a>Dextools</a>
-                <a>Whitepaper</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Etherscan</a>
+                <a href='#' target="_blank" rel="noopener noreferrer">Dextools</a>
+                <a href="https://moon-ton.gitbook.io/moon-ton" target="_blank" rel="noopener noreferrer">Whitepaper</a>
             </div>
             <SocialLinks/>
         </div>

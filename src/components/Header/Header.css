@@ -1,15 +1,24 @@
 .header{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 35px 75px 0 75px;
+    padding: 27px 15px 118px 15px;
+
     max-width: 1290px;
     margin-right: auto;
     margin-left: auto;
-
     animation: fadeIn 2s 4s ease-in-out forwards;
     opacity: 0;
+    @media (min-width: 620px) {
+        gap: 30px;
+    }
+    @media (min-width: 1000px) {
+        padding: 35px 75px 0 75px;
+
+    }
 }
+
 
 @keyframes fadeIn {
     0% {

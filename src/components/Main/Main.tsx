@@ -2,8 +2,8 @@ import "./Main.css"
 import {Header} from "../Header/Header";
 import {TextAnimation} from "./TextAnimation/TextAnimation";
 import {BridgeBtn, WhiteBtn} from "../../ui";
-import {PortalTop} from "./PortalTop";
-import {PortalUp} from "../../ui/PortalUp";
+import {PortalUp} from "../../ui/svg/PortalUp";
+import {OverviewButton} from "../../ui/Buttons/OverviewButton";
 
 export const Main = () => {
     return (
@@ -20,7 +20,7 @@ export const Main = () => {
                 </p>
                 <div className="main-btn">
                     <BridgeBtn/>
-                    <WhiteBtn>Explore ecosystem</WhiteBtn>
+                    <OverviewButton>Explore ecosystem</OverviewButton>
                 </div>
 
             </div>
