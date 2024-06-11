@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <Main/>
-      {/*<Mission/>*/}
-      {/*<Product/>*/}
+      <Mission/>
+      <Product/>
       {/*<ForUsers/>*/}
       {/*<Advantages/>*/}
       {/*<Roadmap/>*/}
