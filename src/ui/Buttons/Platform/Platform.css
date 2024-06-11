@@ -1,33 +1,35 @@
-.learn-more {
+.platform{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap:10px;
     text-decoration: none;
     box-sizing: border-box;
 
     outline: none;
-    background: #F1F1F1;
+    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
     border: none;
     border-radius: 71px;
 
-    color: #1d1d1d;
+    color: #F1F1F1;
     font-weight: 600;
     font-family: "Poppins Regular";
+
 
     height: 50px;
     transition: background-color 0.5s, box-shadow 0.5s;
     @media (min-width: 620px) {
-        width: 200px ;
+        width:200px ;
     }
     @media (min-width: 1000px) {
         height: 55px;
-        width: 223px ;
+        width:223px ;
+
     }
 
 }
 
-.learn-more p {
+.platform p{
     margin: 0;
     font-size: 16px;
     font-weight: 500;
@@ -39,13 +41,12 @@
     }
 }
 
-.learn-more:hover {
-    background: #F1F1F1;
-    color: #1D1D1D;
-    box-shadow: 0 0 16.7px 0 #FFFFFF96;
+.platform:hover
+{
+    box-shadow: 0 0 16.7px 0 #47BCFC94;
 }
-
-.learn-more:active {
-    box-shadow: 0 0 40px 0 #FFFFFF96;
+.platform:active
+{
+    box-shadow: 0 0 40px 0 #47BCFC94;
 }
 
