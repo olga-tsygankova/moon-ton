@@ -116,9 +116,7 @@ export const Advantages = () => {
                 <h4>Integrability.</h4>
                 <p>
                     MoonTon provides secure and seamles
-                    <br/>
                     cross-chain API integration into any
-                    <br/>
                     web3 application
                 </p>
             </div>
