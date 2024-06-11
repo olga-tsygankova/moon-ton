@@ -1,22 +1,19 @@
 .for-users {
   color: #F1F1F1;
-  margin-left: 15px;
-  margin-right: 15px;
   position: relative;
-  margin-top: 150px;
+
+  margin: 150px 15px 128px 15px ;
 
   @media (min-width: 620px) {
-    margin: 200px 35px 0 35px ;
+    margin: 200px 35px 140px 35px ;
   }
 
   @media (min-width: 1000px) {
-    margin: 200px 35px 0 35px;
+    margin: 200px auto 329px auto;
   }
 
   @media (min-width: 1440px) {
     width: 1170px;
-
-    margin: 349px auto 0 auto;
   }
 }
 
@@ -102,14 +99,11 @@ h2 {
   margin-left: auto;
   padding: 40px 30px;
 
-
   background: linear-gradient(356.2deg, #0E2939 34.52%, #0B0B0D 88.11%);
 
   @media (min-width: 620px) {
     width: 500px;
     padding: 50px 30px;
-
-
   }
 
   @media (min-width: 1000px) {

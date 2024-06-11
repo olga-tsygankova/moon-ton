@@ -18,7 +18,7 @@ function App() {
       <Mission/>
       <Product/>
       <ForUsers/>
-      {/*<Advantages/>*/}
+      <Advantages/>
       {/*<Roadmap/>*/}
       {/*<Token/>*/}
       {/*<Join/>*/}
