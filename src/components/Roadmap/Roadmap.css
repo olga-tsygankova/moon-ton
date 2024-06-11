@@ -1,17 +1,38 @@
 .roadmap{
     display: flex;
-    max-width: 1304px;
-    padding: 0 75px 0 61px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 227px;
-    gap: 90px;
+    margin-top: 100px;
+    overflow-x: hidden;
+    gap:20px;
+
+    @media (min-width: 620px) {
+        margin-top: 90px;
+    }
+    @media (min-width: 1000px) {
+        max-width: 1304px;
+        padding: 0 75px 0 61px;
+        margin-top: 227px;
+        gap: 90px;
+
+    }
 }
+
 .roadmap-info{
-    max-width: 1180px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 20px;
+    width: 300px;
+    @media (min-width: 620px) {
+        width: 500px;
+    }
+    @media (min-width: 1200px) {
+        width: 900px;
+        gap: 100px;
+    }
+    @media (min-width: 1440px) {
+        width: 1180px;
+    }
 }
 
 .q2, .q3, .q4, .q2025{
@@ -21,14 +42,21 @@
     gap: 20px;
     opacity: 20%;
 }
+
 .roadmap-title{
     display: flex;
     gap: 10px;
+
 }
+
 h5, .year{
-    font-size: 35.2px;
     margin: 0;
     font-weight: 500;
+    font-size: 28px;
+
+    @media (min-width: 620px) {
+        font-size: 35.2px;
+    }
 }
 .year{
     color: #36B0F1;
@@ -41,11 +69,20 @@ h5, .year{
 }
 .points-item{
     border-radius: 700px;
-    white-space: nowrap;
+    white-space: pre-wrap;
+    text-align: start;
     display: flex;
     gap: 15px;
     align-items: center;
-    font-size: 18px;
-    padding: 20px 35px;
+    font-size: 14px;
+    padding: 15px 20px;
     background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
+    @media (min-width: 620px) {
+        white-space: nowrap;
+
+    }
+    @media (min-width: 1000px) {
+        padding: 20px 35px;
+        font-size: 18px;
+    }
 }
