@@ -1,10 +1,13 @@
 .bridge-btn{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap:10px;
+    text-decoration: none;
+    box-sizing: border-box;
 
     outline: none;
-    background: #1D1D1D;
+    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
     border: none;
     border-radius: 71px;
 
@@ -12,17 +15,15 @@
     font-weight: 600;
     font-family: "Poppins Regular";
 
+
     height: 50px;
     transition: background-color 0.5s, box-shadow 0.5s;
-    @media (min-width: 720px) {
-
+    @media (min-width: 620px) {
+        width:317px ;
     }
-    @media (min-width: 1440px) {
-        background: #1D1D1D;
-        padding: 20px 35px 20px 35px;
+    @media (min-width: 1000px) {
         height: 55px;
-
-
+        width:148px ;
 
     }
 
@@ -33,14 +34,19 @@
     font-size: 16px;
     font-weight: 500;
     align-self: center;
+    @media (min-width: 620px) {
+
+    }
+    @media (min-width: 1000px) {
+    }
 }
 
 .bridge-btn:hover
 {
-    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
+    box-shadow: 0 0 16.7px 0 #47BCFC94;
 }
 .bridge-btn:active
 {
-    box-shadow: 0 0 16.7px 0 #47BCFC94;
+    box-shadow: 0 0 40px 0 #47BCFC94;
 }
 

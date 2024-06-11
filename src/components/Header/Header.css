@@ -1,9 +1,10 @@
 .header{
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 27px 15px 118px 15px;
+    gap: 30px;
 
     max-width: 1290px;
     margin-right: auto;
@@ -12,10 +13,10 @@
     opacity: 0;
     @media (min-width: 620px) {
         gap: 30px;
+        padding: 35px 35px 0 35px;
     }
     @media (min-width: 1000px) {
-        padding: 35px 75px 0 75px;
-
+        padding: 35px 35px 0 35px;
     }
 }
 

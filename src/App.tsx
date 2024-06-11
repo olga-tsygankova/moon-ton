@@ -10,7 +10,7 @@ import {Advantages} from "./components/Advantages";
 import {Roadmap} from "./components/Roadmap";
 import {Token} from "./components/Token";
 import {LineFooter} from "./ui/svg/LineFooter";
-//<Mission/>
+//              <Mission/>
 //             <Product/>
 //             <ForUsers/>
 //             <Advantages/>
