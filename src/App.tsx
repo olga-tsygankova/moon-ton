@@ -20,7 +20,7 @@ function App() {
       <ForUsers/>
       <Advantages/>
       <Roadmap/>
-      {/*<Token/>*/}
+      <Token/>
       {/*<Join/>*/}
       {/*<Footer/>*/}
     </div>
