@@ -1,0 +1,55 @@
+.form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  outline: none;
+  background: #F1F1F1;
+  border: none;
+  border-radius: 71px;
+
+  color: #1d1d1d;
+  font-weight: 600;
+  font-family: "Poppins Regular";
+
+  transition: background-color 0.5s, box-shadow 0.5s;
+
+  width: 170px;
+  height: 40px;
+
+  @media (min-width: 620px) {
+    width: 170px ;
+    height: 45px;
+  }
+  @media (min-width: 1000px) {
+    height: 55px;
+    width: 196px ;
+  }
+
+}
+
+.form-btn p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  align-self: center;
+  @media (min-width: 620px) {
+
+  }
+  @media (min-width: 1000px) {
+  }
+}
+
+.form-btn:hover {
+  background: #F1F1F1;
+  color: #1D1D1D;
+  box-shadow: 0 0 16.7px 0 #FFFFFF96;
+}
+
+.form-btn:active {
+  box-shadow: 0 0 40px 0 #FFFFFF96;
+}
+
