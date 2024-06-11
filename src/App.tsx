@@ -17,7 +17,7 @@ function App() {
       <Main/>
       <Mission/>
       <Product/>
-      {/*<ForUsers/>*/}
+      <ForUsers/>
       {/*<Advantages/>*/}
       {/*<Roadmap/>*/}
       {/*<Token/>*/}
