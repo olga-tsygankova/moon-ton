@@ -1,8 +1,8 @@
 import {Logo} from "./Logo/Logo";
 import {Menu} from "./Menu/Menu";
-import {BridgeHeader} from "../../ui/Buttons/BridgeHeader/BridgeHeader";
+import {BridgeHeader} from "../../../ui/Buttons/BridgeHeader/BridgeHeader";
 import "./Header.css"
-import {BurgerMenu} from "../../ui/Buttons/BurgerMenu";
+import {BurgerMenu} from "../../../ui/Buttons/BurgerMenu";
 import { useState } from 'react';
 
 export const Header=()=>{

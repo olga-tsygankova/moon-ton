@@ -1,11 +1,11 @@
 import "./ForUsers.css";
-import { WhiteBtn } from "../../ui";
-import { BlueBtn } from "../../ui/Buttons/BlueBtn";
+import { WhiteBtn } from "../../../ui";
+import { BlueBtn } from "../../../ui/Buttons/BlueBtn";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { scroller } from "react-scroll";
-import { LearnMore } from "../../ui/Buttons/LearnMore";
-import { Platform } from '../../ui/Buttons/Platform';
+import { LearnMore } from "../../../ui/Buttons/LearnMore";
+import { Platform } from '../../../ui/Buttons/Platform';
 
 export const ForUsers = () => {
   const [isInView, setIsInView] = useState(false);

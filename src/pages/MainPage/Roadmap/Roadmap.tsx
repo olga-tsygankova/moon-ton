@@ -1,6 +1,6 @@
 import "./Roadmap.css";
-import { Point } from "../../ui/Point";
-import { Scrollbar } from "../../ui/svg/Scrollbar";
+import { Point } from "../../../ui/Point";
+import { Scrollbar } from "../../../ui/svg/Scrollbar";
 import { useEffect, useRef } from "react";
 
 export const Roadmap = () => {

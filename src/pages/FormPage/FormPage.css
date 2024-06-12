@@ -4,4 +4,15 @@
   background-repeat: no-repeat;
   background-size: auto 50%; /* 80% высоты экрана */
   background-position: top right;
+  animation: fadeIn 2s 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

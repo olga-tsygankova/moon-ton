@@ -1,5 +1,5 @@
 import "./Menu.css"
-import { CloseBtn } from '../../../ui/Buttons/CloseBtn';
+import { CloseBtn } from '../../../../ui/Buttons/CloseBtn';
 
 type IProps={
   isOpen: boolean,
