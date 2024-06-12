@@ -1,0 +1,47 @@
+.input {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: start;
+}
+
+input {
+  box-sizing: border-box;
+
+  font-family: "Poppins Regular";
+  font-size: 12px;
+  border: 1px solid #2B2B2B;
+  height: 48px;
+  padding: 0 25px;
+  color: #808080;
+  outline: none;
+
+  background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
+  border-radius: 73px;
+}
+
+input:focus {
+  border-color: #CFCFCF;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  input {
+    width: 380px;
+  }
+}
+
+@media (min-width: 1000px) {
+  input {
+    width: 300px;
+  }
+  label{
+    max-width: 300px;
+  }
+
+
+}

@@ -1,0 +1,55 @@
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    outline: none;
+    background: #F1F1F1;
+    border: none;
+    border-radius: 71px;
+
+    color: #1d1d1d;
+    font-weight: 600;
+    font-family: "Poppins Regular";
+
+    height: 50px;
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.upload p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    align-self: center;
+}
+
+.upload:hover {
+    background: #F1F1F1;
+    color: #1D1D1D;
+    box-shadow: 0 0 16.7px 0 #FFFFFF96;
+}
+
+.upload:active {
+    box-shadow: 0 0 40px 0 #FFFFFF96;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 620px) {
+    .upload {
+        width: 317px ;
+    }
+}
+
+@media (min-width: 1000px) {
+    .upload {
+        height: 55px;
+        width: 223px ;
+    }
+}
+

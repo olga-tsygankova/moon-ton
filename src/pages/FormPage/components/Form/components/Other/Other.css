@@ -1,0 +1,92 @@
+.other{
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.other__container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.other__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.check-box__wrapper{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 10px;
+}
+.check-box__title{
+  font-size: 16px;
+  font-weight: 500;
+}
+.check-box__container{
+  display: flex;
+  gap: 26px;
+}
+
+.other__title{
+  font-size: 26px;
+  text-align: start;
+}
+.other:after{
+    content: " ";
+
+    border-bottom: 1px solid rgba(115, 115, 118, 0);
+    border-image: linear-gradient(to right, rgba(115, 115, 118, 0), #737376, rgba(115, 115, 118, 0)) 1;
+}
+.upload__btn{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  text-align: start;
+}
+.upload__btn__subtitle{
+  color: #797979;
+  font-size: 14px;
+
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .other{
+    gap: 50px;
+  }
+  .other__container{
+    width: 480px;
+    margin-right: auto;
+    margin-left: 35px;
+  }
+  .other__title{
+    font-size: 32px;
+  }
+}
+@media (min-width: 1000px) {
+  .input-wrapper{
+    flex-direction: row;
+  }
+ input[type="text"] label{
+   display: inline-block;
+    text-wrap: wrap;
+    width: 300px;
+  }
+  .other__container{
+    width: 960px;
+    margin: 0;
+  }
+  .other__wrapper{
+    flex-direction: row;
+
+  }
+  .check-box__wrapper{
+    margin-bottom: auto;
+  }
+
+}
