@@ -10,11 +10,11 @@ export const Menu = ({ isOpen, onClose}:IProps) => {
     <div className={`menu ${isOpen ? 'open' : 'closed'}`} >
       <div className='menu-container'>
         <CloseBtn onClick={onClose} />
-        <a href="#" className="line">Missoin</a>
-        <a href="#" className="line">Products</a>
-        <a href="#" className="line">Benefits</a>
-        <a href="#" className="line">Roadmap</a>
-        <a href="#" className="line">Tokenomics</a>
+        <a href="#mission" className="line">Mission</a>
+        <a href="#product" className="line">Products</a>
+        <a href="#advantages" className="line">Benefits</a>
+        <a href="#roadmap" className="line">Roadmap</a>
+        <a href="#token" className="line">Tokenomics</a>
         <a href="#">Whitepapper</a>
       </div>
 

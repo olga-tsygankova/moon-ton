@@ -46,7 +46,7 @@ const TokenText = () => {
 
 export const Token = () => {
     return (
-        <div className="token">
+        <div className="token" id="token">
             <Char/>
             <div className="token-info">
                 <svg width="446" height="446" viewBox="0 0 446 446" fill="none" xmlns="http://www.w3.org/2000/svg">

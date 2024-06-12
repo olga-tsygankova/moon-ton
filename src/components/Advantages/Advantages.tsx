@@ -68,7 +68,7 @@ export const Advantages = () => {
     //     };
     // }, []);
     return (
-        <div className="advantages" ref={ref}>
+        <div className="advantages" id="advantages" ref={ref}>
             <div className="big-planet" ref={bigPlanetRef}>
                 <svg width="672" height="372" viewBox="0 0 672 372" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

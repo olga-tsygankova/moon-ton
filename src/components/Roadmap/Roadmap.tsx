@@ -48,7 +48,7 @@ export const Roadmap = () => {
     };
   }, []);
   return (
-    <div className="roadmap">
+    <div className="roadmap" id="roadmap">
       <div className="scrollbar">
         <Scrollbar />
       </div>

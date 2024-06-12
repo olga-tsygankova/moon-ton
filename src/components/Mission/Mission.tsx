@@ -50,7 +50,7 @@ export const Mission = () => {
   };
 
   return (
-    <div className="mission">
+    <div className="mission" id="mission">
       <p
         ref={missionTextRef}
         className={`mission-text ${isVisible ? "visible" : ""}`}
