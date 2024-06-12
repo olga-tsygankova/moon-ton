@@ -1,6 +1,6 @@
 import "./Main.css";
 import { Header } from "../Header/Header";
-import { TextAnimation } from "./TextAnimation/TextAnimation";
+import { TextAnimation } from './TextAnimation';
 import { BridgeBtn } from "../../ui";
 import { OverviewButton } from "../../ui/Buttons/OverviewButton";
 
@@ -9,7 +9,7 @@ export const Main = () => {
     <div className="main">
       <Header />
       <div className="main-container">
-        <TextAnimation text="integrate.empower.bridge." />
+        <TextAnimation />
         <p className="main-subtitle">
           Advanced omnichain interoperability solutions for decentralized
           ecosystems
@@ -19,7 +19,7 @@ export const Main = () => {
           <OverviewButton>Explore ecosystem</OverviewButton>
         </div>
       </div>
-      <div className="portal-up"></div>
+      <div className="portal-up" />
     </div>
   );
 };

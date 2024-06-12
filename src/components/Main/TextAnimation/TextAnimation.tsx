@@ -1,56 +1,104 @@
-import { useSpring, animated } from 'react-spring';
-import './TextAnimation.css'
-import React, {useEffect, useMemo, useState} from "react";
+import { animated } from 'react-spring';
+import './TextAnimation.css';
+import React, { useCallback, useEffect, useState } from 'react';
+import { CharSpan } from './CharSpan';
 
+const words = ['integrate.', 'empower.', 'bridge.']; // 10 , 8 , 7
 
-    //TODO: решить как будут появляться буквы, после точек добавить пробелы, белый цвет
+type IOpacityParams = number[][]
 
-interface TextAnimationProps {
-    text: string;
-}
+const getInitialParams = (stringArray: string[]) => stringArray.reduce(
+  (acc, item) => {
+    return [...acc, Array(item.length).fill(0)];
+  }, [] as IOpacityParams);
 
-export const TextAnimation: React.FC<TextAnimationProps> = ({ text }) => {
-    const [charOpacities, setCharOpacities] = useState<number[]>([]);
+export const TextAnimation = () => {
+  const [opacityParams, setOpacityParams] = useState<IOpacityParams>(() => getInitialParams(words));
+  const [count, setCount] = useState<number>(0);
+  const [count2, setCount2] = useState<number>(0);
+  const [isAllShow, setIsAllShow] = useState(false);
+  const [highlight, setHighlight] = useState(-1);
 
-    //TODO: разбить по контейнерам каждое слово, на мобилке кривое
+  const handleChangeOpacity = useCallback(() => {
+    setOpacityParams(oldParams => {
 
+      return oldParams.map((word, index) => {
+        const newWordParam = [...oldParams[index]];
+        const randomIndex = Math.floor(Math.random() * word.length);
+        if (newWordParam[randomIndex] < 1) {
+          newWordParam[randomIndex] += 0.4;
+        }
+        if (index < 4) {
+          const lowLetter = newWordParam.findIndex(opacity => opacity < 0.4);
+          if (lowLetter > -1) { // Чтобы не было дырок в тексте ищем пустые
+            newWordParam[lowLetter] += 0.2;
+          }
+        }
+        return newWordParam;
+      });
+    });
 
-    useEffect(() => {
-        const opacities = text.split('').map(() => 0);
-        setCharOpacities(opacities);
+  }, []);
 
-        const timer = setInterval(() => {
-            const randomIndex = Math.floor(Math.random() * opacities.length);
-            if (opacities[randomIndex] < 1) {
-                opacities[randomIndex] += 0.4;
-                setCharOpacities([...opacities]);
-            }
-            if (opacities.every((o) => o >= 1)) {
-                clearInterval(timer);
-            }
-        }, 20);
+  useEffect(() => {
+    if (isAllShow) return;
 
+    const timer = setInterval(() => {
+      handleChangeOpacity();
+      setCount(count => count + 1);
+    }, 80);
 
-        return () => {
-            clearInterval(timer);
-        };
-    }, [text]);
+    const timer2 = setInterval(() => {
+      setOpacityParams(oldParams => {
+        if (oldParams.every(
+          wordParam => wordParam.every(opacity => opacity >= 1)
+        )
+        ) {
+          setIsAllShow(true);
+        }
+        setCount2(cnt => cnt + 1);
+        return oldParams;
+      });
+    }, 1e3);
 
-    return (
-        <animated.span className="text-container">
-            {text.split('').map((char, index) => (
-                <span
-                    key={index}
-                    style={{
-                        opacity: charOpacities[index],
-                        display: 'inline-block',
-                        textWrap: "nowrap",
-                        marginRight: char === '.' ? '0.3em' : '0'
-                    }}
-                >
-                    {char}
-                </span>
-            ))}
-        </animated.span>
-    );
+    return () => {
+      clearInterval(timer);
+      clearInterval(timer2);
+    };
+  }, [handleChangeOpacity, isAllShow]);
+
+  useEffect(() => {
+    if (!isAllShow) return;
+
+    setTimeout(() => setHighlight(0), 0);
+    setTimeout(() => setHighlight(1), 2e3);
+    setTimeout(() => setHighlight(2), 4e3);
+  }, [isAllShow]);
+
+  // console.log('count');
+  // console.log(count);
+  // console.log('count2');
+  // console.log(count2);
+
+  return (
+    <animated.span className="text-container">
+      {words.map((word, indexOfWord) => (
+        <span
+          style={{
+            ...(indexOfWord === highlight && {
+              color: 'white',
+              fontWeight: 700
+            })
+          }}
+        >
+          {word.split('').map((char, index) => (
+              <CharSpan
+                key={`${indexOfWord}_${index}`}
+                char={char}
+                opacity={opacityParams[indexOfWord][index]}
+              />
+            )
+          )}</span>))}
+    </animated.span>
+  );
 };
