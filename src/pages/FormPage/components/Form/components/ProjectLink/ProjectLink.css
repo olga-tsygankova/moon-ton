@@ -1,0 +1,85 @@
+.project-link {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-link__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-link__title {
+  font-size: 26px;
+  text-align: start;
+}
+
+.project-link:after {
+  content: " ";
+
+  border-bottom: 1px solid rgba(115, 115, 118, 0);
+  border-image: linear-gradient(to right, rgba(115, 115, 118, 0), #737376, rgba(115, 115, 118, 0)) 1;
+}
+
+.input-wrapper Input[name="projectTwitterLink"] {
+  background-image: url("../../../../../../ui/icons/twitter.svg");
+  background-size: 17px 17px;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+.input-wrapper Input[name="projectTelegramLink"] {
+  background-image: url("../../../../../../ui/icons/telegram.svg");
+  background-size: 17px 17px;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+.input-wrapper Input[name="projectWebsite"] {
+  background-image: url("../../../../../../ui/icons/web.svg");
+  background-size: 17px 17px;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .project-link {
+    gap: 50px;
+  }
+
+  .project-link__container {
+    width: 480px;
+    margin-right: auto;
+    margin-left: 35px;
+  }
+
+  .project-link__title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .input-wrapper {
+    flex-direction: row;
+  }
+
+  .project-link__container {
+    width: 630px;
+  }
+}

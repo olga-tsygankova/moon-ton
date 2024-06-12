@@ -1,0 +1,7 @@
+.form-page{
+  padding: 27px 15px 35px 15px;
+  background-image: url("../../../public/backgroind image main.png");
+  background-repeat: no-repeat;
+  background-size: auto 50%; /* 80% высоты экрана */
+  background-position: top right;
+}
