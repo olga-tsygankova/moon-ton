@@ -12,8 +12,22 @@
     @media (min-width: 1000px) {
         display: none;
     }
-
 }
 .burger-menu:active{
     box-shadow: 0 0 16.7px 0 #47BCFC94;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+    .burger-menu{
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .burger-menu{
+        display: none;
+    }
 }

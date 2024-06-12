@@ -1,34 +1,18 @@
 .mission {
   margin: 574px auto 0 auto;
   width: 330px;
-
-  @media (min-width: 620px) {
-    margin: 620px auto 0 auto;
-    padding: 0 35px;
-    width: 550px;
-
-  }
-  @media (min-width: 1000px) {
-    margin: 522px auto 0 auto;
-    width: 893px;
-  }
 }
 
 .mission-text {
-
   font-size: 24px;
   color: #1d1d1d;
-  white-space: pre-line;
   opacity: 1;
-
-  @media (min-width: 620px) {
-    font-size: 40px;
-  }
 }
 
 .mission-text.visible {
   animation: colorChange 0.5s ease-in-out forwards;
   animation-fill-mode: forwards;
+  text-wrap: wrap;
 }
 
 @keyframes colorChangeOnVisible {
@@ -52,6 +36,29 @@
   }
   100% {
     color: #f1f1f1;
+  }
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 620px) {
+  .mission {
+    margin: 620px auto 0 auto;
+    width: 550px;
+  }
+
+  .mission-text {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mission {
+    margin: 522px auto 0 auto;
+    width: 880px;
   }
 }
 

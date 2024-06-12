@@ -1,52 +1,54 @@
-.platform{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
-    text-decoration: none;
-    box-sizing: border-box;
+.platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-sizing: border-box;
 
-    outline: none;
-    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
-    border: none;
-    border-radius: 71px;
+  outline: none;
+  background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
+  border: none;
+  border-radius: 71px;
 
-    color: #F1F1F1;
-    font-weight: 600;
-    font-family: "Poppins Regular";
+  color: #F1F1F1;
+  font-weight: 600;
+  font-family: "Poppins Regular";
 
+  height: 50px;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
 
-    height: 50px;
-    transition: background-color 0.5s, box-shadow 0.5s;
-    @media (min-width: 620px) {
-        width:200px ;
-    }
-    @media (min-width: 1000px) {
-        height: 55px;
-        width:223px ;
+.platform p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  align-self: center;
+}
 
-    }
+.platform:hover {
+  box-shadow: 0 0 16.6px 0 #47BCFC94;
+  color: #F1F1F1;
 
 }
 
-.platform p{
-    margin: 0;
-    font-size: 16px;
-    font-weight: 500;
-    align-self: center;
-    @media (min-width: 620px) {
-
-    }
-    @media (min-width: 1000px) {
-    }
+.platform:active {
+  box-shadow: 0 0 40px 0 #47BCFC94;
 }
 
-.platform:hover
-{
-    box-shadow: 0 0 16.7px 0 #47BCFC94;
-}
-.platform:active
-{
-    box-shadow: 0 0 40px 0 #47BCFC94;
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .platform {
+    width: 200px;
+  }
 }
 
+@media (min-width: 1000px) {
+  .platform {
+    height: 55px;
+    width: 223px;
+  }
+}

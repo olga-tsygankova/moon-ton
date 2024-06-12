@@ -19,16 +19,6 @@
 
   width: 170px;
   height: 40px;
-
-  @media (min-width: 620px) {
-    width: 170px ;
-    height: 45px;
-  }
-  @media (min-width: 1000px) {
-    height: 55px;
-    width: 196px ;
-  }
-
 }
 
 .form-btn p {
@@ -36,11 +26,6 @@
   font-size: 16px;
   font-weight: 500;
   align-self: center;
-  @media (min-width: 620px) {
-
-  }
-  @media (min-width: 1000px) {
-  }
 }
 
 .form-btn:hover {
@@ -53,3 +38,20 @@
   box-shadow: 0 0 40px 0 #FFFFFF96;
 }
 
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .form-btn {
+    width: 170px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form-btn {
+    height: 55px;
+    width: 196px;
+  }
+}

@@ -1,109 +1,119 @@
-.advantages{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    color: #F1F1F1;
-    position: relative;
-    overflow-x: hidden;
-
-    @media (min-width: 620px) {
-    }
-
-    @media (min-width: 1000px) {
-    }
+.advantages {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #F1F1F1;
+  position: relative;
+  overflow-x: hidden;
 
 }
-.big-planet{
-    margin-left: auto;
-    position: absolute;
-    top: 0;
-    left: 20% ;
-    width: 480px;
-    height: auto;
-    overflow-x: hidden;
 
-    @media (min-width: 620px) {
-        right: -10% ;
-        width: 520px;
-    }
-    @media (min-width: 1000px) {
-        right: 0 ;
-        width: 630px;
-    }
-    @media (min-width: 1200px) {
-        right: 0 ;
-        width: 672px;
-
-    }
-
-}
-.big-planet svg{
-    width: 100%;
-    height: 100%;
+.big-planet {
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 480px;
+  height: auto;
+  overflow-x: hidden;
 }
 
-.small-planet{
-    margin-right: auto;
-    position: absolute;
-    bottom: 0;
-    left: -5%;
-    width: 224px;
-    height: auto;
-    @media (min-width: 620px) {
-        left: 5%;
-        width: 300px;
-    }
-    @media (min-width: 1200px) {
-        left: 2%;
-        width: 350px;
-    }
-
+.big-planet svg {
+  width: 100%;
+  height: 100%;
 }
-.small-planet svg{
-    width: 100%;
-    height: 100%;
+
+.small-planet {
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 224px;
+  height: auto;
+}
+
+.small-planet svg {
+  width: 100%;
+  height: 100%;
 }
 
 .text {
-    transform: translateY(50px);
-    transition: opacity 0.5s, transform 0.5s;
-    margin: 270px 15px 160px 15px;
-
-    @media (min-width: 620px) {
-        font-size: 64px;
-        width: 650px;
-        margin: 270px auto 180px auto;
-    }
-
-    @media (min-width: 1000px) {
-        font-size: 64px;
-        width: 483px;
-
-    }
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+  margin: 270px 15px 160px 15px;
 }
 
-.text h4{
-    font-size: 48px;
-    font-weight: 400;
-    margin: 0;
-    @media (min-width: 620px) {
-        font-size: 64px;
-    }
-
-    @media (min-width: 1000px) {
-        font-size: 64px;
-    }
+.text h4 {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
 }
-.text p{
-    font-size: 16px;
-    @media (min-width: 620px) {
-        font-size: 24px;
-    }
 
+.text p {
+  font-size: 16px;
 }
 
 .text.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 620px) {
+  .big-planet {
+    right: -10%;
+    width: 520px;
+  }
+
+  .text {
+    font-size: 64px;
+    width: 650px;
+    margin: 270px auto 180px auto;
+  }
+
+  .text h4 {
+    font-size: 64px;
+  }
+
+  .text p {
+    font-size: 24px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .big-planet {
+    right: 0;
+    width: 630px;
+  }
+
+  .small-planet {
+    left: 5%;
+    width: 300px;
+  }
+
+  .text {
+    font-size: 64px;
+    width: 483px;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  .big-planet {
+    right: 0;
+    width: 672px;
+  }
+
+  .small-planet {
+    left: 2%;
+    width: 350px;
+  }
+
 }
 

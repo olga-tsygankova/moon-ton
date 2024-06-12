@@ -1,126 +1,136 @@
-.main{
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    background-image: url("../../../public/backgroind image main.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 27px 15px 0 15px ;
+.main {
+  position: relative;
+  opacity: 0;
 
-    @media (min-width: 620px) {
-        background-size: 100% 100%;
-        background-position: 50% 50%;
-    }
+  animation: fadeIn 1s ease-in-out forwards;
 
-    @media (min-width: 1000px) {
-        padding: 0;
-    }
+  background-image: url("../../../public/backgroind image main.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding: 27px 15px 0 15px;
+
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.main-container{
-    box-sizing: border-box;
-    max-width: 1113px;
-    color: #4B4A4D;
-    margin: 118px auto 0 auto;
-
-    @media (min-width: 620px) {
-        margin-top: 108px;
-    }
-    @media (min-width: 1000px) {
-        margin: 232px auto 58px auto;
-    }
-}
-
-.main-btn{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-    @media (min-width: 620px) {
-        flex-direction: row;
-    }
-    @media (min-width: 1000px) {
-    }
-
-}
-.main-subtitle{
-    display: inline-block;
-    max-width: 330px;
-
-    color: #CDCDCD;
+  0% {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 2s 5s ease forwards;
-    font-size: 16px;
-    @media (min-width: 620px) {
-        max-width: 600px;
-        font-size: 20px;
-
-    }
-    @media (min-width: 1000px) {
-        max-width: 482px;
-        margin-bottom: 30px;
-        margin-top: 20px;
-        font-size: 20px;
-
-
-    }
-
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-   /*---------------------------------------------------------------------------------------------*/
-   /*                                  ANIMATION                                                  */
-   /*---------------------------------------------------------------------------------------------*/
+.main-container {
+  box-sizing: border-box;
+  max-width: 1113px;
+  color: #4B4A4D;
+
+  margin: 118px auto 0 auto;
+}
+
+.main-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  position: relative;
+}
+
+.main-subtitle {
+  display: inline-block;
+  max-width: 330px;
+
+  color: #CDCDCD;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s 5s ease forwards;
+
+  font-size: 16px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  ANIMATION                                                  */
+/*---------------------------------------------------------------------------------------------*/
 
 
 .main-subtitle br {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 2s 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s 1s ease forwards;
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
 .main-btn > * {
-    opacity: 0;
-    animation: fadeInButton 2s forwards;
+  opacity: 0;
+  animation: fadeInButton 2s forwards;
 }
 
 .main-btn > *:nth-child(1) {
-    animation-delay: 5s;
+  animation-delay: 5s;
 }
 
 .main-btn > *:nth-child(2) {
-    animation-delay: 5.5s;
+  animation-delay: 5.5s;
 }
 
 @keyframes fadeInButton {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .main {
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+  }
+  .main-container {
+    margin-top: 108px;
+  }
+  .main-btn{
+    flex-direction: row;
+  }
+  .main-subtitle {
+    max-width: 600px;
+    font-size: 20px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .main {
+    padding: 0;
+  }
+  .main-container {
+    margin: 232px auto 58px auto;
+  }
+  .main-subtitle {
+    max-width: 482px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}

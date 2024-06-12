@@ -1,85 +1,69 @@
-.right{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 
-    gap: 20px;
-    @media (min-width: 620px) {
-        align-items: end;
-
-    }
-    @media (min-width: 1200px) {
-    }
-    @media (min-width: 1440px) {
-    }
-}
-.ca_coming-soon{
-    box-sizing: border-box;
-    display: flex;
-    padding: 10px 10px 10px 20px ;
-    background: #0A0A0A;
-    border-radius: 50px;
-
-    height: 60px;
-    width: 253px;
-
-    gap: 50px;
-    @media (min-width: 620px) {
-    }
-    @media (min-width: 1200px) {
-    }
-    @media (min-width: 1440px) {
-    }
+  gap: 20px;
 }
 
-.ca_text{
-    display: flex;
-    gap: 5px;
-    align-self: center;
-    @media (min-width: 620px) {
-    }
-    @media (min-width: 1200px) {
-    }
-    @media (min-width: 1440px) {
-    }
-}
-.coming-soon{
-    font-weight: 400;
-    font-size: 15px ;
-    @media (min-width: 620px) {
-    }
-    @media (min-width: 1200px) {
-    }
-    @media (min-width: 1440px) {
-    }
-}
-.coming-soon .ca{
-    font-weight: 600;
-    font-size: 18px ;
-    vertical-align: center;
-    @media (min-width: 620px) {
-    }
-    @media (min-width: 1200px) {
-    }
-    @media (min-width: 1440px) {
-    }
+.ca_coming-soon {
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px 10px 10px 20px;
+  background: #0A0A0A;
+  border-radius: 50px;
+
+  height: 60px;
+  width: 253px;
+
+  gap: 50px;
+
 }
 
-.copy{
-    background: #161616;
-    display: flex;
-    justify-content: center;
-    border-radius: 23px;
-    @media (min-width: 620px) {
-    }
-    @media (min-width: 1200px) {
-    }
-    @media (min-width: 1440px) {
-    }
-}
-.copy svg{
-    width: 16px;
-    height: 16px;
-    margin: 12px;
+.ca_text {
+  display: flex;
+  gap: 5px;
+  align-self: center;
 
+}
+
+.coming-soon {
+  font-weight: 400;
+  font-size: 15px;
+
+}
+
+.coming-soon .ca {
+  font-weight: 600;
+  font-size: 18px;
+  vertical-align: center;
+}
+
+.copy {
+  background: #161616;
+  display: flex;
+  justify-content: center;
+  border-radius: 23px;
+
+}
+
+.copy svg {
+  width: 16px;
+  height: 16px;
+  margin: 12px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+@media (min-width: 620px) {
+  .right {
+    align-items: end;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
 }
