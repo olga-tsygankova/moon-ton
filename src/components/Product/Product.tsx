@@ -1,5 +1,4 @@
 import "./Product.css";
-import { WhiteBtn } from "../../ui";
 import { useEffect, useRef } from "react";
 import { FormBtn } from '../../ui/Buttons/FormBtn';
 
@@ -39,7 +38,7 @@ export const Product = () => {
     };
   }, []);
   return (
-    <div className="product">
+    <div className="product" id="product">
       <div className="for-developers" ref={forDevelopersRef}>
         <h4>For Developers</h4>
         <p>(Build on MoonTon)</p>
