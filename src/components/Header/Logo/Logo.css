@@ -1,13 +1,17 @@
-.logo{
-    margin-right: auto;
+.logo {
+  margin-right:180px;
+}
 
-    @media (min-width: 620px) {
-        margin-right: 0;
+@media (min-width: 620px) {
+  .logo {
+    margin-right: 0;
+  }
 
-    }
-    @media (min-width: 1000px) {
-        margin-right: 0;
+}
 
-    }
+@media (min-width: 1000px) {
+  .logo {
+    margin-right: 0;
+  }
 
 }

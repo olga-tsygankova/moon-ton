@@ -17,15 +17,6 @@
 
     height: 50px;
     transition: background-color 0.5s, box-shadow 0.5s;
-    @media (min-width: 620px) {
-        width: 317px ;
-    }
-    @media (min-width: 1000px) {
-        height: 55px;
-        width: 223px ;
-
-    }
-
 }
 
 .overview-btn p {
@@ -33,11 +24,6 @@
     font-size: 16px;
     font-weight: 500;
     align-self: center;
-    @media (min-width: 620px) {
-
-    }
-    @media (min-width: 1000px) {
-    }
 }
 
 .overview-btn:hover {
@@ -48,5 +34,22 @@
 
 .overview-btn:active {
     box-shadow: 0 0 40px 0 #FFFFFF96;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 620px) {
+    .overview-btn {
+        width: 317px ;
+    }
+}
+
+@media (min-width: 1000px) {
+    .overview-btn {
+        height: 55px;
+        width: 223px ;
+    }
 }
 

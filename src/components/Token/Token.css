@@ -5,39 +5,16 @@
   margin-top: 92px;
   margin-bottom: 432px;
   overflow-x: hidden;
-
-  @media (min-width: 620px) {
-    margin-bottom: 469px;
-    margin-top: 82px;
-    gap:70px;
-  }
-  @media (min-width: 1000px) {
-    margin: 386px auto 425px auto;
-    padding: 0 70px;
-    gap: 103px;
-    max-width: 1294px;
-  }
-  @media (min-width: 1200px) {
-    flex-direction: row;
-  }
 }
 
 .token-info {
   width: 321px;
-  @media (min-width: 620px) {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
+
 .token-info svg {
   right: -25%;
   position: relative;
   width: 100%;
-  @media (min-width: 620px) {
-    position: static;
-    width: 100%;
-  }
 }
 
 .token-text {
@@ -48,10 +25,6 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 3s, transform 1s;
-  @media (min-width: 620px) {
-    text-align: center;
-
-  }
 }
 
 .token-text.animate {
@@ -68,4 +41,45 @@
 .token-text.animate br {
   opacity: 1;
   transform: translateY(0);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+@media (min-width: 620px) {
+  .token {
+    margin-bottom: 469px;
+    margin-top: 82px;
+    gap: 70px;
+  }
+
+  .token-info {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .token-info svg {
+    position: static;
+    width: 100%;
+  }
+
+  .token-text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .token {
+    margin: 386px auto 425px auto;
+    padding: 0 70px;
+    gap: 103px;
+    max-width: 1294px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .token {
+    flex-direction: row;
+  }
 }

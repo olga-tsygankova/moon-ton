@@ -16,20 +16,26 @@
   opacity: 0;
   background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
   gap: 40px;
-  @media (min-width: 620px) {
-    width: 590px;
-    flex-direction: row;
 
-  }
-  @media (min-width: 1000px) {
-    width: 790px;
-  }
-  @media (min-width: 1440px) {
-    height: 260px;
-    margin: 132px auto 40px auto;
-    padding: 40px;
-    width: 1290px;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
 
-  }
+@media (min-width: 620px) {
+  .footer {
+  width: 590px;
+  flex-direction: row;}
+}
+@media (min-width: 1000px) {
+  .footer {
+  width: 790px;}
+}
+@media (min-width: 1440px) {
+  .footer {
+  height: 260px;
+  margin: 132px auto 40px auto;
+  padding: 40px;
+  width: 1290px;}
 
 }

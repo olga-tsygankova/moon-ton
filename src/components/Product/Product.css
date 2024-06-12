@@ -7,18 +7,6 @@
   flex-direction: column;
 
   align-items: center;
-  @media (min-width: 620px) {
-    margin: 0 35px;
-  }
-
-  @media (min-width: 1000px) {
-    margin: 0 50px;
-  }
-
-  @media (min-width: 1440px) {
-    width: 1290px;
-    margin: 0 auto;
-  }
 
 }
 
@@ -26,40 +14,16 @@
   opacity: 40%;
   margin-top: 707px; /* место для портала*/
   text-align: start;
-
-  @media (min-width: 620px) {
-    margin-top: 623px;
-    margin-right: auto;
-    width: 480px;
-  }
-
-  @media (min-width: 1000px) {
-    margin-top: 450px;
-    display: flex;
-    text-align: start;
-    flex-direction: column;
-  }
-
 }
 
 .for-developers h4 {
   font-size: 28px;
   font-weight: 500;
   margin: 0;
-  @media (min-width: 1000px) {
-    font-size: 32px;
-  }
 }
 
 .for-developers p {
   margin: 10px 0 20px 0;
-
-  @media (min-width: 620px) {
-  }
-
-  @media (min-width: 1000px) {
-    font-size: 16.6px;
-  }
 }
 
 .content {
@@ -70,57 +34,22 @@
   width: 330px;
   border-radius: 35px;
   background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
-  @media (min-width: 620px) {
-    width: 480px;
-  }
-
-  @media (min-width: 1000px) {
-    width: 410px;
-    padding: 34px 42px;
-
-  }
 }
 
 .content-title {
   margin: 0;
   font-weight: 500;
   font-size: 20px;
-
-  @media (min-width: 620px) {
-  }
-
-  @media (min-width: 1000px) {
-    font-size: 22px;
-  }
 }
 
 .content p {
   display: inline-block;
   width: 270px;
   font-size: 14px;
-
-  @media (min-width: 620px) {
-    width: 420px;
-
-  }
-
-  @media (min-width: 1000px) {
-    font-size: 16px;
-    width: 326px;
-  }
 }
 
 .partners-wrapper {
   display: flex;
-
-  @media (min-width: 620px) {
-    justify-content: end;
-    margin-left: auto;
-  }
-
-  @media (min-width: 1000px) {
-
-  }
 }
 
 .for-partners {
@@ -131,16 +60,6 @@
   gap: 20px;
 
   opacity: 40%;
-
-  @media (min-width: 620px) {
-    margin-top: 106px;
-
-  }
-
-  @media (min-width: 1000px) {
-    width: 410px;
-    margin-top: 94px;
-  }
 }
 
 .for-partners h4 {
@@ -148,23 +67,104 @@
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0;
-
-  @media (min-width: 620px) {
-    text-align: end;
-  }
-
-  @media (min-width: 1000px) {
-    font-size: 32px;
-    font-weight: 500;
-    margin: 0;
-
-  }
 }
 
 .for-developers.visible,
 .for-partners.visible {
   opacity: 1 !important;
 }
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .product {
+    margin: 0 35px;
+  }
+
+  .for-developers {
+    margin-top: 623px;
+    margin-right: auto;
+    width: 480px;
+  }
+
+  .content {
+    width: 480px;
+  }
+
+  .content p {
+    width: 420px;
+  }
+
+  .partners-wrapper {
+    justify-content: end;
+    margin-left: auto;
+  }
+
+  .for-partners {
+    margin-top: 106px;
+  }
+
+  .for-partners h4 {
+    text-align: end;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .product {
+    margin: 0 50px;
+  }
+
+  .for-developers {
+    margin-top: 450px;
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+  }
+
+  .for-developers h4 {
+    font-size: 32px;
+  }
+
+  .for-developers p {
+    font-size: 16.6px;
+  }
+
+  .content {
+    width: 410px;
+    padding: 34px 42px;
+  }
+
+  .content-title {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 16px;
+    width: 326px;
+  }
+
+  .for-partners {
+    width: 410px;
+    margin-top: 94px;
+  }
+
+  .for-partners h4 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .product {
+    width: 1290px;
+    margin: 0 auto;
+  }
+}
+
 
 
 

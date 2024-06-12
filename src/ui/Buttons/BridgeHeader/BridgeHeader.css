@@ -1,57 +1,63 @@
 .bridge-header {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 28px;
-    gap: 10px;
-    border-radius: 71px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+  gap: 10px;
+  border-radius: 71px;
 
-    outline: none;
-    border: none;
-    background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
-    padding: 0;
-    color: #F1F1F1;
-    height: 50px;
-    width: 250px;
-    @media (min-width: 620px) {
-        margin-top: 0;
-    }
-    @media (min-width: 1000px) {
-        background: none;
-        width: 77px;
-
-
-    }
-
+  outline: none;
+  border: none;
+  background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);
+  padding: 0;
+  color: #F1F1F1;
+  height: 50px;
+  width: 250px;
 }
 
 .bridge-header p {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
 
 .bridge-header:hover {
-    box-shadow: 0 0 16.7px 0 #47BCFC94;
-    @media (min-width: 1000px) {
-        box-shadow: none;
-    }
+  box-shadow: 0 0 16.7px 0 #47BCFC94;
 }
 
 
-.bridge-header:hover svg path,
-.bridge-header:hover p {
-    @media (min-width: 1000px) {
-        fill: #47BCFC;
-        color: #47BCFC;
-    }
+
+@media (min-width: 620px) {
+  .bridge-header {
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
-.bridge-header:active svg path,
-.bridge-header:active p {
-    @media (min-width: 1000px) {
-        fill: #47BCFC;
-        color: #47BCFC;
-    }
+
+@media (min-width: 1000px) {
+  .bridge-header {
+    background: none;
+    width: 77px;
+    margin-left: 0;
+  }
+
+  .bridge-header:hover {
+    box-shadow: none;
+  }
+
+  .bridge-header:hover svg path,
+  .bridge-header:hover p {
+    fill: #47BCFC;
+    color: #47BCFC;
+  }
+
+  .bridge-header:active svg path,
+  .bridge-header:active p {
+    fill: #47BCFC;
+    color: #47BCFC;
+  }
+
 }
+
 
 
