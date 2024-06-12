@@ -4,7 +4,7 @@
 
   animation: fadeIn 1s ease-in-out forwards;
 
-  background-image: url("../../../public/backgroind image main.png");
+  background-image: url("../../../../public/backgroind image main.png");
   background-size: auto 100%; /* 80% высоты экрана */
   background-position: top right;
   background-repeat: no-repeat;
@@ -26,6 +26,7 @@
   box-sizing: border-box;
   max-width: 1113px;
   color: #4B4A4D;
+  text-align: center;
 
   margin: 118px auto 0 auto;
 }

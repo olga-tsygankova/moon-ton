@@ -1,8 +1,8 @@
 import "./Main.css";
 import { Header } from "../Header/Header";
 import { TextAnimation } from './TextAnimation';
-import { BridgeBtn } from "../../ui";
-import { OverviewButton } from "../../ui/Buttons/OverviewButton";
+import { BridgeBtn } from "../../../ui";
+import { OverviewButton } from "../../../ui/Buttons/OverviewButton";
 
 export const Main = () => {
   return (

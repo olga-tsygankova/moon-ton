@@ -1,28 +1,20 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import { Main, Join } from './components';
-import { Mission } from './components/Mission/Mission';
-import { Product } from './components/Product';
-import { ForUsers } from './components/ForUsers';
-import { Footer } from './components/Footer';
-import { Advantages } from './components/Advantages';
-import { Roadmap } from './components/Roadmap';
-import { Token } from './components/Token';
+import { MainPage } from "./pages/MainPage/MainPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { FormPage } from "./pages/FormPage";
 
 function App() {
   return (
-    <div className="App">
-      <Main/>
-      <Mission/>
-      <Product/>
-      <ForUsers/>
-      <Advantages/>
-      <Roadmap/>
-      <Token/>
-      <Join/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/form-page" element={<FormPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

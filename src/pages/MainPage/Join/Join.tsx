@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { BlueBtn } from '../../ui/Buttons/BlueBtn';
-import { JoinIcon } from '../../ui/svg';
+import { BlueBtn } from '../../../ui/Buttons/BlueBtn';
+import { JoinIcon } from '../../../ui/svg';
 
 import './Join.css';
 
