@@ -10,75 +10,75 @@ export const Advantages = () => {
   const smallPlanetRef = useRef(null);
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "top 0",
-        end: "bottom 50%",
-        scrub: true,
-      },
-    });
-
-    tl.to(bigPlanetRef.current, {
-      x: "0",
-      y: "0",
-      rotation: "0deg",
-      duration: 0.5,
-    })
-      .to(
-        smallPlanetRef.current,
-        {
-          x: "0",
-          y: "0",
-          rotation: "0deg",
-          duration: 0.5,
-        },
-        "<",
-      )
-      .to(bigPlanetRef.current, {
-        x: "-90%",
-        y: "0",
-        rotation: "-30deg",
-        duration: 0.5,
-      })
-      .to(
-        smallPlanetRef.current,
-        {
-          x: "100%",
-          y: "0",
-          rotation: "0deg",
-          duration: 0.5,
-        },
-        "<",
-      )
-
-      .to(bigPlanetRef.current, {
-        x: "-110%",
-        y: "130%",
-        rotation: "-30deg",
-        duration: 0.5,
-      })
-      .to(
-        smallPlanetRef.current,
-        {
-          x: "220%",
-          y: "-280%",
-          rotation: "30deg",
-          duration: 0.5,
-        },
-        "<",
-      );
-
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ref.current,
+  //       start: "top 0",
+  //       end: "bottom 50%",
+  //       scrub: true,
+  //     },
+  //   });
+  //
+  //   tl.to(bigPlanetRef.current, {
+  //     x: "0",
+  //     y: "0",
+  //     rotation: "0deg",
+  //     duration: 0.5,
+  //   })
+  //     .to(
+  //       smallPlanetRef.current,
+  //       {
+  //         x: "0",
+  //         y: "0",
+  //         rotation: "0deg",
+  //         duration: 0.5,
+  //       },
+  //       "<",
+  //     )
+  //     .to(bigPlanetRef.current, {
+  //       x: "-90%",
+  //       y: "0",
+  //       rotation: "-30deg",
+  //       duration: 0.5,
+  //     })
+  //     .to(
+  //       smallPlanetRef.current,
+  //       {
+  //         x: "100%",
+  //         y: "0",
+  //         rotation: "0deg",
+  //         duration: 0.5,
+  //       },
+  //       "<",
+  //     )
+  //
+  //     .to(bigPlanetRef.current, {
+  //       x: "-110%",
+  //       y: "130%",
+  //       rotation: "-30deg",
+  //       duration: 0.5,
+  //     })
+  //     .to(
+  //       smallPlanetRef.current,
+  //       {
+  //         x: "220%",
+  //         y: "-280%",
+  //         rotation: "30deg",
+  //         duration: 0.5,
+  //       },
+  //       "<",
+  //     );
+  //
+  //   return () => {
+  //     tl.kill();
+  //     ScrollTrigger.getAll().forEach((t) => t.kill());
+  //   };
+  // }, []);
   return (
-    <div className="advantages" id="advantages" ref={ref}>
+    <div className="advantages" id="advantages"  ref={ref}>
       <div className="big-planet" ref={bigPlanetRef}>
         <svg
           width="672"
@@ -117,8 +117,8 @@ export const Advantages = () => {
               y2="167.62"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#47BCFC" />
-              <stop offset="1" stop-color="#47BCFC" stop-opacity="0" />
+              <stop stop-color="#47BCFC"/>
+              <stop offset="1" stop-color="#47BCFC" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint1_linear_8_555"
@@ -128,8 +128,8 @@ export const Advantages = () => {
               y2="388.037"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#47BCFC" />
-              <stop offset="1" stop-color="#47BCFC" stop-opacity="0" />
+              <stop stop-color="#47BCFC"/>
+              <stop offset="1" stop-color="#47BCFC" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint2_linear_8_555"
@@ -139,8 +139,8 @@ export const Advantages = () => {
               y2="130.185"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint3_linear_8_555"
@@ -150,8 +150,8 @@ export const Advantages = () => {
               y2="122.808"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint4_linear_8_555"
@@ -161,13 +161,17 @@ export const Advantages = () => {
               y2="119.875"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
           </defs>
         </svg>
       </div>
-      <div className="text">
+      <section className="beam">
+        <span className="beam-advantages" ></span>
+        <span className="beam-advantages" ></span>
+      </section>
+      <div className="text" >
         <h4>Integrability.</h4>
         <p>
           MoonTon provides secure and seamles cross-chain API integration into
@@ -215,8 +219,8 @@ export const Advantages = () => {
               y2="52.777"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint1_linear_8_562"
@@ -226,8 +230,8 @@ export const Advantages = () => {
               y2="49.933"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint2_linear_8_562"
@@ -237,8 +241,8 @@ export const Advantages = () => {
               y2="114.622"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
             <linearGradient
               id="paint3_linear_8_562"
@@ -248,8 +252,8 @@ export const Advantages = () => {
               y2="128.553"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
+              <stop stop-color="white"/>
+              <stop offset="1" stop-color="white" stop-opacity="0"/>
             </linearGradient>
           </defs>
         </svg>
