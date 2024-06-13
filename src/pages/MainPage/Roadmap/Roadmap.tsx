@@ -55,6 +55,10 @@ export const Roadmap = () => {
             <div className="scroll-circle">
               <Circle />
             </div>
+            <section className="beam-scroll">
+              <span></span>
+              <span></span>
+            </section>
           </div>
           <div className="points-wrapper">
             <div className="roadmap-title">
@@ -89,6 +93,10 @@ export const Roadmap = () => {
             <div className="scroll-circle">
               <Circle />
             </div>
+            <section className="beam-scroll">
+              <span></span>
+              <span></span>
+            </section>
           </div>
           <div className="points-wrapper">
             <div className="roadmap-title">
@@ -181,6 +189,10 @@ export const Roadmap = () => {
             <div className="scroll-circle">
               <Circle />
             </div>
+            <section className="beam-scroll">
+              <span></span>
+              <span></span>
+            </section>
           </div>
           <div className="points-wrapper">
             <div className="roadmap-title">
@@ -253,6 +265,10 @@ export const Roadmap = () => {
             <div className="scroll-circle">
               <Circle />
             </div>
+            <section className="beam-scroll">
+              <span></span>
+              <span></span>
+            </section>
           </div>
           <div className="points-wrapper">
             <div className="roadmap-title">

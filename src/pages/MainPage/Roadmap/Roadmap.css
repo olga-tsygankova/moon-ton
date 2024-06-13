@@ -1,66 +1,108 @@
-.roadmap {
-  display: flex;
 
-  margin-right: auto;
-  padding-left: 5px;
-  margin-top: 100px;
-  overflow-x: hidden;
-  gap: 20px;
-}
-
-.roadmap-info {
+.roadmap-info{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap:50px;
+  margin-top: 100px;
+  padding: 0 15px;
+}
+.scroll{
+  margin-top: 10px;
+  position: relative;
 }
 
-.q2, .q3, .q4, .q2025 {
+.q2,.q3,.q4,.q2025{
   display: flex;
-  flex-direction: row;
-  color: #F1F1F1;
   gap: 20px;
-  opacity: 20%;
+  overflow-y:hidden ;
 }
-.scroll-circle{
-  width: 20px;
-}
-.scroll-circle svg{
-  width: 100%;
-}
-.points-wrapper{
-  width: 300px;
-}
-.roadmap-title {
+
+.roadmap-title{
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
-h5, .year {
-  margin: 0;
-  font-weight: 500;
+.roadmap-title h5 {
+  color: #F1F1F1;
   font-size: 28px;
+  font-weight: 500;
+  margin: 0 ;
 }
 
 .year {
-  color: #36B0F1;
+  font-size: 28px;
+  color: #47BCFC;
 }
 
 .points {
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .points-item {
-  border-radius: 700px;
-  white-space: pre-wrap;
-  text-align: start;
+  color: #F1F1F1;
+  background:
+  linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
+
   display: flex;
-  gap: 15px;
-  align-items: center;
+  gap:15px;
+  margin-right: auto;
+
   font-size: 14px;
+  border-radius: 700px;
   padding: 15px 20px;
-  background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
+  align-items: center;
+}
+.beam-scroll{
+  z-index: 100;
+
+}
+.beam-scroll span{
+  position: absolute;
+
+  animation: animate-roadmap-beam 3s linear infinite;
+}
+.beam-scroll span:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg,#fff,transparent);
+}
+
+
+@keyframes animate-roadmap-beam{
+  0%
+  {
+    transform: rotate(270deg) translateX(0);
+  }
+  70%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    transform: rotate(270deg) translateX(-900px);
+    opacity: 0;
+  }
+}
+.beam-scroll span:nth-child(1){
+  top: 200px;/*верхняя координата*/
+  left: 15px;/*правая координата*/
+
+  animation-delay: 0s;/*задержка анимации*/
+  animation-duration: 3s;/*длительность анимации*/
+}
+.beam-scroll span:nth-child(2){
+  top: 200px;/*верхняя координата*/
+  left: 15px;/*правая координата*/
+
+  animation-delay: 1.7s;/*задержка анимации*/
+  animation-duration: 3s;/*длительность анимации*/
 }
 
 
@@ -70,67 +112,84 @@ h5, .year {
 
 
 @media (min-width: 620px) {
-
-  .points-wrapper{
-    width: 580px;
+  .points{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 550px;
   }
-  .q2, .q3, .q4, .q2025 {
-    width: 580px;
+  .points-item{
+    margin-right: 0;
   }
-  .roadmap {
-    margin-top: 90px;
-    width: 580px;
-    padding-left: 25px;
-
-  }
-
-  .roadmap-info {
-    width: 500px;
-  }
-
-  h5, .year {
-    font-size: 35.2px;
-  }
-
-  .points-item {
-    white-space: nowrap;
+  .roadmap-title{
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: 1000px) {
-  .q2, .q3, .q4, .q2025 {
-    width: 880px;
+  .roadmap{
+    margin-left: auto;
+    margin-right:auto ;
   }
-  .roadmap-info {
-    width: 880px;
-
+  .q2,.q3,.q4,.q2025{
+    width: 900px;
   }
-  .roadmap {
-    padding: 0 75px 0 61px;
-    margin-top: 100px;
-    gap: 90px;
-    width: 880px;
-  }
-
-  .points-item {
-    padding: 20px 35px;
-    font-size: 18px;
+  .points-wrapper{
+    width: 900px;
   }
   .points{
-    width: 880px;
-
+    width: auto;
   }
+  .roadmap-info{
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px;
+  }
+
+  .roadmap-title{
+    margin-bottom: 30px;
+  }
+  .roadmap-title h5 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  .year {
+    font-size: 35px;
+  }
+  .points-item{
+    font-size: 18px;
+  }
+
+
 }
 
 @media (min-width: 1200px) {
-  .roadmap-info {
-    width: 900px;
-    gap: 100px;
-  }
+
 }
 
 @media (min-width: 1440px) {
-  .roadmap-info {
-    width: 1180px;
+  .roadmap{
+    margin-left: auto;
+    margin-right:auto ;
   }
+  .q2,.q3,.q4,.q2025{
+    width: 900px;
+  }
+  .points-wrapper{
+    width: 900px;
+  }
+  .points{
+    width: auto;
+  }
+  .roadmap-info{
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px;
+  }
+
+  .roadmap-title{
+    margin-bottom: 30px;
+  }
+
+
 }

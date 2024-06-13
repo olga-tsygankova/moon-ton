@@ -200,13 +200,13 @@
   }
 
     .beam-footer span:nth-child(1){
-      top: -2000px;/*верхняя координата*/
+      top: -1500px;/*верхняя координата*/
     }
     .beam-footer span:nth-child(2){
-      top: -1900px;
+      top: -1500px;
     }
     .beam-footer span:nth-child(3){
-      top: -2000px;
+      top: -1500px;
     }
 
 
@@ -221,7 +221,7 @@
       }
       100%
       {
-        transform: rotate(270deg) translateX(-2500px);
+        transform: rotate(270deg) translateX(-2200px);
         opacity: 0;
       }
     }

@@ -13,7 +13,7 @@
   margin-left: auto;
   position: absolute;
   top: 0;
-  left: 20%;
+  right: -20%;
   width: 480px;
   height: auto;
 }
@@ -68,7 +68,7 @@
   .advantages{
     margin-right: auto;
     margin-left: auto;
-    width: 600px;
+    width: auto;
   }
   .big-planet {
     right: -20%;
@@ -93,13 +93,15 @@
 }
 
 @media (min-width: 1000px) {
+  .advantages{
+  }
   .big-planet {
-    right: -40%;
+    right: 0%;
     width: 630px;
   }
 
   .small-planet {
-    left: -25%;
+    left: 0;
     width: 300px;
   }
 
