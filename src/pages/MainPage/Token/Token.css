@@ -6,6 +6,7 @@
   margin-bottom: 432px;
   overflow-x: hidden;
   z-index: 1000;
+  height: auto;
 }
 
 .circle1, .circle2 {
@@ -13,16 +14,17 @@
 }
 
 .token-info {
-  width: 321px;
 }
 
 .token-info svg {
-  right: -25%;
+  top:0;
+  left: 25%;
   position: relative;
   width: 100%;
 }
 
 .token-text {
+  width: 330px;
   color: #F1F1F1;
   font-size: 16px;
   line-height: 24px;
@@ -72,6 +74,7 @@
 
   .token-text {
     text-align: center;
+    width: 480px;
   }
 }
 
@@ -81,6 +84,7 @@
     padding: 0 70px;
     gap: 103px;
     max-width: 1294px;
+    height: 650px;
   }
 }
 
