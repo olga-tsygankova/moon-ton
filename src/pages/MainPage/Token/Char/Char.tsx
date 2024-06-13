@@ -67,7 +67,7 @@ export const Char = () => {
         <div className="char">
             <div className="char-item" ref={char1Ref}>
                 <div className="rectangle" style={{
-                    width: "160px", height: "70px"
+                    width: "160px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">10%</div>
@@ -76,7 +76,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char2Ref}>
                 <div className="rectangle" style={{
-                    width: "80px", height: "70px"
+                    width: "80px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">5%</div>
@@ -85,7 +85,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char3Ref}>
                 <div className="rectangle" style={{
-                    width: "160px", height: "70px"
+                    width: "160px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">10%</div>
@@ -94,7 +94,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char4Ref}>
                 <div className="rectangle" style={{
-                    width: "240px", height: "70px"
+                    width: "240px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">15%</div>
@@ -103,7 +103,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char5Ref}>
                 <div className="rectangle" style={{
-                    width: "160px", height: "70px"
+                    width: "160px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">10%</div>
@@ -112,7 +112,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char6Ref}>
                 <div className="rectangle" style={{
-                    width: "240px", height: "70px"
+                    width: "240px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">15%</div>
@@ -121,7 +121,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char7Ref}>
                 <div className="rectangle" style={{
-                    width: "130px", height: "70px"
+                    width: "130px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">8%</div>
@@ -130,7 +130,7 @@ export const Char = () => {
             </div>
             <div className="char-item" ref={char8Ref}>
                 <div className="rectangle" style={{
-                    width: "430px", height: "70px"
+                    width: "430px"
                 }}></div>
                 <div className="rectangle-value">
                     <div className="percent">27%</div>

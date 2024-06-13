@@ -1,9 +1,10 @@
 import "./Token.css"
 import {Char} from "./Char/Char";
-import {useEffect, useRef} from "react";
+import { useEffect, useRef, useState } from 'react';
 
 const TokenText = () => {
     const textRef = useRef(null);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -31,7 +32,7 @@ const TokenText = () => {
     }, []);
 
     return (
-        <p ref={textRef} className="token-text">
+        <div ref={textRef} className="token-text">
             The $MOON token is integral to the Moon TON ecosystem,
             ensuring economic equilibrium through token
             burning,
@@ -39,20 +40,45 @@ const TokenText = () => {
             development. It supports NCY incentives and acts
             as a governance tool, enabling stakeholder participation
             in decision-making
-        </p>
+        </div>
     );
 };
 
 
 export const Token = () => {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const circle1 = document.querySelector('.circle1');
+            const circle2 = document.querySelector('.circle2');
+
+            const newScrollY = window.scrollY;
+
+            const rotation1 = newScrollY % 360; // Движение по часовой стрелке
+            const rotation2 = 360 - (newScrollY % 360); // Движение против часовой стрелки
+
+            (circle1 as HTMLElement).style.transform = `rotate(${rotation1}deg)`;
+            (circle2 as HTMLElement).style.transform = `rotate(${rotation2}deg)`;
+
+            setScrollY(newScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className="token" id="token">
             <Char/>
             <div className="token-info">
                 <svg width="446" height="446" viewBox="0 0 446 446" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="222.851" cy="222.851" r="222.265" stroke="url(#paint0_linear_8_472)"
+                    <circle className="circle1" cx="222.851" cy="222.851" r="222.265" stroke="url(#paint0_linear_8_472)"
                             stroke-width="1.1729"/>
-                    <circle cx="222.265" cy="222.265" r="195.875" stroke="url(#paint1_linear_8_472)"
+                    <circle className="circle2" cx="222.265" cy="222.265" r="195.875" stroke="url(#paint1_linear_8_472)"
                             stroke-width="1.1729"/>
                     <path
                         d="M192.885 312.517L285.016 285.792L292.195 261.347L200.232 287.502M192.885 312.517L200.232 287.502M192.885 312.517L129.666 240.843L137.09 215.565L200.232 287.502M193.334 245.307L214.554 238.74L228.863 255.742"
