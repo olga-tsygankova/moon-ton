@@ -1,5 +1,6 @@
 import './Mission.css';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { PortalUp } from '../../../ui/svg';
 import { WordSpan } from './WordSpan';
 
 const text =
@@ -48,6 +49,9 @@ export const Mission = () => {
 
   return (
     <div className="mission" id="mission">
+      <div className="portal-up">
+        <PortalUp/>
+      </div>
       <p
         ref={missionTextRef}
         className="mission-text"

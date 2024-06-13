@@ -10,6 +10,13 @@
 
 }
 
+.portal-down {
+  /*height: 574px;*/
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
 .for-developers {
   opacity: 40%;
   margin-top: 707px; /* место для портала*/
