@@ -1,7 +1,8 @@
 .roadmap {
   display: flex;
-  margin-left: auto;
+
   margin-right: auto;
+  padding-left: 5px;
   margin-top: 100px;
   overflow-x: hidden;
   gap: 20px;
@@ -11,17 +12,24 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 300px;
 }
 
 .q2, .q3, .q4, .q2025 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: #F1F1F1;
   gap: 20px;
   opacity: 20%;
 }
-
+.scroll-circle{
+  width: 20px;
+}
+.scroll-circle svg{
+  width: 100%;
+}
+.points-wrapper{
+  width: 300px;
+}
 .roadmap-title {
   display: flex;
   gap: 10px;
@@ -55,14 +63,25 @@ h5, .year {
   background: linear-gradient(260.84deg, #1C1C23 63.69%, #000000 116.72%);
 }
 
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 
 
 @media (min-width: 620px) {
+
+  .points-wrapper{
+    width: 580px;
+  }
+  .q2, .q3, .q4, .q2025 {
+    width: 580px;
+  }
   .roadmap {
     margin-top: 90px;
+    width: 580px;
+    padding-left: 25px;
+
   }
 
   .roadmap-info {
@@ -79,16 +98,27 @@ h5, .year {
 }
 
 @media (min-width: 1000px) {
+  .q2, .q3, .q4, .q2025 {
+    width: 880px;
+  }
+  .roadmap-info {
+    width: 880px;
+
+  }
   .roadmap {
-    max-width: 1304px;
     padding: 0 75px 0 61px;
     margin-top: 100px;
     gap: 90px;
+    width: 880px;
   }
 
   .points-item {
     padding: 20px 35px;
     font-size: 18px;
+  }
+  .points{
+    width: 880px;
+
   }
 }
 

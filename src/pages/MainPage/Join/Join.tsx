@@ -96,20 +96,27 @@ export const Join = () => {
   }, [isAnimating]);
 
   return (
-    <div className="join" ref={joinRef}>
-      <div className="join-title">
-        <h2>
-          <span>Join MoonTON Ecosystem</span>
-        </h2>
-      </div>
+    <>
+      <div className="join" ref={joinRef}>
+        <div className="join-title">
+          <h2>
+            <span>Join MoonTON Ecosystem</span>
+          </h2>
+        </div>
 
-      <div className="join-btn" ref={joinBtnRef}>
-        <BlueBtn>
-          <JoinIcon/>
-          Join MoonTON Ecosystem
-        </BlueBtn>
-      </div>
+        <div className="join-btn" ref={joinBtnRef}>
+          <BlueBtn>
+            <JoinIcon/>
+            Join MoonTON Ecosystem
+          </BlueBtn>
+        </div>
 
-    </div>
+      </div>
+      <section className="beam-footer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </section>
+    </>
   );
 };

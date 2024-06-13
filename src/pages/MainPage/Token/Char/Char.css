@@ -3,17 +3,22 @@
   flex-direction: column;
   gap: 25px;
   padding: 15px 15px;
+  z-index: 1000;
 }
 
 .char-item {
   display: flex;
   gap: 25px;
   opacity: 10%;
+  position: relative;
+  z-index: 2000;
 }
 
 .rectangle {
   height: 50px;
   align-self: center;
+  position: relative;
+  z-index: 1000;
 
 
   background: linear-gradient(-90deg, #47BCFC 0%, rgba(71, 188, 252, 0) 100%);
@@ -25,7 +30,8 @@
   display: flex;
   gap: 13px;
   align-self: center;
-  text-align: start;
+  text-align: start;position: relative;
+  z-index: 1000;
 }
 
 .percent {

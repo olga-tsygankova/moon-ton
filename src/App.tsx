@@ -8,7 +8,7 @@ import { FormPage } from "./pages/FormPage";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app" style={{ overflow: "hidden" }}>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/form-page" element={<FormPage />} />
