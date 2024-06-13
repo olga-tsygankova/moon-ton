@@ -1,0 +1,30 @@
+.letter,
+.wordSpan,
+.spaceSpan {
+  display: inline-block;
+  color: #1d1d1d;
+}
+
+
+.letter.isVisible {
+  --duration: 0.07s;
+  --delay: 0.05s;
+  animation-name: colorChangeOnVisible;
+  animation-duration: calc(var(--duration) * var(--i));
+  animation-delay: calc(var(--delay) * var(--i));
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.spaceSpan {
+  margin-right: 0.3em;
+}
+
+@keyframes colorChangeOnVisible {
+  0% {
+    color: #1d1d1d;
+  }
+  30%, 100% {
+    color: #f1f1f1;
+  }
+}
