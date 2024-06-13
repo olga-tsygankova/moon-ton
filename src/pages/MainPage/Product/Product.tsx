@@ -72,12 +72,12 @@ export const Product = () => {
             <p>
               Expose your project to new ecosystems and broaden your user base
             </p>
-            <FormBtn >Make Us IOLO</FormBtn>
+            <FormBtn handleBridgeClick={handleBridgeClick} >Make Us IOLO</FormBtn>
           </div>
           <div className="content">
             <div className="content-title">OAS (Omnichain Airdrop System)</div>
             <p>Level up your community engagement with omnichain airdrops</p>
-            <FormBtn >Get OAS</FormBtn>
+            <FormBtn handleBridgeClick={handleBridgeClick} >Get OAS</FormBtn>
           </div>
         </div>
       </div>
