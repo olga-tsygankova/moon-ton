@@ -7,36 +7,7 @@
   font-size: 24px;
   color: #1d1d1d;
   opacity: 1;
-}
-
-.mission-text.visible {
-  animation: colorChange 0.5s ease-in-out forwards;
-  animation-fill-mode: forwards;
-  text-wrap: wrap;
-}
-
-@keyframes colorChangeOnVisible {
-  0% {
-    color: #1d1d1d;
-  }
-  30% {
-    color: #f1f1f1;
-  }
-  100% {
-    color: #f1f1f1;
-  }
-}
-
-@keyframes colorChange {
-  0% {
-    color: #1d1d1d;
-  }
-  20% {
-    color: #f1f1f1;
-  }
-  100% {
-    color: #f1f1f1;
-  }
+  text-align: center;
 }
 
 /*---------------------------------------------------------------------------------------------*/

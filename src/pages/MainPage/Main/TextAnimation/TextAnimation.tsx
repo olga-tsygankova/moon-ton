@@ -81,6 +81,7 @@ export const TextAnimation = () => {
     <animated.span className="text-container">
       {words.map((word, indexOfWord) => (
         <span
+          key={word}
           className={cn('word-span', { highlight: indexOfWord === highlight })}
         >
           {word.split('').map((char, index) => (
