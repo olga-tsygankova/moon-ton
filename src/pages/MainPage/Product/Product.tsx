@@ -2,6 +2,7 @@ import "./Product.css";
 import { useEffect, useRef } from "react";
 import { FormBtn } from '../../../ui/Buttons/FormBtn';
 import { useNavigate } from 'react-router-dom';
+import { PortalDown } from '../../../ui/svg';
 export const Product = () => {
   const forDevelopersRef = useRef(null);
   const forPartnersRef = useRef(null);
@@ -43,8 +44,12 @@ export const Product = () => {
       observer.disconnect();
     };
   }, []);
+
   return (
     <div className="product" id="product">
+      <div className="portal-down">
+        <PortalDown />
+      </div>
       <div className="for-developers" ref={forDevelopersRef}>
         <h4>For Developers</h4>
         <p>(Build on MoonTon)</p>

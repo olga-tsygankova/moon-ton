@@ -1,5 +1,11 @@
+.portal-up {
+  height: 574px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
 .mission {
-  margin: 574px auto 0 auto;
+  margin: 0 auto 0 auto;
   width: 330px;
 }
 
@@ -16,8 +22,11 @@
 
 
 @media (min-width: 620px) {
+  .portal-up {
+    height: 620px
+  }
   .mission {
-    margin: 620px auto 0 auto;
+    margin: 0 auto 0 auto;
     width: 550px;
   }
 
@@ -27,8 +36,11 @@
 }
 
 @media (min-width: 1000px) {
+  .portal-up {
+    height: 522px
+  }
   .mission {
-    margin: 522px auto 0 auto;
+    margin: 0 auto 0 auto;
     width: 880px;
   }
 }
