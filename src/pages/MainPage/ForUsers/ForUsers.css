@@ -5,10 +5,10 @@
   margin: 150px 15px 128px 15px;
 }
 
-h2 {
+.for-users__title {
   font-size: 60px;
-
   position: sticky;
+
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
@@ -110,7 +110,7 @@ h2 {
     margin: 200px auto 329px auto;
   }
 
-  h2 {
+  .for-users__title {
     font-size: 80px;
   }
 
@@ -137,7 +137,7 @@ h2 {
     width: 1170px;
   }
 
-  h2 {
+  .for-users__title {
     font-size: 96px;
     font-weight: 500;
   }
