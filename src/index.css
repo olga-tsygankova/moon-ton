@@ -7,6 +7,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Poppins Bold';
   src: url('../public/fonts/Poppins-Bold/Poppins-Bold.eot');
@@ -27,10 +28,14 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Poppins Regular" ;
+  font-family: "Poppins Regular";
   margin: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,5 +44,5 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }

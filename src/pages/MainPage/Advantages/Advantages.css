@@ -5,6 +5,7 @@
   color: #F1F1F1;
   position: relative;
   overflow-x: hidden;
+  text-align: center;
 
 }
 
@@ -72,8 +73,9 @@
   .text {
     font-size: 64px;
     width: 650px;
-    margin: 270px auto 180px auto;
+    margin: 270px auto 380px auto;
   }
+
 
   .text h4 {
     font-size: 64px;

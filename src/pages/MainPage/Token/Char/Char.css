@@ -1,31 +1,68 @@
-.char{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.char {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 15px;
 }
-.char-item{
-    display: flex;
-    gap: 25px;
-    opacity: 10%;
+
+.char-item {
+  display: flex;
+  gap: 25px;
+  opacity: 10%;
 }
+
 .rectangle {
-    background: linear-gradient(-90deg, #47BCFC 0%, rgba(71, 188, 252, 0) 100%);
-    border-radius: 7.52px ;
+  height: 50px;
+  align-self: center;
+
+
+  background: linear-gradient(-90deg, #47BCFC 0%, rgba(71, 188, 252, 0) 100%);
+  border-radius: 7.52px;
 }
-.rectangle-value{
-    color: #F1F1F1;
-    display: flex;
-    gap: 13px;
-    align-self: center;
-    text-align: start;
+
+.rectangle-value {
+  color: #F1F1F1;
+  display: flex;
+  gap: 13px;
+  align-self: center;
+  text-align: start;
 }
-.percent{
+
+.percent {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.percent-title {
+  font-weight: 400;
+  font-size: 14px;
+  align-self: center;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+@media (min-width: 620px) {
+  .percent {
     font-weight: 700;
     font-size: 25px;
-}
-.percent-title{
+  }
+
+  .percent-title {
     font-weight: 400;
     font-size: 20px;
     align-self: center;
+  }
+
+  .rectangle {
+    height: 50px;
+  }
+
 
 }
+
+@media (min-width: 1000px) {
+
+}
+
+
