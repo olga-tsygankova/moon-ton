@@ -31,7 +31,7 @@ export const ForUsers = () => {
 
   return (
     <div className="for-users" ref={ref} onScroll={handleScroll}>
-      <h2 ref={forUsersRef}>For Users</h2>
+      <h2 className="for-users__title" ref={forUsersRef}>For Users</h2>
       <div className="card-wrapper">
         <div className="card">
           <div className="card-title">MoonTON Omnichain Swap</div>
