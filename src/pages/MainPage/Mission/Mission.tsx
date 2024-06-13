@@ -1,11 +1,15 @@
-import "./Mission.css";
-import { useEffect, useRef, useState } from "react";
+import './Mission.css';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { PortalUp } from '../../../ui/svg';
+import { WordSpan } from './WordSpan';
+
+const text =
+  'Our mission is to ensure seamless, secure, and efficient omnichain interaction between ton and other blockchain ecosystems';
+
 
 export const Mission = () => {
   const missionTextRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
-  //TODO: разбитую на буквы строку нужно после отработки анимации преобразовать обратно в строчу чтобы был перенос текста
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,7 +19,7 @@ export const Mission = () => {
         });
       },
       {
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 0.5, // Триггерить событие, когда элемент виден на 50% или больше
       },
     );
@@ -31,31 +35,36 @@ export const Mission = () => {
     };
   }, []);
 
-  const renderMissionText = () => {
-    const text =
-      "Our mission is to ensure seamless, secure, and efficient omnichain interaction between ton and other blockchain ecosystems";
-    return text.split("").map((char, index) => (
-      <span
-        key={index}
-        style={{
-          display: "inline-block",
-          animation: `${isVisible ? "colorChangeOnVisible" : "colorChangePerLetter"} ${
-            0.1 * (index + 1)
-          }s ease-in-out forwards`,
-        }}
-      >
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
-  };
+  const words = useMemo(() => text.split(' ').reduce(
+    (acc, word, index) => (
+      [
+        ...acc,
+        {
+          word,
+          indexOf: acc[index - 1] ? acc[index - 1].indexOf + acc[index - 1].word.length : 0
+        }
+      ])
+    , [] as { word: string, indexOf: number }[]
+  ), []);
 
   return (
     <div className="mission" id="mission">
+      <div className="portal-up">
+        <PortalUp/>
+      </div>
       <p
         ref={missionTextRef}
-        className={`mission-text ${isVisible ? "visible" : ""}`}
+        className="mission-text"
       >
-        {renderMissionText()}
+        {words.map(({ word, indexOf }) => (
+            <WordSpan
+              key={`${word}-${indexOf}`}
+              word={word}
+              indexOf={indexOf}
+              isVisible={isVisible}
+            />
+          )
+        )}
       </p>
     </div>
   );

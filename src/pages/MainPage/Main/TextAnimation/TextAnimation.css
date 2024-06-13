@@ -1,4 +1,3 @@
-
 .text-container {
   font-family: "Poppins Regular";
   animation: scale 3s ease-in-out;
@@ -6,6 +5,15 @@
   text-align: center;
   font-size: 60px;
   max-width: 320px;
+}
+
+.word-span {
+  transition: color 2s;
+}
+
+.word-span.highlight {
+  color: white;
+  transition:  color 1s;
 }
 
 /*---------------------------------------------------------------------------------------------*/

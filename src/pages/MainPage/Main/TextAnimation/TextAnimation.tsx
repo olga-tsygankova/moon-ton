@@ -1,7 +1,9 @@
-import { animated } from 'react-spring';
-import './TextAnimation.css';
 import React, { useCallback, useEffect, useState } from 'react';
+import { animated } from 'react-spring';
+import cn from 'classnames';
+
 import { CharSpan } from './CharSpan';
+import './TextAnimation.css';
 
 const words = ['integrate.', 'empower.', 'bridge.']; // 10 , 8 , 7
 
@@ -14,8 +16,7 @@ const getInitialParams = (stringArray: string[]) => stringArray.reduce(
 
 export const TextAnimation = () => {
   const [opacityParams, setOpacityParams] = useState<IOpacityParams>(() => getInitialParams(words));
-  const [count, setCount] = useState<number>(0);
-  const [count2, setCount2] = useState<number>(0);
+
   const [isAllShow, setIsAllShow] = useState(false);
   const [highlight, setHighlight] = useState(-1);
 
@@ -24,9 +25,12 @@ export const TextAnimation = () => {
 
       return oldParams.map((word, index) => {
         const newWordParam = [...oldParams[index]];
-        const randomIndex = Math.floor(Math.random() * word.length);
+        let randomIndex = Math.floor(Math.random() * word.length);
+        while (newWordParam[randomIndex] >= 1 && randomIndex < word.length + 1) {
+          randomIndex++;
+        }
         if (newWordParam[randomIndex] < 1) {
-          newWordParam[randomIndex] += 0.4;
+        newWordParam[randomIndex] += 0.4;
         }
         if (index < 4) {
           const lowLetter = newWordParam.findIndex(opacity => opacity < 0.4);
@@ -45,8 +49,7 @@ export const TextAnimation = () => {
 
     const timer = setInterval(() => {
       handleChangeOpacity();
-      setCount(count => count + 1);
-    }, 80);
+    }, 100);
 
     const timer2 = setInterval(() => {
       setOpacityParams(oldParams => {
@@ -56,7 +59,6 @@ export const TextAnimation = () => {
         ) {
           setIsAllShow(true);
         }
-        setCount2(cnt => cnt + 1);
         return oldParams;
       });
     }, 1e3);
@@ -75,21 +77,12 @@ export const TextAnimation = () => {
     setTimeout(() => setHighlight(2), 4e3);
   }, [isAllShow]);
 
-  // console.log('count');
-  // console.log(count);
-  // console.log('count2');
-  // console.log(count2);
-
   return (
     <animated.span className="text-container">
       {words.map((word, indexOfWord) => (
         <span
-          style={{
-            ...(indexOfWord === highlight && {
-              color: 'white',
-              fontWeight: 700
-            })
-          }}
+          key={word}
+          className={cn('word-span', { highlight: indexOfWord === highlight })}
         >
           {word.split('').map((char, index) => (
               <CharSpan
