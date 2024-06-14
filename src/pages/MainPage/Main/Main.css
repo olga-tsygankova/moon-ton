@@ -28,7 +28,7 @@
   text-align: center;
   position: relative;
 
-  margin: 118px auto 0 auto;
+  margin: 118px auto 343px auto;
 }
 
 .main-btn {
@@ -94,7 +94,7 @@
     opacity: 1;
   }
   100% {
-    transform: rotate(270deg) translateX(-826px);
+    transform: rotate(270deg) translateX(-870px);
     opacity: 0;
   }
 }
@@ -193,6 +193,7 @@
 
   .main-container {
     margin-top: 108px;
+    margin-bottom: 389px;
   }
 
   .main-btn {
@@ -224,7 +225,7 @@
   }
 
   .main-container {
-    margin: 232px auto 58px auto;
+    margin: 232px auto 273px auto;
   }
 
   .main-subtitle {
