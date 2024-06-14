@@ -48,8 +48,14 @@ export const Product = () => {
   return (
     <div className="product" id="product">
       <div className="portal-down">
-        <PortalDown />
+        <PortalDown/>
       </div>
+      <section className="portal-down-beam">
+        <span></span>
+        <span></span>
+        <span></span>
+      </section>
+
       <div className="for-developers" ref={forDevelopersRef}>
         <h4>For Developers</h4>
         <p>(Build on MoonTon)</p>
@@ -59,7 +65,7 @@ export const Product = () => {
             Integrate MoonTON Omnichain Technology into your custom
             applications.
           </p>
-          <FormBtn handleBridgeClick={handleBridgeClick} >Get API</FormBtn>
+          <FormBtn handleBridgeClick={handleBridgeClick}>Get API</FormBtn>
         </div>
       </div>
       <div className="partners-wrapper">
@@ -72,12 +78,14 @@ export const Product = () => {
             <p>
               Expose your project to new ecosystems and broaden your user base
             </p>
-            <FormBtn handleBridgeClick={handleBridgeClick} >Make Us IOLO</FormBtn>
+            <FormBtn handleBridgeClick={handleBridgeClick}>
+              Make Us IOLO
+            </FormBtn>
           </div>
           <div className="content">
             <div className="content-title">OAS (Omnichain Airdrop System)</div>
             <p>Level up your community engagement with omnichain airdrops</p>
-            <FormBtn handleBridgeClick={handleBridgeClick} >Get OAS</FormBtn>
+            <FormBtn handleBridgeClick={handleBridgeClick}>Get OAS</FormBtn>
           </div>
         </div>
       </div>

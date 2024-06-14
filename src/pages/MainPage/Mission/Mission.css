@@ -1,8 +1,8 @@
 .portal-up {
-  height: 574px;
   display: flex;
-  align-items: end;
   justify-content: center;
+  margin-top: 574px;
+
 }
 .mission {
   margin: 0 auto 0 auto;
@@ -16,6 +16,7 @@
   text-align: center;
 }
 
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
@@ -23,7 +24,7 @@
 
 @media (min-width: 620px) {
   .portal-up {
-    height: 620px
+    margin-top: 389px;
   }
   .mission {
     margin: 0 auto 0 auto;
@@ -37,7 +38,7 @@
 
 @media (min-width: 1000px) {
   .portal-up {
-    height: 522px
+    margin-top: 273px;
   }
   .mission {
     margin: 0 auto 0 auto;

@@ -3,6 +3,8 @@
 .spaceSpan {
   display: inline-block;
   color: #1d1d1d;
+  z-index: 1000;
+
 }
 
 
@@ -17,6 +19,7 @@
 }
 
 .spaceSpan {
+
   margin-right: 0.3em;
 }
 

@@ -10,7 +10,6 @@
   background-repeat: no-repeat;
 
   padding: 27px 15px 0 15px;
-
 }
 
 @keyframes fadeIn {
@@ -27,6 +26,7 @@
   max-width: 1113px;
   color: #4B4A4D;
   text-align: center;
+  position: relative;
 
   margin: 118px auto 0 auto;
 }
@@ -37,7 +37,6 @@
   justify-content: center;
   gap: 20px;
 
-  position: relative;
 }
 
 .main-subtitle {
@@ -49,13 +48,81 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s 5s ease forwards;
-
   font-size: 16px;
 }
 
 /*---------------------------------------------------------------------------------------------*/
 /*                                  ANIMATION                                                  */
 /*---------------------------------------------------------------------------------------------*/
+
+.portal-up-beam {
+  width: 130px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.portal-up-beam span {
+  position: absolute;
+  animation: animate-portal-up-beam 3s linear infinite;
+}
+
+.portal-up-beam span:before {
+  opacity: 0;
+
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, #fff, transparent);
+  animation: fadeInButton 2s forwards;
+  animation-delay: 5.5s;
+
+}
+
+
+@keyframes animate-portal-up-beam {
+  0% {
+    transform: rotate(270deg) translateX(0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(270deg) translateX(-1100px);
+    opacity: 0;
+  }
+}
+
+.portal-up-beam span:nth-child(1) {
+  top: -400px; /*верхняя координата*/
+  left: -90px; /*правая координата*/
+
+  animation-delay: 0.3s; /*задержка анимации*/
+  animation-duration: 2s; /*длительность анимации*/
+}
+
+.portal-up-beam span:nth-child(2) {
+  top: -400px; /*верхняя координата*/
+  left: 4px;
+  animation-delay: 0s;
+  animation-duration: 2s;
+}
+
+.portal-up-beam span:nth-child(3) {
+  top: -400px; /*верхняя координата*/
+  left:94px;
+  animation-delay: 0.8s;
+  animation-duration: 2s;
+}
+
+
+
 
 
 .main-subtitle br {
@@ -88,6 +155,9 @@
 .main-btn > *:nth-child(2) {
   animation-delay: 5.5s;
 }
+.main-btn > *:nth-child(3) {
+  animation-delay: 5.5s;
+}
 
 @keyframes fadeInButton {
   0% {
@@ -107,12 +177,28 @@
 @media (min-width: 620px) {
   .main {
   }
+
+  @keyframes animate-portal-up-beam {
+    0% {
+      transform: rotate(270deg) translateX(0);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(-900px);
+      opacity: 0;
+    }
+  }
+
   .main-container {
     margin-top: 108px;
   }
-  .main-btn{
+
+  .main-btn {
     flex-direction: row;
   }
+
   .main-subtitle {
     max-width: 600px;
     font-size: 20px;
@@ -121,12 +207,26 @@
 }
 
 @media (min-width: 1000px) {
+  @keyframes animate-portal-up-beam {
+    0% {
+      transform: rotate(270deg) translateX(0);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(-800px);
+      opacity: 0;
+    }
+  }
   .main {
     padding: 0;
   }
+
   .main-container {
     margin: 232px auto 58px auto;
   }
+
   .main-subtitle {
     max-width: 482px;
     margin-bottom: 30px;

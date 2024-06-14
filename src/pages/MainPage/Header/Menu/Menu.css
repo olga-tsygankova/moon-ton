@@ -3,7 +3,6 @@
   top: 110%;
   right: 1%;
 
-  z-index: 1000;
 }
 
 .menu.open {
@@ -23,7 +22,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 15px;
-  z-index: 900;
 
 }
 
@@ -68,11 +66,14 @@
 @media (min-width: 1000px) {
   .menu {
     display: block;
-    position: static;
+    position: relative;
+    z-index: 1000;
   }
 
   .menu.open {
     display: block;
+    z-index: 1000;
+
   }
 
   .menu.closed {
@@ -83,6 +84,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    z-index: 1000;
+
 
     height: 64px;
     width: 600px;
@@ -104,7 +108,7 @@
 
   .menu-container a {
     font-size: 16px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .line:after {
