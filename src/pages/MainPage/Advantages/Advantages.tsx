@@ -115,7 +115,10 @@ export const Advantages = () => {
     if (isScrollControlled) return;
 
     setIsScrollControlled(true);
-    blockScroll();
+    const targetElement = document.querySelector('.big-planet');
+    targetElement!.scrollIntoView();
+
+    setTimeout(() => blockScroll(), 5e2);
     document.addEventListener('wheel', handleYScroll);
     document.addEventListener('touchstart', handleStartTouch);
     document.addEventListener('touchend', handleEndTouch);
