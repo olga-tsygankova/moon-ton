@@ -1,7 +1,7 @@
 import "./Roadmap.css";
 import { Point } from "../../../ui/Point";
 import { useEffect, useRef } from "react";
-import { Circle } from "../../../ui/svg/Circle";
+import { Circle } from "../../../ui/svg";
 
 export const Roadmap = () => {
   const q2Ref = useRef(null);

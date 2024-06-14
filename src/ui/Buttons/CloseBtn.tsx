@@ -10,9 +10,9 @@ export const CloseBtn = ({onClick}:IProps) => {
       <defs>
         <linearGradient id="paint0_linear_20_1748" x1="11" y1="21" x2="11" y2="0.999999"
                         gradientUnits="userSpaceOnUse">
-          <stop offset="0.0001" stop-color="white"/>
-          <stop offset="0.505" stop-color="white" stop-opacity="0"/>
-          <stop offset="1" stop-color="white"/>
+          <stop offset="0.0001" stopColor="white"/>
+          <stop offset="0.505" stopColor="white" stopOpacity="0"/>
+          <stop offset="1" stopColor="white"/>
         </linearGradient>
       </defs>
     </svg>

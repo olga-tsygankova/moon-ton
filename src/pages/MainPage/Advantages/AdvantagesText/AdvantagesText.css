@@ -1,0 +1,49 @@
+.advantages-text {
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+  margin: 270px 15px 160px 15px;
+}
+
+.advantages-text h4 {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.advantages-text p {
+  font-size: 16px;
+}
+
+.advantages-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 620px) {
+  .advantages-text {
+    font-size: 64px;
+    width: 650px;
+    margin: 270px auto 180px auto;
+  }
+
+
+  .advantages-text h4 {
+    font-size: 64px;
+  }
+
+  .advantages-text p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .advantages-text {
+    font-size: 64px;
+    width: 483px;
+  }
+}

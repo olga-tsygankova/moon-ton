@@ -1,5 +1,5 @@
 .logo {
-  margin-right:180px;
+  margin-right: 180px;
   cursor: pointer;
 }
 
@@ -7,12 +7,10 @@
   .logo {
     margin-right: 0;
   }
-
 }
 
 @media (min-width: 1000px) {
   .logo {
     margin-right: 0;
   }
-
 }

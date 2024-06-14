@@ -1,11 +1,12 @@
-import "./Mission.css";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { PortalUp } from "../../../ui/svg";
-import { WordSpan } from "./WordSpan";
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { PortalUp } from '../../../ui/svg';
+import { WordSpan } from './WordSpan';
+import cn from 'classnames';
+
+import './Mission.css';
 
 const text =
   "Our mission is to ensure seamless, secure, and efficient omnichain interaction between ton and other blockchain ecosystems";
-
 export const Mission = () => {
   const missionTextRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +19,7 @@ export const Mission = () => {
         });
       },
       {
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 0.5, // Триггерить событие, когда элемент виден на 50% или больше
       },
     );
@@ -34,38 +35,42 @@ export const Mission = () => {
     };
   }, []);
 
-  const words = useMemo(
-    () =>
-      text.split(" ").reduce(
-        (acc, word, index) => [
-          ...acc,
-          {
-            word,
-            indexOf: acc[index - 1]
-              ? acc[index - 1].indexOf + acc[index - 1].word.length
-              : 0,
-          },
-        ],
-        [] as { word: string; indexOf: number }[],
-      ),
-    [],
-  );
+  const words = useMemo(() => text.split(' ').reduce(
+    (acc, word, index) => (
+      [
+        ...acc,
+        {
+          word,
+          indexOf: acc[index - 1] ? acc[index - 1].indexOf + acc[index - 1].word.length : 0
+        }
+      ])
+    , [] as { word: string, indexOf: number }[]
+  ), []);
 
   return (
     <div className="mission" id="mission">
       <div className="portal-up">
         <PortalUp />
       </div>
-      <p ref={missionTextRef} className="mission-text">
+      <p
+        ref={missionTextRef}
+        className="mission-text"
+      >
         {words.map(({ word, indexOf }) => (
-          <WordSpan
-            key={`${word}-${indexOf}`}
-            word={word}
-            indexOf={indexOf}
-            isVisible={isVisible}
-          />
-        ))}
+            <WordSpan
+              key={`${word}-${indexOf}`}
+              word={word}
+              indexOf={indexOf}
+              isVisible={isVisible}
+            />
+          )
+        )}
       </p>
+      {false && <p className="mission-text">
+        <span className={cn('mission-span', { isVisible })}>
+          {text}
+        </span>
+      </p>}
     </div>
   );
 };

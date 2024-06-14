@@ -4,6 +4,7 @@
   margin-top: 300px;
 
 }
+
 .mission {
   margin: 0 auto 0 auto;
 }
@@ -16,6 +17,22 @@
 }
 
 
+.mission-span.isVisible {
+  animation: clip-pathing 3s ease-in-out both;
+}
+
+@keyframes clip-pathing {
+  from {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    opacity: 0;
+  }
+  to {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
+    color: white;
+  }
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
@@ -25,6 +42,7 @@
   .portal-up {
 
   }
+
   .mission {
     margin: 0 auto 0 auto;
     width: 550px;
@@ -38,6 +56,7 @@
 @media (min-width: 1000px) {
   .portal-up {
   }
+
   .mission {
     margin: 0 auto 0 auto;
     width: 880px;
