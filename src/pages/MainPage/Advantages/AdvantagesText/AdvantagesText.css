@@ -1,14 +1,16 @@
 .advantages-text {
   transform: translateY(50px);
   transition: opacity 0.5s, transform 0.5s;
-  margin: 270px 15px 160px 15px;
+  margin: 270px auto 160px auto;
   display: flex;
+  max-width: 330px;
+  align-self: center;
 }
 
 .advantages-text h4 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 400;
-  margin: 0;
+  margin: 50px 0 0 0;
 }
 
 .advantages-text p {
@@ -59,7 +61,7 @@
 @media (min-width: 620px) {
   .advantages-text {
     font-size: 64px;
-    width: 650px;
+    max-width: 650px;
     margin: 270px auto 180px auto;
   }
 
@@ -76,6 +78,6 @@
 @media (min-width: 1000px) {
   .advantages-text {
     font-size: 64px;
-    width: 483px;
+    max-width:650px;
   }
 }

@@ -116,6 +116,27 @@ export const Advantages = () => {
     return createObserver();
   }, [createObserver]);
 
+  useEffect(() => {
+    const bigPlanet = document.querySelector(".big-planet") as HTMLElement;
+    const smallPlanet = document.querySelector(".small-planet") as HTMLElement;
+    const advantages= document.querySelector(".advantages") as HTMLElement;
+
+    advantages.style.transformOrigin="50% 50%"
+
+    // bigPlanet.style.transform = "translate(0,0)";
+    // bigPlanet.style.transform = "translate(-100,0)";
+    //
+    // bigPlanet.style.top = `(-${stage/4})vh`;
+    // bigPlanet.style.left = `(-${stage/4}vw)`;
+    // smallPlanet.style.transform = "";
+    // smallPlanet.style.transform = "";
+
+    // smallPlanet.style.top = `${stage/4})vh`;
+    // smallPlanet.style.left = `left(${stage/4}vw)`;
+
+
+  }, [stage]);
+
   return (
     <div className="advantages" id="advantages" ref={ref}>
       <div className="big-planet" ref={bigPlanetRef}>
