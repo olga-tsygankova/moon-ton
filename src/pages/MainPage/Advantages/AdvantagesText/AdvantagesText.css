@@ -2,6 +2,7 @@
   transform: translateY(50px);
   transition: opacity 0.5s, transform 0.5s;
   margin: 270px 15px 160px 15px;
+  display: flex;
 }
 
 .advantages-text h4 {
@@ -14,9 +15,40 @@
   font-size: 16px;
 }
 
-.advantages-text.visible {
+.advantages-text-block {
+  opacity: 0;
+  animation: fade-away 0,3s forwards;
+  display: none;
+}
+
+
+.advantages-text-block.visible {
+  min-height: 330px;
   opacity: 1;
-  transform: translateY(0);
+  display: inline-block;
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-away {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50vw);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(50vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /*---------------------------------------------------------------------------------------------*/
