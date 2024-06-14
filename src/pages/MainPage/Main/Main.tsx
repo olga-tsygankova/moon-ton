@@ -9,15 +9,20 @@ export const Main = () => {
     <div className="main">
       <Header />
       <div className="main-container">
-        <TextAnimation />
+        <TextAnimation/>
         <p className="main-subtitle">
           Advanced omnichain interoperability solutions for decentralized
           ecosystems
         </p>
         <div className="main-btn">
-          <BridgeBtn />
+          <BridgeBtn/>
           <OverviewButton>Explore ecosystem</OverviewButton>
         </div>
+        <section className="portal-up-beam">
+          <span></span>
+          <span></span>
+          <span></span>
+        </section>
       </div>
     </div>
   );

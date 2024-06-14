@@ -1,5 +1,5 @@
 .join {
-  margin: 0px auto 53px auto;
+  margin: 0 auto 53px auto;
   width: 330px;
 }
 
@@ -69,70 +69,71 @@
   margin-right: 40px;
 }
 
-
-
-.beam-footer{
+.beam-footer {
   position: absolute;
   z-index: 100;
 
 }
-.beam-footer span{
+
+.beam-footer span {
   position: absolute;
 
   animation: animate-beam-footer 3s linear infinite;
 }
-.beam-footer span:before{
+
+.beam-footer span:before {
   content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 300px;
   height: 3px;
-  background: linear-gradient(90deg,#fff,transparent);
+  background: linear-gradient(90deg, #fff, transparent);
 }
 
 
-@keyframes animate-beam-footer{
-  0%
-  {
+@keyframes animate-beam-footer {
+  0% {
     transform: rotate(270deg) translateX(0);
   }
-  70%
-  {
+  70% {
     opacity: 1;
   }
-  100%
-  {
+  100% {
     transform: rotate(270deg) translateX(-600px);
     opacity: 0;
   }
 }
-.beam-footer span:nth-child(1){
-  top: -500px;/*верхняя координата*/
-  left: 35vw;/*правая координата*/
 
-  animation-delay: 0s;/*задержка анимации*/
-  animation-duration: 3s;/*длительность анимации*/
+.beam-footer span:nth-child(1) {
+  top: -500px; /*верхняя координата*/
+  left: 35vw; /*правая координата*/
+
+  animation-delay: 0s; /*задержка анимации*/
+  animation-duration: 3s; /*длительность анимации*/
 }
-.beam-footer span:nth-child(2){
+
+.beam-footer span:nth-child(2) {
   top: -550px;
   left: 50vw;
   animation-delay: 1s;
   animation-duration: 3s;
 }
-.beam-footer span:nth-child(3){
+
+.beam-footer span:nth-child(3) {
   top: -550px;
   left: 65vw;
   animation-delay: 0.4s;
   animation-duration: 3s;
 }
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 @media (min-width: 620px) {
   .join {
     width: 510px;
-    margin: 0px auto 79px auto;
+    margin: 0 auto 79px auto;
   }
 
   .join-title h2 {
@@ -146,15 +147,18 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .beam-footer span:nth-child(1){
-    top: -500px;/*верхняя координата*/
-    left: 40vw;/*правая координата*/
+
+  .beam-footer span:nth-child(1) {
+    top: -500px; /*верхняя координата*/
+    left: 40vw; /*правая координата*/
   }
-  .beam-footer span:nth-child(2){
+
+  .beam-footer span:nth-child(2) {
     top: -550px;
     left: 50vw;
   }
-  .beam-footer span:nth-child(3){
+
+  .beam-footer span:nth-child(3) {
     top: -550px;
     left: 60vw;
   }
@@ -166,18 +170,22 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   .join-title h2 {
     font-size: 96px;
   }
-  .beam-footer span:nth-child(1){
-    top: -500px;/*верхняя координата*/
-    left: 43vw;/*правая координата*/
+
+  .beam-footer span:nth-child(1) {
+    top: -500px; /*верхняя координата*/
+    left: 43vw; /*правая координата*/
   }
-  .beam-footer span:nth-child(2){
+
+  .beam-footer span:nth-child(2) {
     top: -550px;
     left: 50vw;
   }
-  .beam-footer span:nth-child(3){
+
+  .beam-footer span:nth-child(3) {
     top: -550px;
     left: 57vw;
   }
@@ -199,32 +207,31 @@
     font-size: 96px;
   }
 
-    .beam-footer span:nth-child(1){
-      top: -1500px;/*верхняя координата*/
-    }
-    .beam-footer span:nth-child(2){
-      top: -1500px;
-    }
-    .beam-footer span:nth-child(3){
-      top: -1500px;
-    }
+  .beam-footer span:nth-child(1) {
+    top: -1500px; /*верхняя координата*/
+  }
+
+  .beam-footer span:nth-child(2) {
+    top: -1500px;
+  }
+
+  .beam-footer span:nth-child(3) {
+    top: -1500px;
+  }
 
 
-    @keyframes animate-beam-footer{
-      0%
-      {
-        transform: rotate(270deg) translateX(0);
-      }
-      70%
-      {
-        opacity: 1;
-      }
-      100%
-      {
-        transform: rotate(270deg) translateX(-2200px);
-        opacity: 0;
-      }
+  @keyframes animate-beam-footer {
+    0% {
+      transform: rotate(270deg) translateX(0);
     }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(-2200px);
+      opacity: 0;
+    }
+  }
 
 
 }

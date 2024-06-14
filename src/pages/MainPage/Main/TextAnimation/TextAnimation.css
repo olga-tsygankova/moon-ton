@@ -5,6 +5,9 @@
   text-align: center;
   font-size: 60px;
   max-width: 320px;
+  position: relative;
+  z-index: 1000;
+
 }
 
 .word-span {
@@ -13,7 +16,7 @@
 
 .word-span.highlight {
   color: white;
-  transition:  color 1s;
+  transition: color 1s;
 }
 
 /*---------------------------------------------------------------------------------------------*/

@@ -6,6 +6,8 @@
   align-items: center;
   gap: 30px;
 
+  z-index: 1000;
+
   max-width: 1290px;
   margin-right: auto;
   margin-left: auto;
