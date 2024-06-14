@@ -110,7 +110,7 @@ export const Join = () => {
         <div className="join-btn" ref={joinBtnRef}>
           <BlueBtn>
             <JoinIcon />
-            Join MoonTON Ecosystem
+            Launch Moon TON
           </BlueBtn>
         </div>
       </div>
