@@ -1,4 +1,4 @@
-import { MutableRefObject, useCallback, useEffect, useMemo, useRef } from 'react';
+import { MutableRefObject, useCallback, useMemo, useRef } from 'react';
 
 type UseObserver = (
   onEntry: (entry: IntersectionObserverEntry) => void,

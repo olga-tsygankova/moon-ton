@@ -106,7 +106,7 @@ export const Advantages = () => {
     // соответствует скроллу вниз
     const deltaY = touchstartY - touchendY;
     if (Math.abs(deltaY) > 0) {
-      setStage(stage => stage > 300 ? 301 : stage + deltaY / 3);
+      setStage(stage => stage > 300 ? 301 : stage + deltaY / 2);
     }
   }, []);
 
@@ -115,10 +115,10 @@ export const Advantages = () => {
     if (isScrollControlled) return;
 
     setIsScrollControlled(true);
-    const targetElement = document.querySelector('.big-planet');
-    targetElement!.scrollIntoView();
+    const targetElement = document.querySelector('.advantages-text-container');
+    targetElement!.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    setTimeout(() => blockScroll(), 5e2);
+    setTimeout(() => blockScroll(), 3e2);
     document.addEventListener('wheel', handleYScroll);
     document.addEventListener('touchstart', handleStartTouch);
     document.addEventListener('touchend', handleEndTouch);
