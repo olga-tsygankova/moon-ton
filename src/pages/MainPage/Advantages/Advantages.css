@@ -1,5 +1,6 @@
 .advantages {
   margin: 0 auto;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
   color: #F1F1F1;
@@ -12,8 +13,8 @@
 .big-planet {
   margin-left: auto;
   position: absolute;
-  top: 0;
-  right: -20%;
+  top: 10%;
+  left: 20%;
   width: 480px;
   height: auto;
 }
@@ -26,7 +27,7 @@
 .small-planet {
   margin-right: auto;
   position: absolute;
-  bottom: 0;
+  bottom: 15%;
   left: -5%;
   width: 224px;
   height: auto;
@@ -35,6 +36,57 @@
 .small-planet svg {
   width: 100%;
   height: 100%;
+}
+
+
+@keyframes rotate-big-planet {
+  0% {
+    transform: translate(0,50vw) rotate(0deg);
+  }
+  25% {
+    transform: translate(-20vw,-5vw) ;
+  }
+
+  50% {
+    transform: translate(-80vw, 70vw) rotate(-20deg) ;
+  }
+  75% {
+    transform: translate(-30vw, 120vw) ;
+  }
+  100% {
+    transform: translate(0,50vw) rotate(0deg) ;
+  }
+}
+
+@keyframes rotate-small-planet {
+  0% {
+    transform: translate(0vw, -50vw);
+  }
+  25% {
+    transform: translate(30vw,0vw) ;
+  }
+
+  50% {
+    transform: translate(60vw, -50vw) rotate(-20deg) ;
+  }
+  75% {
+    transform: translate(30vw, -100vw) ;
+  }
+  100% {
+    transform: translate(0vw, -50vw) rotate(0deg) ;
+  }
+}
+
+.big-planet {
+  animation: rotate-big-planet 20s linear infinite;
+}
+
+.small-planet {
+  animation: rotate-small-planet 20s linear infinite;
+}
+
+.advantages {
+  transform-origin: 50% 50%;
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -49,8 +101,53 @@
     width: auto;
   }
   .big-planet {
-    right: -20%;
+    top: 5%;
+    right: -10%;
     width: 520px;
+  }
+  .small-planet {
+
+    bottom: 5%;
+    left: 0%;
+
+  }
+
+  @keyframes rotate-big-planet {
+    0% {
+      transform: translate(0,100%) rotate(0deg);
+    }
+    25% {
+      transform: translate(-40%,-2%) ;
+    }
+
+    50% {
+      transform: translate(-100%, 90%) rotate(-20deg) ;
+    }
+    75% {
+      transform: translate(-50%, 180%) ;
+    }
+    100% {
+      transform: translate(0,100%) rotate(0deg) ;
+    }
+  }
+
+  @keyframes rotate-small-planet {
+    0% {
+      transform: translate(0%, -250%);
+    }
+    25% {
+      transform: translate(170%,-100%) ;
+    }
+
+    50% {
+      transform: translate(300%, -300%) rotate(-20deg) ;
+    }
+    75% {
+      transform: translate(150%, -450%) ;
+    }
+    100% {
+      transform: translate(0%, -250%) rotate(0deg) ;
+    }
   }
 }
 
@@ -59,13 +156,53 @@
   }
   .big-planet {
     right: 0%;
+    top: 0;
     width: 630px;
   }
 
   .small-planet {
-    left: 0;
+    left: 5%;
     width: 300px;
+    bottom: 0;
   }
+  @keyframes rotate-big-planet {
+    0% {
+      transform: translate(0,50%) rotate(0deg);
+    }
+    25% {
+      transform: translate(-50%,-5%) ;
+    }
+
+    50% {
+      transform: translate(-100%, 70%) rotate(-20deg) ;
+    }
+    75% {
+      transform: translate(-50%, 150%) ;
+    }
+    100% {
+      transform: translate(0,50%) rotate(0deg) ;
+    }
+  }
+
+  @keyframes rotate-small-planet {
+    0% {
+      transform: translate(0%, -100%);
+    }
+    25% {
+      transform: translate(120%,0%) ;
+    }
+
+    50% {
+      transform: translate(260%, -120%) rotate(-20deg) ;
+    }
+    75% {
+      transform: translate(150%, -300%) ;
+    }
+    100% {
+      transform: translate(0%, -100%) rotate(0deg) ;
+    }
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -91,29 +228,29 @@
     content: '';
     position: absolute;
     transform: translateY(0%);
-    width: 300px;
+    width: 100px;
     height: 3px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.8),transparent);
   }
 
   .beam .beam-advantages:nth-child(1){
-    top: 66%;
-    left: -10%;
+    top: 55%;
+    left: 10%;
     animation-delay: 0s;/*задержка анимации*/
-    animation-duration: 3s;/*длительность анимации*/
+    animation-duration: 2s;/*длительность анимации*/
   }
   .beam .beam-advantages:nth-child(2){
-    top: 66%;
-    right: 10%;
-    animation-delay: 6s;
-    animation-duration: 3s;
+    top: 55%;
+    right: -10%;
+    animation-delay: 0s;
+    animation-duration: 2s;
   }
 
 
   @keyframes animate-advantages{
     0%
     {
-      transform: rotate(180deg) translateX(0%);
+      transform: rotate(0deg) translateX(0%);
     }
     70%
     {
@@ -121,18 +258,17 @@
     }
     100%
     {
-      transform: rotate(180deg) translateX(-600px);
+      transform: rotate(0deg) translateX(-500px);
       opacity: 0;
     }
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1460px) {
   .advantages{
     width: 1327px;
   }
   .big-planet {
     right: 0%;
-    width: 520px;
   }
   .beam .beam-advantages:before{
     width: 400px;
