@@ -103,11 +103,10 @@ export const Advantages = () => {
 
   const handleEndTouch = useCallback((e: TouchEvent) => {
     touchendY = e.changedTouches[0].screenY;
-    const deltaY = touchendY - touchstartY;
-    console.log('deltaY');
-    console.log(deltaY);
-    if (deltaY > 0) {
-      setStage(stage => stage > 300 ? 301 : stage + deltaY / 5);
+    // соответствует скроллу вниз
+    const deltaY = touchstartY - touchendY;
+    if (Math.abs(deltaY) > 0) {
+      setStage(stage => stage > 300 ? 301 : stage + deltaY / 3);
     }
   }, []);
 
