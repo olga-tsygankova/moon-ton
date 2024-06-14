@@ -90,9 +90,26 @@ export const Advantages = () => {
     (event: WheelEvent) => {
       event.preventDefault();
       if (event.deltaY > 0) {
-        setStage(stage => stage > 300 ? 301 : stage + event.deltaY / 5);
+        setStage(stage => stage > 300 ? 301 : stage + event.deltaY / 10);
       }
     }, []);
+
+  let touchstartY = 0;
+  let touchendY = 0;
+
+  const handleStartTouch = useCallback((e: TouchEvent) => {
+    touchstartY = e.changedTouches[0].screenY;
+  }, []);
+
+  const handleEndTouch = useCallback((e: TouchEvent) => {
+    touchendY = e.changedTouches[0].screenY;
+    const deltaY = touchendY - touchstartY;
+    console.log('deltaY');
+    console.log(deltaY);
+    if (deltaY > 0) {
+      setStage(stage => stage > 300 ? 301 : stage + deltaY / 5);
+    }
+  }, []);
 
   const handleScrollText = useCallback((entry: IntersectionObserverEntry) => {
     if (!entry.isIntersecting) return;
@@ -101,12 +118,16 @@ export const Advantages = () => {
     setIsScrollControlled(true);
     blockScroll();
     document.addEventListener('wheel', handleYScroll);
+    document.addEventListener('touchstart', handleStartTouch);
+    document.addEventListener('touchend', handleEndTouch);
   }, [isScrollControlled, blockScroll, handleYScroll]);
 
   useEffect(() => {
     if (stage < 300) return;
     allowScroll();
     document.removeEventListener('wheel', handleYScroll);
+    document.removeEventListener('touchstart', handleStartTouch);
+    document.removeEventListener('touchend', handleEndTouch);
   }, [stage, handleYScroll]);
 
   const { createObserver, ref: bottomRef } = useObserver(handleScrollText, smallPlanetRef);
