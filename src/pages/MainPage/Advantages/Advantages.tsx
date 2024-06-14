@@ -90,7 +90,6 @@ export const Advantages = () => {
     (event: WheelEvent) => {
       event.preventDefault();
       if (event.deltaY > 0) {
-        // console.log(event.deltaY);
         setStage(stage => stage > 300 ? 301 : stage + event.deltaY / 5);
       }
     }, []);
@@ -98,34 +97,23 @@ export const Advantages = () => {
   const handleScrollText = useCallback((entry: IntersectionObserverEntry) => {
     if (!entry.isIntersecting) return;
     if (isScrollControlled) return;
+
     setIsScrollControlled(true);
-    if (!isScrollControlled) {
-      blockScroll();
-      console.log('isScrollControlled');
-      console.log(isScrollControlled);
-    }
-
+    blockScroll();
     document.addEventListener('wheel', handleYScroll);
-
-    return () => document.removeEventListener('wheel', handleYScroll);
-
   }, [isScrollControlled, blockScroll, handleYScroll]);
 
   useEffect(() => {
     if (stage < 300) return;
-    setIsScrollControlled(true);
     allowScroll();
-    console.log('stage');
-    console.log(stage);
     document.removeEventListener('wheel', handleYScroll);
   }, [stage, handleYScroll]);
 
   const { createObserver, ref: bottomRef } = useObserver(handleScrollText, smallPlanetRef);
 
   useEffect(() => {
-    const clearObserver = createObserver();
-
-    return clearObserver();
+    // createObserver возвращает очищающую функцию
+    return createObserver();
   }, [createObserver]);
 
   return (
