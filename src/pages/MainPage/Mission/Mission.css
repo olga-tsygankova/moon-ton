@@ -6,7 +6,6 @@
 }
 .mission {
   margin: 0 auto 0 auto;
-  width: 330px;
 }
 
 .mission-text {
@@ -24,7 +23,7 @@
 
 @media (min-width: 620px) {
   .portal-up {
-    margin-top: 389px;
+
   }
   .mission {
     margin: 0 auto 0 auto;
@@ -38,7 +37,6 @@
 
 @media (min-width: 1000px) {
   .portal-up {
-    margin-top: 273px;
   }
   .mission {
     margin: 0 auto 0 auto;
