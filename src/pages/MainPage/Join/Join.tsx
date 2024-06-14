@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-import { BlueBtn } from "../../../ui/Buttons/BlueBtn";
-import { JoinIcon } from "../../../ui/svg";
+import { BlueBtn } from '../../../ui/Buttons/BlueBtn';
+import { JoinIcon } from '../../../ui/svg';
 
-import "./Join.css";
+import './Join.css';
 
 const DELAY_LENGTH = 1;
 
@@ -18,9 +18,9 @@ export const Join = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
+            entry.target.classList.add('fade-in');
           } else {
-            entry.target.classList.remove("fade-in");
+            entry.target.classList.remove('fade-in');
           }
         });
       },
@@ -40,34 +40,37 @@ export const Join = () => {
   }, []);
 
   const handleChangeHeading = (entry: IntersectionObserverEntry) => {
-    const headings = entry.target.querySelectorAll("h2");
+    const headings = entry.target.querySelectorAll('h2');
     if (!headings) return;
 
     headings.forEach((heading) => {
       const { textContent } = heading;
       if (!textContent) return;
-      heading.innerHTML = "";
+      heading.innerHTML = '';
 
-      const words = textContent.split(" ");
+      const words = textContent.split(' ');
       words.forEach((word) => {
-        const letters = word.split("");
+        const wordSpan = document.createElement('span');
+        wordSpan.style.display = 'inline-block';
+        const letters = word.split('');
         letters.forEach((letter) => {
-          const span = document.createElement("span");
+          const span = document.createElement('span');
           span.textContent = letter;
-          if (letter === " ") {
-            span.style.color = "#F1F1F1";
+          if (letter === ' ') {
+            span.style.color = '#F1F1F1';
           }
-          if (["T", "O", "N"].includes(letter)) {
-            span.style.color = "#00b0ff"; // Голубой цвет для "T", "O", "N"
+          if (['T', 'O', 'N'].includes(letter)) {
+            span.style.color = '#00b0ff'; // Голубой цвет для "T", "O", "N"
           }
           span.style.animationDelay = `${Math.random() * DELAY_LENGTH}s`;
-          heading.appendChild(span);
+          wordSpan.appendChild(span);
         });
-        const space = document.createElement("span");
-        space.textContent = " ";
-        space.style.display = "inline-block";
-        space.style.marginRight = "0.5em";
-        heading.appendChild(space);
+        const space = document.createElement('span');
+        space.textContent = ' ';
+        space.style.display = 'inline-block';
+        space.style.marginRight = '0.5em';
+        wordSpan.appendChild(space);
+        heading.appendChild(wordSpan);
       });
     });
   };
@@ -83,7 +86,7 @@ export const Join = () => {
         });
       },
       {
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 0.5,
       },
     );
