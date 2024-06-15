@@ -75,12 +75,6 @@ export const Roadmap = () => {
                 <Point />
                 <div>Testnet ETH bridge</div>
               </div>
-
-              <div className="points-item">
-                <Point />
-                <div>Token Generation Event (TGE)</div>
-              </div>
-
               <div className="points-item">
                 <Point />
                 <div>PRP (Participants Reward Program) Initialization</div>
@@ -272,7 +266,7 @@ export const Roadmap = () => {
           </div>
           <div className="points-wrapper">
             <div className="roadmap-title">
-              <div className="year">2024</div>
+              <div className="year">2025</div>
             </div>
             <div className="points">
               <div className="points-item">

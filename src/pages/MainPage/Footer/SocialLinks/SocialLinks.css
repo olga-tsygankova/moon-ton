@@ -1,0 +1,48 @@
+.social-links {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-links h6 {
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: auto;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #F1F1F1;
+}
+
+.social-links a:hover {
+  color: #47BCFC;
+}
+
+.social-links a:active {
+  color: #F1F1F1;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 620px) {
+  .web-links h6 {
+    font-size: 18px;
+  }
+
+  .web-links {
+    font-size: 16px;
+  }
+}
+

@@ -1,7 +1,6 @@
 .right {
   display: flex;
   flex-direction: column;
-  align-items: start;
 
   gap: 20px;
 }
@@ -12,12 +11,9 @@
   padding: 10px 10px 10px 20px;
   background: #0A0A0A;
   border-radius: 50px;
+  justify-content: space-between;
 
   height: 60px;
-  width: 253px;
-
-  gap: 50px;
-
 }
 
 .ca_text {
@@ -29,8 +25,7 @@
 
 .coming-soon {
   font-weight: 400;
-  font-size: 15px;
-
+  font-size: 15px
 }
 
 .coming-soon .ca {
@@ -53,12 +48,30 @@
   margin: 12px;
 }
 
+.right-social {
+  height: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.right-social svg {
+  height: 100%;
+}
+
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 @media (min-width: 620px) {
   .right {
     align-items: end;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .ca_coming-soon {
+    width: 300px;
   }
 }
 

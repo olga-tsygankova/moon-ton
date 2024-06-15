@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 588px) {
   .logo {
     margin-right: 0;
   }

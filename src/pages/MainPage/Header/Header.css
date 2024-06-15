@@ -3,15 +3,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
+  align-items: flex-start;
 
   z-index: 1000;
 
   max-width: 1290px;
   margin-right: auto;
   margin-left: auto;
-  animation: fadeIn 2s 4s ease-in-out forwards;
+  animation: fadeIn 2s 2s ease-in-out forwards;
   opacity: 0;
 
 }

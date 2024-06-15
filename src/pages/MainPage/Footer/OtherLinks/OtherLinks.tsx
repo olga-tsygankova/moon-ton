@@ -1,16 +1,16 @@
-import {SocialLinks} from "./SocialLinks/SocialLinks";
-import "./Left.css"
+import {SocialLinksIcon} from "./SocialLinksIcon/SocialLinksIcon";
+import "./OtherLinks.css"
 
-export const Left = () => {
+export const OtherLinks = () => {
     return (
-        <div className="left">
+        <div className="other-inks">
             <h6>Links</h6>
-            <div className="links">
+            <div className="other-inks">
                 <a href="#" target="_blank" rel="noopener noreferrer">Etherscan</a>
                 <a href='#' target="_blank" rel="noopener noreferrer">Dextools</a>
                 <a href="https://moon-ton.gitbook.io/moon-ton" target="_blank" rel="noopener noreferrer">Whitepaper</a>
             </div>
-            <SocialLinks/>
+            <SocialLinksIcon/>
         </div>
     )
 }
