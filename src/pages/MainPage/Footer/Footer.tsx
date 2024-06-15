@@ -1,8 +1,9 @@
-import { Left } from "./Left";
+import { OtherLinks } from "./OtherLinks";
 import { Right } from "./Right";
 import "./Footer.css";
 import { useEffect, useRef } from "react";
-import { LineFooter } from "../../../ui/svg/LineFooter";
+import { WebLinks } from "./WebLinks";
+import { SocialLinks } from "./SocialLinks";
 
 export const Footer = () => {
   const footerRef = useRef(null);
@@ -38,11 +39,13 @@ export const Footer = () => {
   return (
     <>
       <div className="footer" ref={footerRef}>
-        <Left />
+        <div className="link-container">
+          <OtherLinks />
+          <WebLinks />
+          <SocialLinks />
+        </div>
         <Right />
       </div>
-
-
     </>
   );
 };

@@ -1,5 +1,4 @@
 .main {
-  position: relative;
   opacity: 0;
 
   animation: fadeIn 1s ease-in-out forwards;
@@ -26,9 +25,8 @@
   max-width: 1113px;
   color: #4B4A4D;
   text-align: center;
-  position: relative;
 
-  margin: 118px auto 343px auto;
+  margin: 50px auto 343px auto;
 }
 
 .main-btn {
@@ -47,7 +45,7 @@
 
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 2s 5s ease forwards;
+  animation: fadeInUp 2s 3s ease forwards;
   font-size: 16px;
 }
 
@@ -120,9 +118,6 @@
   animation-delay: 0.8s;
   animation-duration: 2s;
 }
-
-
-
 
 
 .main-subtitle br {

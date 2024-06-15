@@ -1,12 +1,7 @@
-import "./Menu.css";
-import { CloseBtn } from "../../../../ui/Buttons/CloseBtn";
+import "./WebLinks.css";
 import React from "react";
 
-type IProps = {
-  isOpen: boolean;
-  onClose: () => void;
-};
-export const Menu = ({ isOpen, onClose }: IProps) => {
+export const WebLinks = () => {
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href");
@@ -24,32 +19,27 @@ export const Menu = ({ isOpen, onClose }: IProps) => {
       }
     }
   };
-
   return (
-    <div className={`menu ${isOpen ? "open" : "closed"}`}>
-
-      <div className="menu-container">
-        <CloseBtn onClick={onClose} />
-
-
-        <a href="#mission" className="line" onClick={handleLinkClick}>
+    <div className="web-links">
+      <h6> Web Links</h6>
+      <div className="web-links">
+        <a href="#mission" onClick={handleLinkClick}>
           Mission
         </a>
 
-        <a href="#product" className="line" onClick={handleLinkClick}>
+        <a href="#product" onClick={handleLinkClick}>
           Products
         </a>
 
-        <a href="#advantages" className="line" onClick={handleLinkClick}>
+        <a href="#advantages" onClick={handleLinkClick}>
           Benefits
         </a>
-        <a href="#roadmap" className="line" onClick={handleLinkClick}>
+        <a href="#roadmap" onClick={handleLinkClick}>
           Roadmap
         </a>
-        <a href="#token" className="line" onClick={handleLinkClick}>
+        <a href="#token" onClick={handleLinkClick}>
           Tokenomics
         </a>
-        <a href="#whitepaper">Whitepaper</a>
       </div>
     </div>
   );

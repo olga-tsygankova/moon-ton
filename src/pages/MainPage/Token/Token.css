@@ -17,7 +17,7 @@
 }
 
 .token-info svg {
-  top:0;
+  top: 0;
   left: 25%;
   position: relative;
   width: 100%;
@@ -82,7 +82,7 @@
   .token {
     margin: 227px auto 425px auto;
     padding: 0 70px;
-    gap: 103px;
+    justify-content: space-between;
     max-width: 1294px;
     height: 650px;
   }
@@ -91,5 +91,6 @@
 @media (min-width: 1200px) {
   .token {
     flex-direction: row;
+    padding: 0;
   }
 }

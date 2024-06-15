@@ -11,6 +11,7 @@
 
 .menu.closed {
   display: none;
+  position: relative
 }
 
 .menu-container {
@@ -29,15 +30,21 @@
   align-self: end;
   margin-right: 15px;
 }
+.menu-container > *:nth-child(2) {
+  margin-top: 0;
+}
 
 .menu-container a {
+  text-align: center;
   display: flex;
+  gap: 20px;
   flex-direction: column;
   font-size: 22px;
   text-decoration: none;
   color: #F1F1F1;
-  gap: 20px;
   margin-top: 20px;
+  margin-left: 45px;
+  margin-right: 45px;
 }
 
 
@@ -47,6 +54,7 @@
   border-bottom: 1px solid rgba(115, 115, 118, 0);
   border-image: linear-gradient(to right, rgba(115, 115, 118, 0), #737376, rgba(115, 115, 118, 0)) 1;
 }
+
 .line:target {
   padding-top: 20%;
   margin-top: 20%;
@@ -68,6 +76,8 @@
     display: block;
     position: relative;
     z-index: 1000;
+    order: 0;
+
   }
 
   .menu.open {
@@ -92,9 +102,7 @@
     width: 600px;
 
     gap: 20px;
-    padding-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 
     background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
 
@@ -108,7 +116,7 @@
 
   .menu-container a {
     font-size: 16px;
-    margin-top: 0;
+    margin: 0;
   }
 
   .line:after {
