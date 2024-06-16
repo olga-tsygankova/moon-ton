@@ -1,18 +1,17 @@
-import "./ForUsers.css";
-import { WhiteBtn } from "../../../ui";
-import { BlueBtn } from "../../../ui/Buttons/BlueBtn";
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
-import { scroller } from "react-scroll";
-import { LearnMore } from "../../../ui/Buttons/LearnMore";
-import { Platform } from '../../../ui/Buttons/Platform';
+import { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { scroller } from 'react-scroll';
+import { WhiteBtn, LearnMoreButton, PlatformButton } from '../../../ui';
+
+import './ForUsers.css';
+
 
 export const ForUsers = () => {
   const [isInView, setIsInView] = useState(false);
   const forUsersRef = useRef<HTMLDivElement>(null);
   const [ref, inView] = useInView({
     threshold: 0.5, // Триггер при 50% видимости блока
-    rootMargin: "-50% 0px", // Смещение для срабатывания триггера
+    rootMargin: '-50% 0px', // Смещение для срабатывания триггера
   });
 
   useEffect(() => {
@@ -21,7 +20,7 @@ export const ForUsers = () => {
 
   const handleScroll = () => {
     if (isInView && forUsersRef.current) {
-      scroller.scrollTo("forUsers", {
+      scroller.scrollTo('forUsers', {
         duration: 500,
         smooth: true,
         offset: -50, // Adjust the offset as needed
@@ -64,8 +63,8 @@ export const ForUsers = () => {
             assets between ecosystems
           </p>
           <div className="card-bridge__btn">
-            <LearnMore>Learn More</LearnMore>
-            <Platform>Use Bridge (App)</Platform>
+            <LearnMoreButton>Learn More</LearnMoreButton>
+            <PlatformButton>Use Bridge (App)</PlatformButton>
           </div>
         </div>
       </div>

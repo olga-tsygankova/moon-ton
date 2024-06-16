@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { BlueBtn } from '../../../ui/Buttons/BlueBtn';
 import { JoinIcon } from '../../../ui/svg';
@@ -39,41 +39,44 @@ export const Join = () => {
     };
   }, []);
 
-  const handleChangeHeading = (entry: IntersectionObserverEntry) => {
-    const headings = entry.target.querySelectorAll('h2');
-    if (!headings) return;
+  const handleChangeHeading = useCallback((heading: HTMLElement) => {
+    const { textContent } = heading;
+    if (!textContent) return;
+    heading.innerHTML = '';
 
-    headings.forEach((heading) => {
-      const { textContent } = heading;
-      if (!textContent) return;
-      heading.innerHTML = '';
-
-      const words = textContent.split(' ');
-      words.forEach((word) => {
-        const wordSpan = document.createElement('span');
-        wordSpan.style.display = 'inline-block';
-        const letters = word.split('');
-        letters.forEach((letter) => {
-          const span = document.createElement('span');
-          span.textContent = letter;
-          if (letter === ' ') {
-            span.style.color = '#F1F1F1';
-          }
-          if (['T', 'O', 'N'].includes(letter)) {
-            span.style.color = '#00b0ff'; // Голубой цвет для "T", "O", "N"
-          }
-          span.style.animationDelay = `${Math.random() * DELAY_LENGTH}s`;
-          wordSpan.appendChild(span);
-        });
-        const space = document.createElement('span');
-        space.textContent = ' ';
-        space.style.display = 'inline-block';
-        space.style.marginRight = '0.5em';
-        wordSpan.appendChild(space);
-        heading.appendChild(wordSpan);
+    const words = textContent.split(' ');
+    words.forEach((word) => {
+      const wordSpan = document.createElement('span');
+      wordSpan.style.display = 'inline-block';
+      const letters = word.split('');
+      letters.forEach((letter) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        if (letter === ' ') {
+          span.style.color = '#F1F1F1';
+        }
+        if (['T', 'O', 'N'].includes(letter)) {
+          span.style.color = '#00b0ff'; // Голубой цвет для "T", "O", "N"
+        }
+        span.style.animationDelay = `${Math.random() * DELAY_LENGTH}s`;
+        wordSpan.appendChild(span);
       });
+      const space = document.createElement('span');
+      space.textContent = ' ';
+      space.style.display = 'inline-block';
+      space.style.marginRight = '0.5em';
+      wordSpan.appendChild(space);
+      heading.appendChild(wordSpan);
+      heading.style.opacity = '1';
     });
-  };
+  }, []);
+
+  useEffect(() => {
+    const heading = document.getElementById('join-animated-heading');
+    if (!heading || !isAnimating) return;
+
+    handleChangeHeading(heading);
+  }, [isAnimating, handleChangeHeading]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -81,7 +84,6 @@ export const Join = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isAnimating) {
             setIsAnimating(true);
-            handleChangeHeading(entry);
           }
         });
       },
@@ -102,8 +104,8 @@ export const Join = () => {
     <>
       <div className="join" ref={joinRef}>
         <div className="join-title">
-          <h2>
-            <span>Join MoonTON Ecosystem</span>
+          <h2 id="join-animated-heading">
+            Join MoonTON Ecosystem
           </h2>
         </div>
 
@@ -115,9 +117,9 @@ export const Join = () => {
         </div>
       </div>
       <section className="beam-footer">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
       </section>
     </>
   );

@@ -32,53 +32,53 @@ export const Advantages = () => {
       }
     }, []);
 
-  let touchstartY = 0;
-  let touchendY = 0;
+  const touchstart = useRef({ x: 0, y: 0 });
 
   const handleStartTouch = useCallback((e: TouchEvent) => {
-    touchstartY = e.changedTouches[0].screenY;
+    touchstart.current = { x: e.changedTouches[0].screenX, y: e.changedTouches[0].screenY };
   }, []);
 
   const handleEndTouch = useCallback((e: TouchEvent) => {
-    touchendY = e.changedTouches[0].screenY;
-    // соответствует скроллу вниз
-    const deltaY = touchstartY - touchendY;
-    if (deltaY > 0) {
-      setStage(stage => Math.min(300, stage + deltaY / 2));
+    // соответствует скроллу вниз или вправо
+    const deltaY = touchstart.current.y - e.changedTouches[0].screenY;
+    const deltaX = touchstart.current.x - e.changedTouches[0].screenX;
+    touchstart.current.y = 0;
+    if (!isIos && deltaY > 10 || isIos && deltaX > 10) {
+      setStage(stage => Math.min(300, (Math.floor(stage / 100) + 1) * 100));
       setDirection('forwards');
     }
-    if (deltaY < 0) {
-      setStage(stage => Math.max(0, stage + deltaY / 2));
+    if (!isIos && deltaY < -10 || isIos && deltaX < -10) {
+      setStage(stage => Math.max(0, (Math.ceil(stage / 100) - 1) * 100));
       setDirection('backwards');
     }
-  }, []);
+  }, [isIos]);
 
   const handleScrollText = useCallback((entry: IntersectionObserverEntry) => {
-    if (!entry.isIntersecting || isIos) return;
+    if (!entry.isIntersecting) return;
     if (isScrollControlled) return;
 
     setIsScrollControlled(true);
-    // const targetElement = document.querySelector('.advantages-text-container');
-    // targetElement!.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    blockScroll();
-    // setTimeout(() => blockScroll(), 3e2);
+
+    if (!isIos) blockScroll();
     document.addEventListener('wheel', handleYScroll);
     document.addEventListener('touchstart', handleStartTouch);
     document.addEventListener('touchend', handleEndTouch);
   }, [isScrollControlled, blockScroll, handleYScroll, isIos]);
 
   const handleReleaseBlock = useCallback((entry: IntersectionObserverEntry) => {
-    if (entry.isIntersecting || isIos || !isScrollControlled) return;
+    if (entry.isIntersecting || !isScrollControlled) return;
     setIsScrollControlled(false);
+    if (isIos) document.removeEventListener('touchstart', handleStartTouch);
+    if (isIos) document.removeEventListener('touchend', handleEndTouch);
   }, [isScrollControlled, isIos]);
 
   useEffect(() => {
     if (stage > 0 && stage < 300) return;
-    allowScroll();
+    if (!isIos) allowScroll();
     document.removeEventListener('wheel', handleYScroll);
-    document.removeEventListener('touchstart', handleStartTouch);
-    document.removeEventListener('touchend', handleEndTouch);
-  }, [stage, handleYScroll]);
+    if (!isIos) document.removeEventListener('touchstart', handleStartTouch);
+    if (!isIos) document.removeEventListener('touchend', handleEndTouch);
+  }, [stage, handleYScroll, isIos]);
 
   const { createObserver } = useObserver(handleScrollText, textBlockRef);
   useEffect(() => createObserver(), [createObserver]);
@@ -88,6 +88,7 @@ export const Advantages = () => {
 
   return (
     <div className="advantages" id="advantages" ref={ref}>
+
       <div className="big-planet" ref={bigPlanetRef}>
         <PlanetBig />
       </div>
@@ -95,13 +96,15 @@ export const Advantages = () => {
         <span className="beam-advantages" />
         <span className="beam-advantages" />
       </section>
+
       <div className="advantages-text-container" ref={textBlockRef}>
         <AdvantagesText stage={stage} direction={direction} />
       </div>
+
       <div className="small-planet" ref={smallPlanetRef}>
         <PlanetSmall />
       </div>
-      <div className="bottom-text"/>
+
     </div>
   );
 };
