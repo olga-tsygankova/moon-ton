@@ -1,96 +1,34 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { PlanetBig, PlanetSmall } from '../../../ui/svg';
 import './Advantages.css';
 import { AdvantagesText } from './AdvantagesText';
-import { useObserver, useScrollBlock } from '../../../hooks';
+import { useIosDetector, useObserver, useScrollBlock } from '../../../hooks';
 
 export const Advantages = () => {
   //TODO анимация с пролистыванием блоков и планетами
 
   const bigPlanetRef = useRef(null);
   const smallPlanetRef = useRef(null);
+  const textBlockRef = useRef(null);
   const ref = useRef<HTMLDivElement>(null);
 
   const [stage, setStage] = useState(1);
   const [isScrollControlled, setIsScrollControlled] = useState(false);
+  const [direction, setDirection] = useState<'backwards' | 'forwards' | 'none'>('none');
 
   const { blockScroll, allowScroll } = useScrollBlock();
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ref.current,
-  //       start: "top 0",
-  //       end: "bottom 50%",
-  //       scrub: true,
-  //     },
-  //   });
-  //
-  //   tl.to(bigPlanetRef.current, {
-  //     x: "0",
-  //     y: "0",
-  //     rotation: "0deg",
-  //     duration: 0.5,
-  //   })
-  //     .to(
-  //       smallPlanetRef.current,
-  //       {
-  //         x: "0",
-  //         y: "0",
-  //         rotation: "0deg",
-  //         duration: 0.5,
-  //       },
-  //       "<",
-  //     )
-  //     .to(bigPlanetRef.current, {
-  //       x: "-90%",
-  //       y: "0",
-  //       rotation: "-30deg",
-  //       duration: 0.5,
-  //     })
-  //     .to(
-  //       smallPlanetRef.current,
-  //       {
-  //         x: "100%",
-  //         y: "0",
-  //         rotation: "0deg",
-  //         duration: 0.5,
-  //       },
-  //       "<",
-  //     )
-  //
-  //     .to(bigPlanetRef.current, {
-  //       x: "-110%",
-  //       y: "130%",
-  //       rotation: "-30deg",
-  //       duration: 0.5,
-  //     })
-  //     .to(
-  //       smallPlanetRef.current,
-  //       {
-  //         x: "220%",
-  //         y: "-280%",
-  //         rotation: "30deg",
-  //         duration: 0.5,
-  //       },
-  //       "<",
-  //     );
-  //
-  //   return () => {
-  //     tl.kill();
-  //     ScrollTrigger.getAll().forEach((t) => t.kill());
-  //   };
-  // }, []);
+  const isIos = useIosDetector();
 
   const handleYScroll = useCallback(
     (event: WheelEvent) => {
       event.preventDefault();
       if (event.deltaY > 0) {
-        setStage(stage => stage > 300 ? 301 : stage + event.deltaY / 10);
+        setStage(stage => Math.min(300, stage + event.deltaY / 3));
+        setDirection('forwards');
+      } else {
+        setStage(stage => Math.max(0, stage + event.deltaY / 3));
+        setDirection('backwards');
       }
     }, []);
 
@@ -105,60 +43,48 @@ export const Advantages = () => {
     touchendY = e.changedTouches[0].screenY;
     // соответствует скроллу вниз
     const deltaY = touchstartY - touchendY;
-    if (Math.abs(deltaY) > 0) {
-      setStage(stage => stage > 300 ? 301 : stage + deltaY / 2);
+    if (deltaY > 0) {
+      setStage(stage => Math.min(300, stage + deltaY / 2));
+      setDirection('forwards');
+    }
+    if (deltaY < 0) {
+      setStage(stage => Math.max(0, stage + deltaY / 2));
+      setDirection('backwards');
     }
   }, []);
 
   const handleScrollText = useCallback((entry: IntersectionObserverEntry) => {
-    if (!entry.isIntersecting) return;
+    if (!entry.isIntersecting || isIos) return;
     if (isScrollControlled) return;
 
     setIsScrollControlled(true);
-    const targetElement = document.querySelector('.advantages-text-container');
-    targetElement!.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-    setTimeout(() => blockScroll(), 3e2);
+    // const targetElement = document.querySelector('.advantages-text-container');
+    // targetElement!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    blockScroll();
+    // setTimeout(() => blockScroll(), 3e2);
     document.addEventListener('wheel', handleYScroll);
     document.addEventListener('touchstart', handleStartTouch);
     document.addEventListener('touchend', handleEndTouch);
-  }, [isScrollControlled, blockScroll, handleYScroll]);
+  }, [isScrollControlled, blockScroll, handleYScroll, isIos]);
+
+  const handleReleaseBlock = useCallback((entry: IntersectionObserverEntry) => {
+    if (entry.isIntersecting || isIos || !isScrollControlled) return;
+    setIsScrollControlled(false);
+  }, [isScrollControlled, isIos]);
 
   useEffect(() => {
-    if (stage < 300) return;
+    if (stage > 0 && stage < 300) return;
     allowScroll();
     document.removeEventListener('wheel', handleYScroll);
     document.removeEventListener('touchstart', handleStartTouch);
     document.removeEventListener('touchend', handleEndTouch);
   }, [stage, handleYScroll]);
 
-  const { createObserver, ref: bottomRef } = useObserver(handleScrollText, smallPlanetRef);
+  const { createObserver } = useObserver(handleScrollText, textBlockRef);
+  useEffect(() => createObserver(), [createObserver]);
 
-  useEffect(() => {
-    // createObserver возвращает очищающую функцию
-    return createObserver();
-  }, [createObserver]);
-
-  useEffect(() => {
-    const bigPlanet = document.querySelector(".big-planet") as HTMLElement;
-    const smallPlanet = document.querySelector(".small-planet") as HTMLElement;
-    const advantages= document.querySelector(".advantages") as HTMLElement;
-
-    advantages.style.transformOrigin="50% 50%"
-
-    // bigPlanet.style.transform = "translate(0,0)";
-    // bigPlanet.style.transform = "translate(-100,0)";
-    //
-    // bigPlanet.style.top = `(-${stage/4})vh`;
-    // bigPlanet.style.left = `(-${stage/4}vw)`;
-    // smallPlanet.style.transform = "";
-    // smallPlanet.style.transform = "";
-
-    // smallPlanet.style.top = `${stage/4})vh`;
-    // smallPlanet.style.left = `left(${stage/4}vw)`;
-
-
-  }, [stage]);
+  const { createObserver: observerRelease } = useObserver(handleReleaseBlock, textBlockRef);
+  useEffect(() => observerRelease(), [observerRelease]);
 
   return (
     <div className="advantages" id="advantages" ref={ref}>
@@ -169,13 +95,13 @@ export const Advantages = () => {
         <span className="beam-advantages" />
         <span className="beam-advantages" />
       </section>
-      <div className="advantages-text-container">
-        <AdvantagesText stage={stage} />
+      <div className="advantages-text-container" ref={textBlockRef}>
+        <AdvantagesText stage={stage} direction={direction} />
       </div>
       <div className="small-planet" ref={smallPlanetRef}>
         <PlanetSmall />
       </div>
-      <div ref={bottomRef} />
+      <div className="bottom-text"/>
     </div>
   );
 };
