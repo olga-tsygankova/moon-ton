@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import './AdvantagesText.css';
 import { useIosDetector } from '../../../../hooks';
+import { Dot } from '../../../../ui/svg';
 
 type AdvantagesTextProps = {
   stage: number;
@@ -11,7 +12,7 @@ export const AdvantagesText = ({ stage, direction }: AdvantagesTextProps) => {
   const isIos = useIosDetector();
 
   return (
-    <div className="advantages-text">
+    <div className={cn('advantages-text', isIos && 'ios')}>
       <div className="advantages-text-beam-container">
         <span
           className={cn('advantages-text-beam-advantages', direction)}
@@ -53,6 +54,11 @@ export const AdvantagesText = ({ stage, direction }: AdvantagesTextProps) => {
           MoonTon products facilitate effortless transfers of blockchain assets across diverse ecosystems,
           maximizing arbitrage opportunities and enhancing the security of your investments
         </p>
+      </div>
+      <div className="advantages-text-points">
+        <Dot className={cn('advantages-text-dot', { selected: stage <= 100 })} />
+        <Dot className={cn('advantages-text-dot', { selected: stage > 100 && stage <= 200 })} />
+        <Dot className={cn('advantages-text-dot', { selected: stage > 200 })} />
       </div>
     </div>
   );

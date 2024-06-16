@@ -15,30 +15,21 @@
   opacity: 0;
 
   text-align: center;
-
-  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .join h2 span {
-  z-index: 1000;
-
-  display: inline-block;
-  opacity: 0;
-  animation: fadeInLetter 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fadeInLetter 1s ease-in-out both;
 }
 
 @keyframes fadeInLetter {
   0% {
     opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  20%, 70% {
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
