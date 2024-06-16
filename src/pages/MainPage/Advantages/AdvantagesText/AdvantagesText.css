@@ -3,8 +3,11 @@
   transition: opacity 0.5s, transform 0.5s;
   margin: 270px auto 160px auto;
   display: flex;
+  flex-direction: column;
   max-width: 330px;
   align-self: center;
+
+  /*border: 1px blue solid;*/
 }
 
 .advantages-text h4 {
@@ -18,45 +21,31 @@
 }
 
 .advantages-text-block {
-  opacity: 0;
-  animation: fade-away 0,3s forwards;
-  display: none;
-}
-
-
-.advantages-text-block.visible {
-  min-height: 330px;
   opacity: 1;
-  display: inline-block;
-  animation: fade-in 2s forwards;
-}
-
-@keyframes fade-away {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-50vw);
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateX(50vw);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  animation: fade-away 3s forwards;
+  /*border: 1px yellow solid;*/
 }
 
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 
+@media (max-width: 620px) {
+  .advantages-text p {
+    font-size: 16px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: move-bg 1s infinite linear;
+  }
+
+  @keyframes move-bg {
+    to {
+      background-position: 400% 0;
+    }
+  }
+}
 
 @media (min-width: 620px) {
   .advantages-text {
@@ -73,11 +62,113 @@
   .advantages-text p {
     font-size: 24px;
   }
+
+  .advantages-text-block {
+    opacity: 0;
+    animation: fade-away 3s forwards;
+    /*border: 1px yellow solid;*/
+    display: none;
+  }
+
+
+  .advantages-text-block.visible {
+    min-height: 330px;
+    opacity: 1;
+    display: inline-block;
+    animation: fade-in 2s forwards;
+    /*border: 1px green solid;*/
+  }
+
+  .advantages-text-block.visible.backwards {
+    --startX: -50vw;
+    animation: fade-in 2s forwards;
+  }
+
+  /*!* По сути, не работает *!*/
+  @keyframes fade-away {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50vw);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(var(--startX, 50vw));
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .advantages-text-beam-container {
+  }
+
+  .advantages-text-beam-advantages {
+    --beam-color: rgba(255, 245, 255, 0.8);
+    position: absolute;
+    top: 132px;
+    left: 0;
+  }
+
+  /*.advantages-text-beam-advantages:after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*width: 1px;*/
+    /*height: 5px;*/
+    /*background: rgba(105, 198, 169, 0.8);*/
+  /*}*/
+
+  .advantages-text-beam-advantages:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    left: -100px;
+    height: 3px;
+    /*background: linear-gradient(270deg, rgba(255, 0, 255, 0.8), transparent);*/
+    /*animation: changeDirection 0.2s none ease-in-out;*/
+  }
+
+  .advantages-text-beam-advantages.forwards:before {
+    --initDeg: 90deg;
+    --finalDeg: 270deg;
+    background: linear-gradient(270deg, var(--beam-color), transparent);
+    /*animation: changeDirection 0.4s cubic-bezier(.68, -0.55, .27, 1.55);*/
+  }
+
+  .advantages-text-beam-advantages.backwards:before {
+    --initDeg: 270deg;
+    --finalDeg: 90deg;
+    background: linear-gradient(90deg, var(--beam-color), transparent);
+    /*animation: changeDirection 0.2s ease-in-out;*/
+  }
+
+  @keyframes changeDirection {
+    from {
+      background: linear-gradient(var(--initDeg), var(--beam-color), transparent);
+    }
+    50% {
+      background: rgba(255, 255, 255, 0.8);
+    }
+    to {
+      background: linear-gradient(var(--finalDeg), var(--beam-color), transparent);
+    }
+  }
 }
 
 @media (min-width: 1000px) {
   .advantages-text {
     font-size: 64px;
-    max-width:650px;
+    /*max-width: 650px;*/
+    min-width: 50vw;
+    max-width: 50vw;
+
   }
+
 }

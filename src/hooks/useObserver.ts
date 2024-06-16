@@ -9,6 +9,10 @@ type UseObserver = (
   ref: MutableRefObject<any>
 }
 
+
+/**
+ * @example  const { createObserver, ref: bottomRef } = useObserver(cb, extRef); useEffect(() =>  createObserver(), [createObserver]);
+ */
 export const useObserver: UseObserver = (onEntry, triggerRef) => {
   const ref = useRef(null);
 
@@ -21,7 +25,7 @@ export const useObserver: UseObserver = (onEntry, triggerRef) => {
       },
       {
         rootMargin: '0px',
-        threshold: 0.5, // Триггерить событие, когда элемент виден на 50% или больше
+        threshold: 0.8, // Триггерить событие, когда элемент виден на 50% или больше
       },
     );
 
@@ -36,5 +40,5 @@ export const useObserver: UseObserver = (onEntry, triggerRef) => {
     };
   }, [onEntry, finalRef]);
 
-  return { createObserver, ref };
+  return { createObserver, ref: finalRef };
 };

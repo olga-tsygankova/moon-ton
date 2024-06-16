@@ -8,6 +8,15 @@
   text-align: center;
   overflow: hidden;
 
+  /*  border: 1px seagreen solid;*/
+}
+
+.advantages-text-container {
+  /*border: 1px red solid;*/
+}
+
+.bottom-text {
+  /*border: 1px white solid;*/
 }
 
 .big-planet {
@@ -40,40 +49,33 @@
 
 
 @keyframes rotate-big-planet {
-  0% {
-    transform: translate(0,50vw) rotate(0deg);
+  0%, 100% {
+    transform: translate(0, 50vw) rotate(0deg);
   }
   25% {
-    transform: translate(-20vw,-5vw) ;
+    transform: translate(-20vw, -5vw);
   }
-
   50% {
-    transform: translate(-80vw, 70vw) rotate(-20deg) ;
+    transform: translate(-80vw, 70vw) rotate(-20deg);
   }
   75% {
-    transform: translate(-30vw, 120vw) ;
-  }
-  100% {
-    transform: translate(0,50vw) rotate(0deg) ;
+    transform: translate(-30vw, 120vw);
   }
 }
 
 @keyframes rotate-small-planet {
-  0% {
-    transform: translate(0vw, -50vw);
+  0%,
+  100% {
+    transform: translate(0vw, -50vw) rotate(0deg);
   }
   25% {
-    transform: translate(30vw,0vw) ;
+    transform: translate(30vw, 0vw);
   }
-
   50% {
-    transform: translate(60vw, -50vw) rotate(-20deg) ;
+    transform: translate(60vw, -50vw) rotate(-20deg);
   }
   75% {
-    transform: translate(30vw, -100vw) ;
-  }
-  100% {
-    transform: translate(0vw, -50vw) rotate(0deg) ;
+    transform: translate(30vw, -100vw);
   }
 }
 
@@ -95,67 +97,62 @@
 
 
 @media (min-width: 620px) {
-  .advantages{
+  .advantages {
     margin-right: auto;
     margin-left: auto;
     width: auto;
   }
+
   .big-planet {
     top: 5%;
     right: -10%;
     width: 520px;
   }
+
   .small-planet {
-
     bottom: 5%;
-    left: 0%;
-
+    left: 0;
   }
 
   @keyframes rotate-big-planet {
-    0% {
-      transform: translate(0,100%) rotate(0deg);
+    0%,
+    100% {
+      transform: translate(0, 100%) rotate(0deg);
     }
     25% {
-      transform: translate(-40%,-2%) ;
+      transform: translate(-40%, -2%);
     }
-
     50% {
-      transform: translate(-100%, 90%) rotate(-20deg) ;
+      transform: translate(-100%, 90%) rotate(-20deg);
     }
     75% {
-      transform: translate(-50%, 180%) ;
-    }
-    100% {
-      transform: translate(0,100%) rotate(0deg) ;
+      transform: translate(-50%, 180%);
     }
   }
 
   @keyframes rotate-small-planet {
-    0% {
-      transform: translate(0%, -250%);
+    0%,
+    100% {
+      transform: translate(0%, -250%) rotate(0deg);
     }
     25% {
-      transform: translate(170%,-100%) ;
+      transform: translate(170%, -100%);
     }
-
     50% {
-      transform: translate(300%, -300%) rotate(-20deg) ;
+      transform: translate(300%, -300%) rotate(-20deg);
     }
     75% {
-      transform: translate(150%, -450%) ;
-    }
-    100% {
-      transform: translate(0%, -250%) rotate(0deg) ;
+      transform: translate(150%, -450%);
     }
   }
 }
 
 @media (min-width: 1000px) {
-  .advantages{
+  .advantages {
   }
+
   .big-planet {
-    right: 0%;
+    right: 0;
     top: 0;
     width: 630px;
   }
@@ -165,63 +162,58 @@
     width: 300px;
     bottom: 0;
   }
+
   @keyframes rotate-big-planet {
-    0% {
-      transform: translate(0,50%) rotate(0deg);
+    0%,
+    100% {
+      transform: translate(0, 50%) rotate(0deg);
     }
     25% {
-      transform: translate(-50%,-5%) ;
+      transform: translate(-50%, -5%);
     }
-
     50% {
-      transform: translate(-100%, 70%) rotate(-20deg) ;
+      transform: translate(-100%, 70%) rotate(-20deg);
     }
     75% {
-      transform: translate(-50%, 150%) ;
-    }
-    100% {
-      transform: translate(0,50%) rotate(0deg) ;
+      transform: translate(-50%, 150%);
     }
   }
 
   @keyframes rotate-small-planet {
-    0% {
-      transform: translate(0%, -100%);
+    0%,
+    100% {
+      transform: translate(0%, -100%) rotate(0deg);
     }
     25% {
-      transform: translate(120%,0%) ;
+      transform: translate(120%, 0%);
     }
-
     50% {
-      transform: translate(260%, -120%) rotate(-20deg) ;
+      transform: translate(260%, -120%) rotate(-20deg);
     }
     75% {
-      transform: translate(150%, -300%) ;
-    }
-    100% {
-      transform: translate(0%, -100%) rotate(0deg) ;
+      transform: translate(150%, -300%);
     }
   }
-
 }
 
 @media (min-width: 1200px) {
-  .advantages{
+  .advantages {
     width: 1200px;
   }
+
   .big-planet {
-    right: 0%;
+    right: 0;
     width: 672px;
   }
 
   .small-planet {
-    left: 0%;
+    left: 0;
     width: 350px;
   }
 
-  .beam .beam-advantages{
+  .beam .beam-advantages {
     position: absolute;
-    animation: animate-advantages 3s linear infinite;
+    animation: animate-beam-advantages 3s linear infinite;
   }
 
   .beam .beam-advantages:before {
@@ -230,16 +222,17 @@
     transform: translateY(0%);
     width: 200px;
     height: 3px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8),transparent);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
   }
 
-  .beam .beam-advantages:nth-child(1){
+  .beam .beam-advantages:nth-child(1) {
     top: 55%;
     left: 10%;
-    animation-delay: 0s;/*задержка анимации*/
-    animation-duration: 2s;/*длительность анимации*/
+    animation-delay: 0s; /*задержка анимации*/
+    animation-duration: 2s; /*длительность анимации*/
   }
-  .beam .beam-advantages:nth-child(2){
+
+  .beam .beam-advantages:nth-child(2) {
     top: 55%;
     right: -10%;
     animation-delay: 0s;
@@ -247,30 +240,30 @@
   }
 
 
-  @keyframes animate-advantages{
-    0%
-    {
+  @keyframes animate-beam-advantages {
+    0% {
       transform: rotate(0deg) translateX(0%);
     }
-    70%
-    {
+    70% {
       opacity: 1;
     }
-    100%
-    {
+    100% {
       transform: rotate(0deg) translateX(-500px);
       opacity: 0;
     }
   }
 }
+
 @media (min-width: 1460px) {
-  .advantages{
+  .advantages {
     width: 1327px;
   }
+
   .big-planet {
-    right: 0%;
+    right: 0;
   }
-  .beam .beam-advantages:before{
+
+  .beam .beam-advantages:before {
     width: 400px;
   }
 }

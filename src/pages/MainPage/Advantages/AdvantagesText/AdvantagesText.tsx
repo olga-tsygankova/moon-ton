@@ -1,14 +1,28 @@
 import cn from 'classnames';
 import './AdvantagesText.css';
+import { useIosDetector } from '../../../../hooks';
 
 type AdvantagesTextProps = {
-  stage: number
+  stage: number;
+  direction: 'backwards' | 'forwards' | 'none'
 }
 
-export const AdvantagesText = ({ stage }: AdvantagesTextProps) => {
+export const AdvantagesText = ({ stage, direction }: AdvantagesTextProps) => {
+  const isIos = useIosDetector();
+
   return (
     <div className="advantages-text">
-      <div className={cn('advantages-text-block', { visible: stage <= 100 })}>
+      <div className="advantages-text-beam-container">
+        <span
+          className={cn('advantages-text-beam-advantages', direction)}
+          style={{ transform: `translateX(${(stage % 100 || -100) / 2}vw)` }} />
+      </div>
+      <div
+        className={cn('advantages-text-block',
+          {
+            visible: stage <= 100,
+            backwards: direction !== 'forwards'
+          })}>
         <h4>integrability.</h4>
         <p>
           MoonTon provides secure and seamless cross-chain API integration into
@@ -16,7 +30,11 @@ export const AdvantagesText = ({ stage }: AdvantagesTextProps) => {
         </p>
       </div>
 
-      <div className={cn('advantages-text-block', { visible: stage > 100 && stage <= 200 })}>
+      <div
+        className={cn('advantages-text-block', {
+          visible: stage > 100 && stage <= 200,
+          backwards: direction !== 'forwards'
+        })}>
         <h4>interconnectivity.</h4>
         <p>
           MoonTon’s ecosystem provides cutting edge omnichain products
@@ -25,7 +43,11 @@ export const AdvantagesText = ({ stage }: AdvantagesTextProps) => {
         </p>
       </div>
 
-      <div className={cn('advantages-text-block', { visible: stage > 200 })}>
+      <div
+        className={cn('advantages-text-block', {
+          visible: stage > 200,
+          backwards: direction !== 'forwards'
+        })}>
         <h4>interoperability.</h4>
         <p>
           MoonTon products facilitate effortless transfers of blockchain assets across diverse ecosystems,
