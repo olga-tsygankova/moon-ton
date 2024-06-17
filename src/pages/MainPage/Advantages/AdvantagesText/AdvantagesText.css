@@ -86,7 +86,9 @@
 .advantages-text-beam-advantages {
   --beam-color: rgba(255, 245, 255, 0.8);
   position: absolute;
+
   top: 110px;
+
   left: 0;
 }
 
@@ -101,7 +103,7 @@
 .advantages-text-beam-advantages:before {
   content: '';
   position: absolute;
-  width: 200px;
+  width: 300px;
   left: -100px;
   height: 3px;
   /*animation: changeDirection 0.2s none ease-in-out;*/
@@ -159,9 +161,11 @@
     font-size: 64px;
     max-width: 500px;
     margin: 150px auto 270px auto;
+
   }
   .advantages-text-beam-advantages {
     top: 150px;
+
   }
 
   .advantages-text h4 {
