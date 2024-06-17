@@ -2,7 +2,7 @@
   color: #F1F1F1;
   position: relative;
 
-  margin: 150px 15px 128px 15px;
+  margin: 150px 15px 50px 15px;
 }
 
 .for-users__title {
@@ -71,7 +71,7 @@
 /*---------------------------------------------------------------------------------------------*/
 @media (min-width: 620px) {
   .for-users {
-    margin: 200px 35px 140px 35px;
+    margin: 200px 35px 50px 35px;
   }
 
   .card-wrapper {
@@ -107,7 +107,8 @@
 
 @media (min-width: 1000px) {
   .for-users {
-    margin: 200px auto 200px auto;
+    margin: 200px auto 50px auto;
+
   }
 
   .for-users__title {
