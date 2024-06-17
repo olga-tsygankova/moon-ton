@@ -1,6 +1,5 @@
 .advantages {
   margin: 0 auto;
-  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
   color: #F1F1F1;
@@ -46,32 +45,32 @@
 
 @keyframes rotate-big-planet {
   0%, 100% {
-    transform: translate(0, 50vw) rotate(0deg);
+    transform: translate(30vw, 20vw) rotate(0deg);
   }
   25% {
-    transform: translate(-20vw, -5vw);
+    transform: translate(0vw, -10vw);
   }
   50% {
-    transform: translate(-80vw, 70vw) rotate(-20deg);
+    transform: translate(-50vw, 20vw) rotate(-20deg);
   }
   75% {
-    transform: translate(-30vw, 120vw);
+    transform: translate(-20vw, 50vw);
   }
 }
 
 @keyframes rotate-small-planet {
   0%,
   100% {
-    transform: translate(0vw, -50vw) rotate(0deg);
+    transform: translate(0vw, -20vw) rotate(0deg);
   }
   25% {
-    transform: translate(30vw, 0vw);
+    transform: translate(30vw, 15vw);
   }
   50% {
-    transform: translate(60vw, -50vw) rotate(-20deg);
+    transform: translate(70vw, -20vw) rotate(-20deg);
   }
   75% {
-    transform: translate(30vw, -100vw);
+    transform: translate(40vw, -60vw);
   }
 }
 
@@ -108,32 +107,32 @@
   @keyframes rotate-big-planet {
     0%,
     100% {
-      transform: translate(0, 100%) rotate(0deg);
+      transform: translate(10vh, 25vh) rotate(0deg);
     }
     25% {
-      transform: translate(-40%, -2%);
+      transform: translate(-40vh, -6vh);
     }
     50% {
-      transform: translate(-100%, 90%) rotate(-20deg);
+      transform: translate(-80vh, 25vh) rotate(-20deg);
     }
     75% {
-      transform: translate(-50%, 180%);
+      transform: translate(-30vh, 50vh);
     }
   }
 
   @keyframes rotate-small-planet {
     0%,
     100% {
-      transform: translate(0%, -250%) rotate(0deg);
+      transform: translate(0vh, -25vh) rotate(0deg);
     }
     25% {
-      transform: translate(170%, -100%);
+      transform: translate(50vh, 0vh);
     }
     50% {
-      transform: translate(300%, -300%) rotate(-20deg);
+      transform: translate(90vh, -25vh) rotate(-20deg);
     }
     75% {
-      transform: translate(150%, -450%);
+      transform: translate(50vh, -60vh);
     }
   }
 }
@@ -155,32 +154,44 @@
   @keyframes rotate-big-planet {
     0%,
     100% {
-      transform: translate(0, 50%) rotate(0deg);
+      transform: translate(10vh, 25vh) rotate(0deg);
     }
     25% {
-      transform: translate(-50%, -5%);
+      transform: translate(-20vh, 0vh);
     }
     50% {
-      transform: translate(-100%, 70%) rotate(-20deg);
+      transform: translate(-50vh, 25vh) rotate(-20deg);
     }
     75% {
-      transform: translate(-50%, 150%);
+      transform: translate(-30vh, 50vh);
     }
   }
 
   @keyframes rotate-small-planet {
     0%,
     100% {
-      transform: translate(0%, -100%) rotate(0deg);
+      transform: translate(-5vh, -30vh) rotate(0deg);
+    }
+    12% {
+      transform: translate(5vh, -10vh);
     }
     25% {
-      transform: translate(120%, 0%);
+      transform: translate(30vh, 0);
+    }
+    37% {
+      transform: translate(60vh, -10vh);
     }
     50% {
-      transform: translate(260%, -120%) rotate(-20deg);
+      transform: translate(80vh, -30vh) rotate(-20deg);
+    }
+    62% {
+      transform: translate(70vh, -50vh);
     }
     75% {
-      transform: translate(150%, -300%);
+      transform: translate(40vh, -65vh);
+    }
+    87% {
+      transform: translate(5vh, -60vh);
     }
   }
 }
@@ -229,6 +240,7 @@
   }
 
 
+
   @keyframes animate-beam-advantages {
     0% {
       transform: rotate(0deg) translateX(0%);
@@ -239,6 +251,66 @@
     100% {
       transform: rotate(0deg) translateX(-500px);
       opacity: 0;
+    }
+  }
+
+  @keyframes rotate-big-planet {
+    0%,
+    100% {
+      transform: translate(0vh, 25vh) rotate(0deg);
+    }
+    12% {
+      transform: translate(-5vh, 10vh);
+    }
+
+    25% {
+      transform: translate(-20vh, 0vh);
+    }
+    37% {
+      transform: translate(-50vh, 5vh);
+    }
+
+    50% {
+      transform: translate(-75vh, 25vh) rotate(-20deg);
+    }
+    62% {
+      transform: translate(-70vh, 35vh);
+    }
+
+    75% {
+      transform: translate(-30vh, 45vh);
+    }
+    87% {
+      transform: translate(-5vh, 40vh);
+    }
+
+  }
+
+  @keyframes rotate-small-planet {
+    0%,
+    100% {
+      transform: translate(0vh, -30vh) rotate(0deg);
+    }
+    12% {
+      transform: translate(20vh, -10vh);
+    }
+    25% {
+      transform: translate(50vh, 0);
+    }
+    37% {
+      transform: translate(90vh, -10vh);
+    }
+    50% {
+      transform: translate(110vh, -30vh) rotate(-20deg);
+    }
+    62% {
+      transform: translate(90vh, -50vh);
+    }
+    75% {
+      transform: translate(60vh, -60vh);
+    }
+    87% {
+      transform: translate(10vh, -45vh);
     }
   }
 }

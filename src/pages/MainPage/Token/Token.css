@@ -29,7 +29,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: start;
-  padding: 15px;
+  padding: 20px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 3s, transform 1s;
@@ -75,6 +75,7 @@
   .token-text {
     text-align: center;
     width: 480px;
+    padding: 15px 0;
   }
 }
 
@@ -84,7 +85,10 @@
     padding: 0 70px;
     justify-content: space-between;
     max-width: 1294px;
-    height: 650px;
+  }
+  .token-text {
+
+    padding: 0 ;
   }
 }
 

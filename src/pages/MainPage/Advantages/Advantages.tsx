@@ -92,10 +92,10 @@ export const Advantages = () => {
       <div className="big-planet" ref={bigPlanetRef}>
         <PlanetBig />
       </div>
-      <section className="beam">
-        <span className="beam-advantages" />
-        <span className="beam-advantages" />
-      </section>
+      {/*<section className="beam">*/}
+      {/*  <span className="beam-advantages" />*/}
+      {/*  <span className="beam-advantages" />*/}
+      {/*</section>*/}
 
       <div className="advantages-text-container" ref={textBlockRef}>
         <AdvantagesText stage={stage} direction={direction} />

@@ -1,7 +1,7 @@
 .advantages-text {
   transform: translateY(50px);
   transition: opacity 0.5s, transform 0.5s;
-  margin: 270px auto 160px auto;
+  margin: 100px auto 200px auto;
   display: flex;
   flex-direction: column;
   max-width: 330px;
@@ -86,7 +86,7 @@
 .advantages-text-beam-advantages {
   --beam-color: rgba(255, 245, 255, 0.8);
   position: absolute;
-  top: 132px;
+  top: 17vh;
   left: 0;
 }
 
@@ -101,7 +101,7 @@
 .advantages-text-beam-advantages:before {
   content: '';
   position: absolute;
-  width: 200px;
+  width: 300px;
   left: -100px;
   height: 3px;
   /*animation: changeDirection 0.2s none ease-in-out;*/
@@ -157,8 +157,8 @@
 @media (min-width: 620px) {
   .advantages-text {
     font-size: 64px;
-    max-width: 650px;
-    margin: 270px auto 180px auto;
+    max-width: 500px;
+    margin: 150px auto 270px auto;
   }
 
 
@@ -174,8 +174,7 @@
 @media (min-width: 1000px) {
   .advantages-text {
     font-size: 64px;
-    /*max-width: 650px;*/
-    min-width: 50vw;
-    max-width: 50vw;
+    max-width: 600px;
+
   }
 }
