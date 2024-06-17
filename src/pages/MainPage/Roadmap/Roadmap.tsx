@@ -50,38 +50,29 @@ export const Roadmap = () => {
   return (
     <div className="roadmap" id="roadmap">
       <div className="roadmap-info">
-        <div className="q2" ref={q2Ref}>
-          <div className="scroll">
-            <div className="scroll-circle">
-              <Circle />
-            </div>
-            <section className="beam-scroll">
-              <span></span>
-              <span></span>
-            </section>
-          </div>
-          <div className="points-wrapper">
-            <div className="roadmap-title">
-              <h5>Q2</h5>
-              <div className="year">2024</div>
-            </div>
-            <div className="points">
-              <div className="points-item">
-                <Point />
-                <div>Mainnet ETH bridge</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
-                <div>Testnet ETH bridge</div>
-              </div>
-              <div className="points-item">
-                <Point />
-                <div>PRP (Participants Reward Program) Initialization</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/*<div className="q2" ref={q2Ref}>*/}
+        {/*  <div className="scroll">*/}
+        {/*    <div className="scroll-circle">*/}
+        {/*      <Circle />*/}
+        {/*    </div>*/}
+        {/*    <section className="beam-scroll">*/}
+        {/*      <span></span>*/}
+        {/*      <span></span>*/}
+        {/*    </section>*/}
+        {/*  </div>*/}
+        {/*  <div className="points-wrapper">*/}
+        {/*    <div className="roadmap-title">*/}
+        {/*      <h5>Q2</h5>*/}
+        {/*      <div className="year">2024</div>*/}
+        {/*    </div>*/}
+        {/*    <div className="points">*/}
+        {/*      <div className="points-item">*/}
+        {/*        <Point />*/}
+        {/*        <div>PRP (Participants Reward Program) Initialization</div>*/}
+        {/*      </div>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         <div className="q3" ref={q3Ref}>
           <div className="scroll">
             <div className="scroll-circle">
@@ -106,6 +97,15 @@ export const Roadmap = () => {
               <div className="points-item">
                 <Point />
                 <div>$MOON IOLO (Initial Liquidity Omnichain Offering)</div>
+              </div>
+              <div className="points-item">
+                <Point />
+                <div>Mainnet ETH bridge</div>
+              </div>
+
+              <div className="points-item">
+                <Point />
+                <div>Testnet ETH bridge</div>
               </div>
 
               <div className="points-item">
@@ -270,34 +270,39 @@ export const Roadmap = () => {
             </div>
             <div className="points">
               <div className="points-item">
-                <Point />
+                <Point/>
                 <div>Bridge Expansion</div>
               </div>
 
               <div className="points-item">
-                <Point />
+                <Point/>
                 <div>Institutional Deals</div>
               </div>
 
               <div className="points-item">
-                <Point />
+                <Point/>
                 <div>Ecosystem Expansion Initiatives</div>
               </div>
 
               <div className="points-item">
-                <Point />
+                <Point/>
                 <div>Ultimate Omnichain Arbitrage Platform</div>
               </div>
 
               <div className="points-item">
-                <Point />
+                <Point/>
                 <div>MoonTON Omni Game Launch</div>
               </div>
 
               <div className="points-item">
-                <Point />
+                <Point/>
                 <div>MoonTON Omni App</div>
               </div>
+              <div className="points-item">
+                <Point/>
+                <div>MoonTON Omnichain Swap</div>
+              </div>
+
             </div>
           </div>
         </div>
