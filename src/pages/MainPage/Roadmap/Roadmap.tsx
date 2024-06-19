@@ -91,11 +91,6 @@ export const Roadmap = () => {
             <div className="points">
               <div className="points-item">
                 <Point />
-                <div>Token Generation Event (TGE)</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
                 <div>$MOON IOLO (Initial Liquidity Omnichain Offering)</div>
               </div>
               <div className="points-item">
@@ -116,6 +111,10 @@ export const Roadmap = () => {
               <div className="points-item">
                 <Point />
                 <div>Testnet Cosmos Bridge</div>
+              </div>
+              <div className="points-item">
+                <Point />
+                <div>Token Generation Event (TGE)</div>
               </div>
 
               <div className="points-item">
@@ -270,39 +269,38 @@ export const Roadmap = () => {
             </div>
             <div className="points">
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Bridge Expansion</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Institutional Deals</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Ecosystem Expansion Initiatives</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Ultimate Omnichain Arbitrage Platform</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>MoonTON Omni Game Launch</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>MoonTON Omni App</div>
               </div>
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>MoonTON Omnichain Swap</div>
               </div>
-
             </div>
           </div>
         </div>
