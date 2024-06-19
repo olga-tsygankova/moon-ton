@@ -1,4 +1,3 @@
-import {SocialLinksIcon} from "./SocialLinksIcon/SocialLinksIcon";
 import "./OtherLinks.css"
 
 export const OtherLinks = () => {
@@ -10,7 +9,6 @@ export const OtherLinks = () => {
                 <a href='#' target="_blank" rel="noopener noreferrer">Dextools</a>
                 <a href="https://moon-ton.gitbook.io/moon-ton" target="_blank" rel="noopener noreferrer">Whitepaper</a>
             </div>
-            <SocialLinksIcon/>
         </div>
     )
 }
