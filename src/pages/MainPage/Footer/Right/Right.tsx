@@ -1,6 +1,5 @@
 import "./Right.css";
 import { Logo } from "../../Header/Logo/Logo";
-import { SocialLinksIcon } from '../OtherLinks/SocialLinksIcon';
 import { TwitterIcon } from '../../../../ui/svg/TwitterIcon';
 import { TelegramIcon } from '../../../../ui/svg/TelegramIcon';
 
