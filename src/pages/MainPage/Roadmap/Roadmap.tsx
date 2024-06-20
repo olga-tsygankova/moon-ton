@@ -70,14 +70,17 @@ export const Roadmap = () => {
                 <Point />
                 <div>Testnet ETH Bridge</div>
               </div>
+              
               <div className="points-item">
                 <Point />
                 <div>Mainnet ETH Bridge</div>
               </div>
+              
               <div className="points-item">
                 <Point />
                 <div>PRP (Participants Reward Program) Initialization</div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -291,6 +294,7 @@ export const Roadmap = () => {
                 <Point />
                 <div>MoonTON Omni App</div>
               </div>
+
             </div>
           </div>
         </div>
