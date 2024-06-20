@@ -50,29 +50,37 @@ export const Roadmap = () => {
   return (
     <div className="roadmap" id="roadmap">
       <div className="roadmap-info">
-        {/*<div className="q2" ref={q2Ref}>*/}
-        {/*  <div className="scroll">*/}
-        {/*    <div className="scroll-circle">*/}
-        {/*      <Circle />*/}
-        {/*    </div>*/}
-        {/*    <section className="beam-scroll">*/}
-        {/*      <span></span>*/}
-        {/*      <span></span>*/}
-        {/*    </section>*/}
-        {/*  </div>*/}
-        {/*  <div className="points-wrapper">*/}
-        {/*    <div className="roadmap-title">*/}
-        {/*      <h5>Q2</h5>*/}
-        {/*      <div className="year">2024</div>*/}
-        {/*    </div>*/}
-        {/*    <div className="points">*/}
-        {/*      <div className="points-item">*/}
-        {/*        <Point />*/}
-        {/*        <div>PRP (Participants Reward Program) Initialization</div>*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+        <div className="q2" ref={q2Ref}>
+          <div className="scroll">
+            <div className="scroll-circle">
+              <Circle />
+            </div>
+            <section className="beam-scroll">
+              <span></span>
+              <span></span>
+            </section>
+          </div>
+          <div className="points-wrapper">
+            <div className="roadmap-title">
+              <h5>Q2</h5>
+              <div className="year">2024</div>
+            </div>
+            <div className="points">
+              <div className="points-item">
+                <Point />
+                <div>Testnet ETH Bridge</div>
+              </div>
+              <div className="points-item">
+                <Point />
+                <div>Mainnet ETH Bridge</div>
+              </div>
+              <div className="points-item">
+                <Point />
+                <div>PRP (Participants Reward Program) Initialization</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="q3" ref={q3Ref}>
           <div className="scroll">
             <div className="scroll-circle">
@@ -91,6 +99,10 @@ export const Roadmap = () => {
             <div className="points">
               <div className="points-item">
                 <Point />
+                <div>Testnet SOL Bridge</div>
+              </div>
+              <div className="points-item">
+                <Point />
                 <div>Token Generation Event (TGE)</div>
               </div>
 
@@ -100,52 +112,27 @@ export const Roadmap = () => {
               </div>
               <div className="points-item">
                 <Point />
-                <div>Mainnet ETH bridge</div>
+                <div>NCY (Network Contribution Yield) Program [ETH, TON]</div>
               </div>
-
-              <div className="points-item">
-                <Point />
-                <div>Testnet ETH bridge</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
-                <div>Testnet SOL Bridge</div>
-              </div>
-
               <div className="points-item">
                 <Point />
                 <div>Testnet Cosmos Bridge</div>
               </div>
-
               <div className="points-item">
                 <Point />
                 <div>Mainnet SOL Bridge</div>
               </div>
-
               <div className="points-item">
                 <Point />
                 <div>Mainnet Cosmos bridge</div>
               </div>
-
               <div className="points-item">
                 <Point />
                 <div>Mainnet Bridge SDK</div>
               </div>
-
               <div className="points-item">
                 <Point />
-                <div>NCY (Network Contribution Yield) Program [ETH, TON]</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
-                <div>DGP (Developer Grants Program) [Phase 1]</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
-                <div>Self Delegate Staking Launch</div>
+                <div>Wave 1 Partnerships</div>
               </div>
 
               <div className="points-item">
@@ -158,7 +145,12 @@ export const Roadmap = () => {
 
               <div className="points-item">
                 <Point />
-                <div>Wave 1 Partnerships</div>
+                <div>DGP (Developer Grants Program) [Phase 1]</div>
+              </div>
+
+              <div className="points-item">
+                <Point />
+                <div>Self Delegate Staking Launch</div>
               </div>
 
               <div className="points-item">
@@ -178,6 +170,7 @@ export const Roadmap = () => {
             </div>
           </div>
         </div>
+
         <div className="q4" ref={q4Ref}>
           <div className="scroll">
             <div className="scroll-circle">
@@ -196,11 +189,6 @@ export const Roadmap = () => {
             <div className="points">
               <div className="points-item">
                 <Point />
-                <div>MoonTON Omnichain Swap</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
                 <div>PRP (Participants Reward Program) [Phase 2]</div>
               </div>
 
@@ -216,10 +204,20 @@ export const Roadmap = () => {
 
               <div className="points-item">
                 <Point />
+                <div>Wave 2 Partnerships</div>
+              </div>
+
+              <div className="points-item">
+                <Point />
                 <div>
                   IOLO (Initial Liquidity Omnichain Offering) Provision Program
                   [Phase 2]
                 </div>
+              </div>
+
+              <div className="points-item">
+                <Point />
+                <div>OAS (Omnichain Airdrop System)</div>
               </div>
 
               <div className="points-item">
@@ -229,17 +227,12 @@ export const Roadmap = () => {
 
               <div className="points-item">
                 <Point />
+                <div>MoonTON Omnichain Swap</div>
+              </div>
+
+              <div className="points-item">
+                <Point />
                 <div>Major CEX Listings</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
-                <div>Wave 2 Partnerships</div>
-              </div>
-
-              <div className="points-item">
-                <Point />
-                <div>OAS (Omnichain Airdrop System)</div>
               </div>
 
               <div className="points-item">
@@ -270,39 +263,34 @@ export const Roadmap = () => {
             </div>
             <div className="points">
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Bridge Expansion</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Institutional Deals</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Ecosystem Expansion Initiatives</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>Ultimate Omnichain Arbitrage Platform</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>MoonTON Omni Game Launch</div>
               </div>
 
               <div className="points-item">
-                <Point/>
+                <Point />
                 <div>MoonTON Omni App</div>
               </div>
-              <div className="points-item">
-                <Point/>
-                <div>MoonTON Omnichain Swap</div>
-              </div>
-
             </div>
           </div>
         </div>
