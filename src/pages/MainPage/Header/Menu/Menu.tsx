@@ -49,7 +49,7 @@ export const Menu = ({ isOpen, onClose }: IProps) => {
         <a href="#token" className="line" onClick={handleLinkClick}>
           Tokenomics
         </a>
-        <a href="#whitepaper">Whitepaper</a>
+        <a href="https://moon-ton.gitbook.io/moon-ton">Whitepaper</a>
       </div>
     </div>
   );
