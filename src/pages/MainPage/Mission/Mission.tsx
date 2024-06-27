@@ -4,6 +4,7 @@ import { WordSpan } from './WordSpan';
 import cn from 'classnames';
 
 import './Mission.css';
+import { PortalUpLine } from '../../../ui/svg/PortalUpLine';
 
 const text =
   "Our mission is to ensure seamless, secure, and efficient omnichain interaction between ton and other blockchain ecosystems";
@@ -46,6 +47,8 @@ export const Mission = () => {
       ])
     , [] as { word: string, indexOf: number }[]
   ), []);
+
+
 
   return (
     <div className="mission" id="mission">

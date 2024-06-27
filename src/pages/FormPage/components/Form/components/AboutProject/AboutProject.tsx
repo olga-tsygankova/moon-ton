@@ -18,6 +18,8 @@ export const AboutProject = ({
   tokenSymbol,
   projectDescription,
 }: IProps) => {
+
+
   return (
     <div className="about-project">
       <div className="about-project__container">

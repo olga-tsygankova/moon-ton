@@ -61,9 +61,14 @@
 }
 
 .beam-footer {
+  width: 130px;
+  height: 100px;
   position: absolute;
-  z-index: 100;
-
+  left: 50%;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
 }
 
 .beam-footer span {
@@ -91,30 +96,32 @@
     opacity: 1;
   }
   100% {
-    transform: rotate(270deg) translateX(-600px);
+    transform: rotate(270deg) translateX(-800px);
     opacity: 0;
   }
 }
 
 .beam-footer span:nth-child(1) {
   top: -500px; /*верхняя координата*/
-  left: 35vw; /*правая координата*/
+  left: 97px;
 
   animation-delay: 0s; /*задержка анимации*/
   animation-duration: 3s; /*длительность анимации*/
 }
 
 .beam-footer span:nth-child(2) {
-  top: -550px;
-  left: 50vw;
+  top: -500px;
+  left: 0;
+
   animation-delay: 1s;
   animation-duration: 3s;
 }
 
 .beam-footer span:nth-child(3) {
-  top: -550px;
-  left: 65vw;
-  animation-delay: 0.4s;
+  top: -500px;
+  left: -97px;
+
+  animation-delay: 0.5s;
   animation-duration: 3s;
 }
 
@@ -138,21 +145,31 @@
     margin-left: auto;
     margin-right: auto;
   }
-
   .beam-footer span:nth-child(1) {
-    top: -500px; /*верхняя координата*/
-    left: 40vw; /*правая координата*/
+    top: -750px; /*верхняя координата*/
   }
 
   .beam-footer span:nth-child(2) {
-    top: -550px;
-    left: 50vw;
+    top: -750px; /*верхняя координата*/
   }
 
   .beam-footer span:nth-child(3) {
-    top: -550px;
-    left: 60vw;
+    top: -750px; /*верхняя координата*/
   }
+  @keyframes animate-beam-footer {
+    0% {
+      transform: rotate(270deg) translateX(0);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(-950px);
+      opacity: 0;
+    }
+  }
+
+
 }
 
 @media (min-width: 1000px) {
@@ -166,20 +183,6 @@
     font-size: 96px;
   }
 
-  .beam-footer span:nth-child(1) {
-    top: -500px; /*верхняя координата*/
-    left: 43vw; /*правая координата*/
-  }
-
-  .beam-footer span:nth-child(2) {
-    top: -550px;
-    left: 50vw;
-  }
-
-  .beam-footer span:nth-child(3) {
-    top: -550px;
-    left: 57vw;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -219,7 +222,7 @@
       opacity: 1;
     }
     100% {
-      transform: rotate(270deg) translateX(-2200px);
+      transform: rotate(270deg) translateX(-1800px);
       opacity: 0;
     }
   }

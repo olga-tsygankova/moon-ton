@@ -19,7 +19,15 @@
   display: flex;
   justify-content: center;
 }
-
+.portal-down-line{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.portal-down-line svg{
+  position: absolute;
+  top:-35px;
+}
 .for-developers {
   position: relative;
   z-index: 1000;
@@ -125,24 +133,24 @@
 .portal-down-beam span:nth-child(1) {
   top: 450px;
   /*верхняя координата*/
-  left: -40px; /*правая координата*/
+  left: -30px; /*правая координата*/
 
-  animation-delay: 0.3s; /*задержка анимации*/
-  animation-duration: 2s; /*длительность анимации*/
+  animation-delay: 0.5s; /*задержка анимации*/
+  animation-duration: 3s; /*длительность анимации*/
 }
 
 .portal-down-beam span:nth-child(2) {
   top: 450px;
-  left: 68px;
+  left: 67px;
   animation-delay: 0s;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 .portal-down-beam span:nth-child(3) {
   top: 450px;
-  left: 176px;
-  animation-delay: 0.8s;
-  animation-duration: 2s;
+  left: 160px;
+  animation-delay: 1s;
+  animation-duration: 3s;
 }
 
 
@@ -180,6 +188,18 @@
 
   .for-partners h4 {
     text-align: end;
+  }
+  @keyframes animate-portal-down-beam {
+    0% {
+      transform: rotate(270deg) translateX(0);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(-1200px);
+      opacity: 0;
+    }
   }
 
 }
@@ -227,6 +247,18 @@
     font-size: 32px;
     font-weight: 500;
     margin: 0;
+  }
+  @keyframes animate-portal-down-beam {
+    0% {
+      transform: rotate(270deg) translateX(0);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(-1250px);
+      opacity: 0;
+    }
   }
 }
 

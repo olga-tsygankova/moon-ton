@@ -13,11 +13,11 @@ export const AdvantagesText = ({ stage, direction }: AdvantagesTextProps) => {
 
   return (
     <div className={cn('advantages-text', isIos && 'ios')}>
-      <div className="advantages-text-beam-container">
-        <span
-          className={cn('advantages-text-beam-advantages', direction)}
-          style={{ transform: `translateX(${(stage % 100 || -100) / 2}vw)` }} />
-      </div>
+      {/*<div className="advantages-text-beam-container">*/}
+      {/*  <span*/}
+      {/*    className={cn('advantages-text-beam-advantages', direction)}*/}
+      {/*    style={{ transform: `translateX(${(stage % 100 || -100) / 2}vw)` }} />*/}
+      {/*</div>*/}
       <div
         className={cn('advantages-text-block',
           {
