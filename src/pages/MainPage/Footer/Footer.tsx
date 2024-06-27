@@ -4,6 +4,7 @@ import "./Footer.css";
 import { useEffect, useRef } from "react";
 import { WebLinks } from "./WebLinks";
 import { SocialLinks } from "./SocialLinks";
+import { FooterLine } from '../../../ui/svg/FooterLine';
 
 export const Footer = () => {
   const footerRef = useRef(null);
@@ -38,13 +39,16 @@ export const Footer = () => {
 
   return (
     <>
+      <div className="footer-line">
+        <FooterLine/>
+      </div>
       <div className="footer" ref={footerRef}>
         <div className="link-container">
-          <OtherLinks />
-          <WebLinks />
-          <SocialLinks />
+          <OtherLinks/>
+          <WebLinks/>
+          <SocialLinks/>
         </div>
-        <Right />
+        <Right/>
       </div>
     </>
   );
