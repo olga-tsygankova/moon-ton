@@ -4,7 +4,7 @@ import "./Form.css";
 import { Contact } from "./Contact";
 import { ProjectLink } from "./ProjectLink";
 import { Other } from "./Other";
-import { Submit } from '../../../../../ui/Buttons/Submit';
+import { SubmitButton } from '../../../../../ui/Buttons/Submit';
 
 interface FormData {
   projectName: string;
@@ -127,7 +127,7 @@ export const Form = () => {
           }}
         >
           <div className="submit-wrapper">
-          <Submit>Submit</Submit>
+          <SubmitButton>Submit</SubmitButton>
           </div>
         </section>
       </section>

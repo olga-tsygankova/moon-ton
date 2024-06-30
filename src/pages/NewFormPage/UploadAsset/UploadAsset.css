@@ -1,0 +1,11 @@
+.upload__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: start;
+}
+
+.upload__btn__subtitle {
+  color: #797979;
+  font-size: 14px;
+}

@@ -2,7 +2,7 @@ import "./Other.css";
 import { Input } from "../../../../../../ui/Input";
 import { ChangeEvent } from "react";
 import { CheckBox } from "../../../../../../ui/CheckBox";
-import { Upload } from "../../../../../../ui/Buttons/Upload";
+import { UploadButton } from "../../../../../../ui/Buttons/Upload";
 
 type IProps = {
   liquidity: string;
@@ -71,7 +71,7 @@ export const Other = ({
           />
           <div className="upload__btn">
             <div className="upload__btn__title">Logo and Branding Assets</div>
-            <Upload>Upload</Upload>
+            <UploadButton>Upload</UploadButton>
             <div className="upload__btn__subtitle">No file chosen</div>
           </div>
         </div>

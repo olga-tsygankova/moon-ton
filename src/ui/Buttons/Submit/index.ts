@@ -1,1 +1,1 @@
-export * from './Submit'
+export * from './SubmitButton'
