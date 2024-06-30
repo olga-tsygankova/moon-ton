@@ -1,27 +1,58 @@
 .form-block-container {
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .form-block-title {
-    font-size: 26px;
-    text-align: start;
+  font-size: 26px;
+  text-align: start;
 }
 
 .form-block-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .form-block-container:after {
-    content: " ";
+  content: " ";
 
-    border-bottom: 1px solid rgba(115, 115, 118, 0);
-    border-image: linear-gradient(to right, rgba(115, 115, 118, 0), #737376, rgba(115, 115, 118, 0)) 1;
+  border-bottom: 1px solid rgba(115, 115, 118, 0);
+  border-image: linear-gradient(to right, rgba(115, 115, 118, 0), #737376, rgba(115, 115, 118, 0)) 1;
 }
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .form-block-container {
+    gap: 50px;
+  }
+
+  .form-block-container {
+    width: 480px;
+    margin-right: auto;
+    margin-left: 35px;
+  }
+
+  .form-block-title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form-block-fields {
+    flex-direction: row;
+  }
+
+  .form-block-container {
+    width: 630px;
+  }
+}
+
 
 
 

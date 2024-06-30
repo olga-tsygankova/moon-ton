@@ -1,4 +1,4 @@
-.new-form-page{
+.new-form-page {
   padding: 27px 15px 35px 15px;
   background-image: url("../../../public/backgroind image main.png");
   background-repeat: no-repeat;
@@ -14,5 +14,56 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.form-all-container {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Иконки в инпутах */
+Input[name="projectTwitterLink"] {
+  background-image: url("../../ui/icons/twitter.svg");
+  background-size: 17px 17px;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+Input[name="projectTelegramLink"] {
+  background-image: url("../../ui/icons/telegram.svg");
+  background-size: 17px 17px;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+Input[name="projectWebsite"] {
+  background-image: url("../../ui/icons/web.svg");
+  background-size: 17px 17px;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+/* Конец иконок в инпутах */
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .form-all-container {
+    margin: 82px auto 0 auto;
+    width: 580px;
+    gap: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form-all-container {
+    width: 960px;
   }
 }
