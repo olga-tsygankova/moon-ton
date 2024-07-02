@@ -9,6 +9,6 @@ export type IContactForm = {
   projectTelegramLink: string;
   projectWebsite: string;
   chain: string;
-  liquidity: string;
+  liquidity: number;
   upload?: string;
 };

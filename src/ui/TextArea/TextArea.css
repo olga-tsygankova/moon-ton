@@ -20,8 +20,17 @@ textarea {
   border-radius: 20px;
 }
 
-textarea:focus{
+textarea:focus {
   border-color: #CFCFCF;
+}
+
+.textarea-label.error {
+  color: var(--error-color);
+}
+
+.textarea-error-message {
+  color: var(--error-color);
+  font-size: var(--error-hint-size, 8pt);
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -29,13 +38,13 @@ textarea:focus{
 /*---------------------------------------------------------------------------------------------*/
 
 @media (min-width: 620px) {
-  textarea{
+  textarea {
     width: 380px;
   }
 }
 
 @media (min-width: 1000px) {
-  textarea{
+  textarea {
     width: 630px;
   }
 

@@ -1,0 +1,20 @@
+.radio-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.radio-group-items {
+  display: flex;
+  flex-direction: row;
+  gap: 26px
+}
+
+.radio-label.error {
+  color: var(--error-color);
+}
+
+.radio-error-message {
+  color: var(--error-color);
+  font-size: var(--error-hint-size, 8pt);
+}

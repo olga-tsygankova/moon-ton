@@ -4,3 +4,7 @@
   width: 100%;
 }
 
+.app {
+  --error-color: #f65f5f;
+  --error-hint-size: 8pt;
+}

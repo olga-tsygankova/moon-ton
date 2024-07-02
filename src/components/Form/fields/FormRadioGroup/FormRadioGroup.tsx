@@ -1,23 +1,32 @@
-import { useController, useFormContext } from 'react-hook-form';
+import { get, useController, useFormContext } from 'react-hook-form';
+import cn from 'classnames';
+
 import { CheckBox } from '../../../../ui/CheckBox';
+
+import './FormRadioGroup.css';
 
 type FormRadioGroupProps = {
   fieldName: string;
-  options: { label: string, value: string }[];
+  options: { label: string; value: string }[];
   title: string;
-
-}
-export const FormRadioGroup = ({ fieldName, options, title }: FormRadioGroupProps) => {
+};
+export const FormRadioGroup = ({
+  fieldName,
+  options,
+  title,
+}: FormRadioGroupProps) => {
   const { control } = useFormContext();
   const {
     field: { value, onChange },
-    formState
+    formState,
   } = useController({ name: fieldName, control });
 
+  const error = get(formState.errors, fieldName);
+
   return (
-    <div>
-      <div>{title}</div>
-      <div>
+    <div className="radio-group-container">
+      <div className={cn('radio-label', { error: !!error })}>{title}</div>
+      <div className="radio-group-items">
         {options.map((option) => (
           <CheckBox
             key={option.value}
@@ -31,6 +40,7 @@ export const FormRadioGroup = ({ fieldName, options, title }: FormRadioGroupProp
           />
         ))}
       </div>
+      {error && <div className="radio-error-message">{error.message}</div>}
     </div>
   );
 };
