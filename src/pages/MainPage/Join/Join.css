@@ -125,6 +125,19 @@
   animation-duration: 3s;
 }
 
+.footer-line {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: fadeIn 2s 2s ease-in-out forwards;
+
+}
+.footer-line svg{
+  position: absolute;
+  bottom: -650px;
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
