@@ -25,13 +25,12 @@ input:focus {
 }
 
 .input-label.error {
-  color: #f65f5f;
+  color: var(--error-color);
 }
 
 .input-error-message {
-  color: #f65f5f;
-  font-size: 8pt;
-
+  color: var(--error-color);
+  font-size: var(--error-hint-size, 8pt);
 }
 
 /*---------------------------------------------------------------------------------------------*/

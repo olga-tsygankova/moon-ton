@@ -2,7 +2,6 @@ import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Footer, Header } from '../MainPage';
 import { SubmitButton } from '../../ui';
 import { sendMessage } from '../../api/telegram';
@@ -59,7 +58,7 @@ export const NewFormPage = () => {
         </div>
       </div>
 
-      {/*<Footer />*/}
+      <Footer />
     </div>
   );
 };

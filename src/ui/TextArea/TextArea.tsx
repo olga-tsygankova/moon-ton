@@ -1,4 +1,5 @@
-import "./TextArea.css";
+import './TextArea.css';
+import cn from 'classnames';
 
 interface TextAreaProps {
   name: string;
@@ -8,6 +9,7 @@ interface TextAreaProps {
   onChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
+  error?: { message: string };
 }
 
 export const TextArea = ({
@@ -16,11 +18,17 @@ export const TextArea = ({
   placeholder,
   value,
   onChange,
+  error,
   ...rest
 }: TextAreaProps) => {
   return (
     <div className="textarea">
-      <label htmlFor={name}>{label}</label>
+      <label
+        className={cn('textarea-label', { error: !!error })}
+        htmlFor={name}
+      >
+        {label}
+      </label>
       <textarea
         name={name}
         placeholder={placeholder}
@@ -28,6 +36,7 @@ export const TextArea = ({
         onChange={onChange}
         {...rest}
       />
+      {error && <div className="textarea-error-message">{error.message}</div>}
     </div>
   );
 };

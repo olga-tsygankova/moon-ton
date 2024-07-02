@@ -29,7 +29,11 @@
 
 @media (min-width: 620px) {
   .form-block-container {
-    gap: 50px;
+    gap: 30px;
+  }
+
+  .form-block-container:after {
+    padding-top: 20px;
   }
 
   .form-block-container {

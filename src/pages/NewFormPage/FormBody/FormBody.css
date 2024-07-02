@@ -1,0 +1,18 @@
+.form-body-project-info-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.form-block-container:first-child .form-block-fields {
+  flex-direction: column;
+}
+
+.form-block-container:nth-child(4) {
+  margin-left: 0;
+}
+
+.form-block-container:nth-child(4):after {
+  /* FIXME не работает вроде, плюс по ширине везде короче */
+  margin-left: 40px;
+}

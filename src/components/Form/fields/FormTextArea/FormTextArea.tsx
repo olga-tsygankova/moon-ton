@@ -1,18 +1,24 @@
-import { useController, useFormContext } from 'react-hook-form';
+import { get, useController, useFormContext } from 'react-hook-form';
 import { TextArea } from '../../../../ui/TextArea';
 
 type FormTextInputProps = {
   fieldName: string;
   title: string;
   placeholder: string;
-}
+};
 
-export const FormTextArea = ({ fieldName, title, placeholder }: FormTextInputProps) => {
+export const FormTextArea = ({
+  fieldName,
+  title,
+  placeholder,
+}: FormTextInputProps) => {
   const { control } = useFormContext();
   const {
     field: { value, onChange },
-    formState
+    formState,
   } = useController({ name: fieldName, control });
+
+  const error = get(formState.errors, fieldName);
 
   return (
     <TextArea
@@ -21,6 +27,7 @@ export const FormTextArea = ({ fieldName, title, placeholder }: FormTextInputPro
       value={value}
       label={title}
       onChange={onChange}
+      error={error}
     />
   );
 };
