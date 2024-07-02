@@ -4,6 +4,7 @@ import { BlueBtn } from '../../../ui/Buttons/BlueBtn';
 import { JoinIcon } from '../../../ui/svg';
 
 import './Join.css';
+import { FooterLine } from '../../../ui/svg/FooterLine';
 
 const DELAY_LENGTH = 1;
 
@@ -111,15 +112,18 @@ export const Join = () => {
 
         <div className="join-btn" ref={joinBtnRef}>
           <BlueBtn>
-            <JoinIcon />
+            <JoinIcon/>
             Launch Moon TON
           </BlueBtn>
         </div>
       </div>
+      <div className="footer-line">
+        <FooterLine/>
+      </div>
       <section className="beam-footer">
-        <span />
-        <span />
-        <span />
+        <span/>
+        <span/>
+        <span/>
       </section>
     </>
   );

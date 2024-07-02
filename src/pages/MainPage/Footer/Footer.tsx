@@ -39,9 +39,7 @@ export const Footer = () => {
 
   return (
     <>
-      <div className="footer-line">
-        <FooterLine/>
-      </div>
+
       <div className="footer" ref={footerRef}>
         <div className="link-container">
           <OtherLinks/>
