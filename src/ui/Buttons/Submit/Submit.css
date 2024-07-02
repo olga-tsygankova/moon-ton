@@ -5,6 +5,7 @@
   gap: 10px;
   text-decoration: none;
   box-sizing: border-box;
+  cursor: pointer;
 
   outline: none;
   background: linear-gradient(180deg, #47BCFC 0%, #078FD1 100%);

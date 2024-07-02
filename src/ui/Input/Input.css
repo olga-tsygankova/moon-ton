@@ -1,5 +1,4 @@
 .input {
-
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -25,6 +24,16 @@ input:focus {
   border-color: #CFCFCF;
 }
 
+.input-label.error {
+  color: #f65f5f;
+}
+
+.input-error-message {
+  color: #f65f5f;
+  font-size: 8pt;
+
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
@@ -39,7 +48,8 @@ input:focus {
   input {
     width: 300px;
   }
-  label{
+
+  label {
     max-width: 300px;
   }
 
