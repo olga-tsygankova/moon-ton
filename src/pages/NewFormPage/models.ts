@@ -8,7 +8,7 @@ export type IContactForm = {
   projectTwitterLink: string;
   projectTelegramLink: string;
   projectWebsite: string;
-  chain: string | null;
+  chain: string;
   liquidity: string;
   upload?: string;
-}
+};
