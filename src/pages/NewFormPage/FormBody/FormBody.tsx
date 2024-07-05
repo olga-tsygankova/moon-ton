@@ -20,9 +20,15 @@ const chainOptions = [
 
 type FormBodyProps = {
   methods: UseFormReturn<IContactForm>;
+  onUploadFile: (data: FileList) => void;
+  attachedFiles: FileList | null;
 };
 
-export const FormBody = ({ methods }: FormBodyProps) => {
+export const FormBody = ({
+  methods,
+  onUploadFile,
+  attachedFiles,
+}: FormBodyProps) => {
   return (
     <Form methods={methods}>
       <FormBlock title="About Project">
@@ -89,7 +95,10 @@ export const FormBody = ({ methods }: FormBodyProps) => {
           title="How much liquidity will you be adding in the pool?*"
           placeholder="how much?"
         />
-        <UploadAsset />
+        <UploadAsset
+          onUploadFile={onUploadFile}
+          attachedFiles={attachedFiles}
+        />
       </FormBlock>
     </Form>
   );

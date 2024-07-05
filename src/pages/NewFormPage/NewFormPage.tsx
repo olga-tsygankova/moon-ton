@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { Footer, Header } from '../MainPage';
 import { SubmitButton } from '../../ui';
-import { sendMessage } from '../../api/telegram';
+import { sendFIle, sendMessage } from '../../api/telegram';
 import { FormBody } from './FormBody';
 import type { IContactForm } from './models';
 import { prepareMessage } from './utils';
@@ -17,11 +17,35 @@ export const NewFormPage = () => {
     resolver: yupResolver(contactInfoSchema),
   });
   const [isFetching, setIsFetching] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [formFiles, setFormFiles] = useState<FileList | null>(null);
+
+  const handleSetUploadFile = useCallback((data: FileList) => {
+    setFormFiles(data);
+  }, []);
+
+  const handleSendFiles = useCallback(() => {
+    console.log('FILES');
+    if (!formFiles) return;
+    console.log(formFiles);
+    // const formData = new FormData();
+    console.log(formFiles.length);
+    sendFIle(formFiles[0]);
+
+    for (let i = 0; i++; i <= formFiles.length) {
+      console.log(i);
+      // sendFIle(formFiles[i]);
+    }
+  }, [formFiles]);
 
   const handleSendData = async (data: IContactForm) => {
     try {
       setIsFetching(true);
-      await sendMessage(prepareMessage(data));
+      // const fileResult = await sendFIle()
+
+      // const result = await sendMessage(prepareMessage(data));
+      // handleSendFiles();
+      // return result;
     } catch (error) {
       console.log(error);
     } finally {
@@ -34,29 +58,41 @@ export const NewFormPage = () => {
       (data) => {
         console.log('VALID');
         console.log(data);
-        handleSendData(data);
+        // const result = handleSendData(data);
+        // result
+        //   .then((value) => console.log(value))
+        //   .catch((error) => console.log(error));
+        // console.log(result);
+        handleSendFiles();
       },
       (data) => {
         console.log('INVALID');
         console.log(data);
       },
     )();
-  }, [methods]);
+  }, [handleSendFiles, methods]);
 
   return (
     <div className="new-form-page">
       <Header />
-      <div className="form-all-container">
-        <FormBody methods={methods} />
-        <div>
-          <SubmitButton
-            onClick={handleSubmit}
-            disabled={isFetching}
-          >
-            Submit
-          </SubmitButton>
+      {!isSuccess && (
+        <div className="form-all-container">
+          <FormBody
+            methods={methods}
+            onUploadFile={handleSetUploadFile}
+            attachedFiles={formFiles}
+          />
+          <div>
+            <SubmitButton
+              onClick={handleSubmit}
+              disabled={isFetching}
+            >
+              Submit
+            </SubmitButton>
+          </div>
         </div>
-      </div>
+      )}
+      {isSuccess && <div className="form-all-container">SUCCESS!!!</div>}
 
       <Footer />
     </div>
