@@ -2,10 +2,19 @@ import type { ReactNode } from 'react';
 
 import './Upload.css';
 
-export const UploadButton = ({ children }: { children: ReactNode }) => {
+type UploadButtonProps = {
+  onClick: VoidFunction;
+  children: ReactNode;
+};
+
+export const UploadButton = ({ onClick, children }: UploadButtonProps) => {
   //TODO поигратья с плавностью кнопок
+  // TODO переименовать className
   return (
-    <button className="upload">
+    <button
+      className="upload"
+      onClick={onClick}
+    >
       <svg
         width="16"
         height="16"
