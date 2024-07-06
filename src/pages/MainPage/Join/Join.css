@@ -186,6 +186,8 @@
 }
 
 @media (min-width: 1000px) {
+
+
   .join {
     width: 630px;
     margin-left: auto;
@@ -215,15 +217,15 @@
   }
 
   .beam-footer span:nth-child(1) {
-    top: -1500px; /*верхняя координата*/
+    top: -1300px; /*верхняя координата*/
   }
 
   .beam-footer span:nth-child(2) {
-    top: -1500px;
+    top: -1300px;
   }
 
   .beam-footer span:nth-child(3) {
-    top: -1500px;
+    top: -1300px;
   }
 
 
@@ -235,7 +237,7 @@
       opacity: 1;
     }
     100% {
-      transform: rotate(270deg) translateX(-1800px);
+      transform: rotate(270deg) translateX(-1600px);
       opacity: 0;
     }
   }

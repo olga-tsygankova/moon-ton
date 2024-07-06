@@ -1,5 +1,5 @@
 import "./Product.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { FormBtn } from "../../../ui/Buttons/FormBtn";
 import { useNavigate } from "react-router-dom";
 import { PortalDown } from "../../../ui/svg";
@@ -12,7 +12,7 @@ export const Product = () => {
 
   const handleBridgeClick = () => {
     window.scrollTo(0, 0);
-    navigate("/form-page");
+    navigate("/form");
   };
 
   useEffect(() => {
@@ -47,14 +47,12 @@ export const Product = () => {
     };
   }, []);
 
-
-
   return (
     <div className="product" id="product">
       <div className="portal-down">
         <PortalDown />
       </div>
-      <div className="portal-down-line" >
+      <div className="portal-down-line">
         <PortalDownLine />
       </div>
       <section className="portal-down-beam">

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { PortalUpLine } from '../../../ui/svg/PortalUpLine';
 
 export const Main = () => {
-  const [portalPosition, setPortalPosition] = useState(-400);
+  const [portalPosition, setPortalPosition] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,17 +22,18 @@ export const Main = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <div className="main">
       <Header />
       <div className="main-container">
-        <TextAnimation/>
+        <TextAnimation />
         <p className="main-subtitle">
           Advanced omnichain interoperability solutions for decentralized
           ecosystems
         </p>
         <div className="main-btn">
-          <BridgeBtn/>
+          <BridgeBtn />
           <OverviewButton>Explore ecosystem</OverviewButton>
         </div>
         <section className="portal-up-beam" style={{ top: `${portalPosition}px` }}>
@@ -41,7 +42,7 @@ export const Main = () => {
           <span></span>
         </section>
         <section className="portal-up-line">
-          <PortalUpLine/>
+          <PortalUpLine />
         </section>
       </div>
     </div>
