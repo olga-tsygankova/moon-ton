@@ -109,7 +109,7 @@
 }
 
 .portal-up-beam span:nth-child(1) {
-  top: -400px; /*верхняя координата*/
+  top: -450px; /*верхняя координата*/
   left: -98px; /*правая координата*/
 
   animation-delay: 0.5s; /*задержка анимации*/
@@ -117,14 +117,14 @@
 }
 
 .portal-up-beam span:nth-child(2) {
-  top: -400px; /*верхняя координата*/
+  top: -450px; /*верхняя координата*/
   left: -1px;
   animation-delay: 0s;
   animation-duration: 3s;
 }
 
 .portal-up-beam span:nth-child(3) {
-  top: -400px; /*верхняя координата*/
+  top: -450px; /*верхняя координата*/
   left: 94px;
   animation-delay: 1s;
   animation-duration: 3s;

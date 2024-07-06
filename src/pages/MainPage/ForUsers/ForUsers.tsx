@@ -1,17 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { scroller } from 'react-scroll';
-import { WhiteBtn, LearnMoreButton, PlatformButton } from '../../../ui';
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { scroller } from "react-scroll";
+import { LearnMoreButton, PlatformButton, WhiteBtn } from "../../../ui";
 
-import './ForUsers.css';
-
+import "./ForUsers.css";
 
 export const ForUsers = () => {
   const [isInView, setIsInView] = useState(false);
   const forUsersRef = useRef<HTMLDivElement>(null);
   const [ref, inView] = useInView({
     threshold: 0.5, // Триггер при 50% видимости блока
-    rootMargin: '-50% 0px', // Смещение для срабатывания триггера
+    rootMargin: "-50% 0px", // Смещение для срабатывания триггера
   });
 
   useEffect(() => {
@@ -20,7 +19,7 @@ export const ForUsers = () => {
 
   const handleScroll = () => {
     if (isInView && forUsersRef.current) {
-      scroller.scrollTo('forUsers', {
+      scroller.scrollTo("forUsers", {
         duration: 500,
         smooth: true,
         offset: -50, // Adjust the offset as needed
@@ -30,7 +29,9 @@ export const ForUsers = () => {
 
   return (
     <div className="for-users" ref={ref} onScroll={handleScroll}>
-      <h2 className="for-users__title" ref={forUsersRef}>For Users</h2>
+      <h2 className="for-users__title" ref={forUsersRef}>
+        For Users
+      </h2>
       <div className="card-wrapper">
         <div className="card">
           <div className="card-title">MoonTON Omnichain Swap</div>
@@ -59,8 +60,8 @@ export const ForUsers = () => {
         <div className="card-bridge">
           <div className="card-title">Bridge</div>
           <p>
-            Use our multisignature bridge protocol to transfer
-            assets between ecosystems
+            Use our multisignature bridge protocol to transfer assets between
+            ecosystems
           </p>
           <div className="card-bridge__btn">
             <LearnMoreButton>Learn More</LearnMoreButton>
