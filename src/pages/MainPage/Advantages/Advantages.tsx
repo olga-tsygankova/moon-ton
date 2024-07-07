@@ -8,10 +8,11 @@ import { useIosDetector, useObserver, useScrollBlock } from '../../../hooks';
 export const Advantages = () => {
   //TODO анимация с пролистыванием блоков и планетами
 
-  const bigPlanetRef = useRef(null);
-  const smallPlanetRef = useRef(null);
+  const bigPlanetRef = useRef<HTMLDivElement>(null);
+  const smallPlanetRef = useRef<HTMLDivElement>(null);
   const textBlockRef = useRef(null);
   const ref = useRef<HTMLDivElement>(null);
+
 
   const [stage, setStage] = useState(1);
   const [isScrollControlled, setIsScrollControlled] = useState(false);
@@ -85,6 +86,61 @@ export const Advantages = () => {
 
   const { createObserver: observerRelease } = useObserver(handleReleaseBlock, textBlockRef);
   useEffect(() => observerRelease(), [observerRelease]);
+
+  useEffect(() => {
+    if (bigPlanetRef.current && smallPlanetRef.current) {
+      let bigPlanetStyle = {};
+      let smallPlanetStyle = {};
+
+      if (stage < 100) {
+        bigPlanetStyle = {
+          top: '0',
+          right: '0',
+          transition: 'all 2s ease'
+        };
+        smallPlanetStyle = {
+          top: '60%',
+          left: '10%',
+          transform: 'rotate(30deg)',
+          transition: 'all 1s ease'
+        };
+      } else if (stage >= 100 && stage <= 200) {
+        bigPlanetStyle = {
+          top: '0',
+          right: '45%',
+          transform: 'rotate(-30deg)',
+
+          transition: 'all 2s ease'
+        };
+        smallPlanetStyle = {
+          bottom: '0',
+          left: '70%',
+          transition: 'all 1s ease'
+        };
+      } else if (stage > 200) {
+        bigPlanetStyle = {
+          top: '50%',
+          right: '45%',
+          transform: 'rotate(5deg)',
+          transition: 'all 2s ease'
+        };
+        smallPlanetStyle = {
+          top: '20%',
+          left: '70%',
+          transform: 'rotate(20deg)',
+          transition: 'all 1s ease'
+        };
+      }
+
+      bigPlanetRef.current.style.cssText = Object.entries(bigPlanetStyle)
+        .map(([key, value]) => `${key}: ${value};`)
+        .join(' ');
+
+      smallPlanetRef.current.style.cssText = Object.entries(smallPlanetStyle)
+        .map(([key, value]) => `${key}: ${value};`)
+        .join(' ');
+    }
+  }, [stage]);
 
   return (
     <div className="advantages" id="advantages" ref={ref}>
