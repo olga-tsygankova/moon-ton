@@ -25,7 +25,7 @@ export const useObserver: UseObserver = (onEntry, triggerRef) => {
       },
       {
         rootMargin: '0px',
-        threshold: 0.8, // Триггерить событие, когда элемент виден на 50% или больше
+        threshold: 0.9, // Триггерить событие, когда элемент виден на 50% или больше
       },
     );
 
