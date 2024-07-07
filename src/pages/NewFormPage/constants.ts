@@ -12,7 +12,7 @@ const tgPattern = /(?:@|(?:(?:(?:https?:\/\/)?t(?:elegram)?)\.me\/))(\w{4,})$/;
 export const contactInfoSchema = yup.object().shape({
   projectName: yup.string().max(255).required(errorLabels.required),
   tokenSymbol: yup.string().max(32).required(errorLabels.required),
-  projectDescription: yup.string(),
+  projectDescription: yup.string().max(1024),
 
   name: yup.string().max(255).required(errorLabels.required),
   telegramLink: yup
@@ -45,3 +45,10 @@ export const contactInfoSchema = yup.object().shape({
     .required(errorLabels.required),
   // upload
 });
+
+export const requiredFields = {
+  aboutProject: ['projectName', 'tokenSymbol'],
+  contact: ['name', 'telegramLink'],
+  projectLink: ['projectTwitterLink', 'projectTelegramLink', 'projectWebsite'],
+  other: ['chain', 'liquidity'],
+};

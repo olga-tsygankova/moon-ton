@@ -3,6 +3,13 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  opacity: 100%;
+  transition: opacity 0.3s;
+}
+
+.form-block-container.blocked {
+  opacity: 30%;
+  pointer-events: none;
 }
 
 .form-block-title {

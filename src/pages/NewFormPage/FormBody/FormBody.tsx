@@ -9,6 +9,7 @@ import {
 import { FormBlock } from '../FormBlock';
 import { UploadAsset } from '../UploadAsset';
 import type { IContactForm } from '../models';
+import { requiredFields } from '../constants';
 
 import './FormBody.css';
 
@@ -50,7 +51,7 @@ export const FormBody = ({
           placeholder="Describe your project"
         />
       </FormBlock>
-      <FormBlock title="Contact">
+      <FormBlock title="Contact" watchFieldNames={requiredFields.aboutProject}>
         <FormTextInput
           fieldName="name"
           title="Name*"
@@ -67,7 +68,7 @@ export const FormBody = ({
           placeholder="@username"
         />
       </FormBlock>
-      <FormBlock title="Project Link">
+      <FormBlock title="Project Link" watchFieldNames={requiredFields.contact}>
         <FormTextInput
           fieldName="projectTwitterLink"
           title="Project Twitter Link*"
@@ -84,7 +85,7 @@ export const FormBody = ({
           placeholder="https://moonton.io"
         />
       </FormBlock>
-      <FormBlock title="Other">
+      <FormBlock title="Other" watchFieldNames={requiredFields.projectLink}>
         <FormRadioGroup
           fieldName="chain"
           options={chainOptions}
