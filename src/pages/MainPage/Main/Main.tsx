@@ -1,8 +1,8 @@
-import "./Main.css";
-import { Header } from "../Header";
+import './Main.css';
+import { Header } from '../Header';
 import { TextAnimation } from './TextAnimation';
-import { BridgeBtn } from "../../../ui";
-import { OverviewButton } from "../../../ui/Buttons/OverviewButton";
+import { BridgeBtn } from '../../../ui';
+import { OverviewButton } from '../../../ui/Buttons/OverviewButton';
 import { useEffect, useState } from 'react';
 import { PortalUpLine } from '../../../ui/svg/PortalUpLine';
 
@@ -36,7 +36,10 @@ export const Main = () => {
           <BridgeBtn />
           <OverviewButton>Explore ecosystem</OverviewButton>
         </div>
-        <section className="portal-up-beam" style={{ top: `${portalPosition}px` }}>
+        <section
+          className="portal-up-beam"
+          style={{ top: `${portalPosition}px` }}
+        >
           <span></span>
           <span></span>
           <span></span>

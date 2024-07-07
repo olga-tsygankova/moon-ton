@@ -1,7 +1,7 @@
 .advantages-text {
   transform: translateY(50px);
   transition: opacity 0.5s, transform 0.5s;
-  margin: 100px auto 200px auto;
+  margin: 100px auto 100px auto;
   display: flex;
   flex-direction: column;
   max-width: 330px;
@@ -160,7 +160,7 @@
   .advantages-text {
     font-size: 64px;
     max-width: 500px;
-    margin: 150px auto 270px auto;
+    margin: 150px auto 150px auto;
 
   }
   .advantages-text-beam-advantages {
