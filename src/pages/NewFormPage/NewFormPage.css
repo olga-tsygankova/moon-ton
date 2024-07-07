@@ -25,7 +25,7 @@
 
 .form-successful-title {
   text-align: center;
- margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .form-successful-title-lite {
@@ -49,7 +49,7 @@
 
 .form-successful-link a {
   background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
-color: #FFFFFF;
+  color: #FFFFFF;
   text-decoration: none;
   display: flex;
   gap: 10px;
@@ -58,10 +58,12 @@ color: #FFFFFF;
   align-items: center;
   height: 55px;
 }
-.form-successful-link a svg{
+
+.form-successful-link a svg {
   width: 17px;
 }
-.form-successful-link a svg path{
+
+.form-successful-link a svg path {
   fill: #47BCFC;
 }
 
@@ -99,6 +101,12 @@ Input[name="projectWebsite"] {
 /*---------------------------------------------------------------------------------------------*/
 
 @media (min-width: 620px) {
+  .new-form-page {
+    padding: 0;
+  }
+  .submit-container{
+    width: 600px;
+  }
   .form-successful-container {
     margin: 150px 0;
   }
@@ -121,15 +129,22 @@ Input[name="projectWebsite"] {
     height: 55px;
     width: 203px;
   }
-  .form-successful-link a svg{
+
+  .form-successful-link a svg {
     width: 17px;
   }
-  .form-successful-link a svg path{
+
+  .form-successful-link a svg path {
     fill: #47BCFC;
   }
 
 }
 
 @media (min-width: 1000px) {
+  .submit-container{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }

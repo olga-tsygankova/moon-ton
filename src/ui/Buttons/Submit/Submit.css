@@ -17,6 +17,7 @@
   margin-top: 30px;
   width: 330px;
   margin-left: auto;
+  margin-right: auto;
 
   height: 50px;
   transition: background-color 0.5s, box-shadow 0.5s;
@@ -46,6 +47,7 @@
 @media (min-width: 620px) {
   .submit {
     width: 300px;
+    margin-right: 35px;
   }
 }
 
@@ -53,5 +55,7 @@
   .submit {
     height: 55px;
     width: 223px;
+    margin-right: 80px;
+
   }
 }

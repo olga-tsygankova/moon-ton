@@ -1,7 +1,14 @@
 .form-body-project-info-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 30px;
+}
+.form-all-container{
+  padding-top: 30px;
+}
+
+.form-block-container {
+  margin-top: 30px;
 }
 
 .form-block-container:first-child .form-block-fields {
@@ -9,10 +16,34 @@
 }
 
 .form-block-container:nth-child(4) {
-  margin-left: 0;
 }
 
 .form-block-container:nth-child(4):after {
   /* FIXME не работает вроде, плюс по ширине везде короче */
   margin-left: 40px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 620px) {
+  .form-block-container {
+    min-width: 600px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .form-block-container {
+    min-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-body-project-info-flex {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
 }

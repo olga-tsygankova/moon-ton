@@ -65,7 +65,7 @@ export const NewFormPage = () => {
             onUploadFile={handleSetUploadFile}
             attachedFiles={formFiles}
           />
-          <div>
+          <div className='submit-container'>
             <SubmitButton
               onClick={handleSubmit}
               disabled={isFetching}
