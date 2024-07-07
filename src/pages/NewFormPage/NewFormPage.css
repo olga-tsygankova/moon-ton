@@ -17,11 +17,52 @@
   }
 }
 
-.form-all-container {
-  margin-top: 66px;
+.form-successful-container {
+  color: #FFFFFF;
+  margin: 106px 0;
+
+}
+
+.form-successful-title {
+  text-align: center;
+ margin-bottom: 30px;
+}
+
+.form-successful-title-lite {
+  font-size: 42px;
+  opacity: 50%;
+  font-weight: 300;
+}
+
+.form-successful-title-bold {
+  font-size: 42px;
+  font-weight: 600;
+  opacity: 100%;
+  letter-spacing: 1px;
+}
+
+.form-successful-link {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
+}
+
+.form-successful-link a {
+  background: linear-gradient(259.78deg, #1C1C23 14.56%, #000000 65.11%);
+color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  border-radius: 71px;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+.form-successful-link a svg{
+  width: 17px;
+}
+.form-successful-link a svg path{
+  fill: #47BCFC;
 }
 
 /* Иконки в инпутах */
@@ -48,22 +89,47 @@ Input[name="projectWebsite"] {
   background-repeat: no-repeat;
   padding-left: 50px;
 }
+
 /* Конец иконок в инпутах */
+
+
 
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 
 @media (min-width: 620px) {
-  .form-all-container {
-    margin: 82px auto 0 auto;
-    width: 580px;
-    gap: 50px;
+  .form-successful-container {
+    margin: 150px 0;
   }
+
+  .form-successful-title-lite {
+    font-size: 60px;
+  }
+
+  .form-successful-title-bold {
+    font-size: 60px;
+  }
+
+  .form-successful-link {
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .form-successful-link a {
+    height: 55px;
+    width: 203px;
+  }
+  .form-successful-link a svg{
+    width: 17px;
+  }
+  .form-successful-link a svg path{
+    fill: #47BCFC;
+  }
+
 }
 
 @media (min-width: 1000px) {
-  .form-all-container {
-    width: 960px;
-  }
+
 }
