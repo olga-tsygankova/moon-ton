@@ -11,6 +11,8 @@ import { prepareMessage } from './utils';
 import { contactInfoSchema } from './constants';
 
 import './NewFormPage.css';
+import { TwitterIcon } from '../../ui/svg/TwitterIcon';
+import { TelegramIcon } from '../../ui/svg/TelegramIcon';
 
 export const NewFormPage = () => {
   const methods = useForm<IContactForm>({
@@ -74,9 +76,27 @@ export const NewFormPage = () => {
         </div>
       )}
       {isSuccess && (
-        <div className="form-all-container">
-          <div className="сделать-по-макетам">
-            Thank you, we will contact you soon
+        <div className="form-successful-container">
+          <div className="form-successful-title">
+            <div className="form-successful-title-lite">
+              We will contact you
+            </div>
+            <div className="form-successful-title-bold">shortly!</div>
+          </div>
+          <div className="form-successful-link">
+            <a href="https://x.com/MoonTON_bridge">
+              <TwitterIcon />
+              Our twitter
+            </a>
+            <a href="https://t.me/moonton_bridge">
+              {' '}
+              <TelegramIcon />
+              Our TG portal
+            </a>
+            <a href="#">
+              {' '}
+              <TelegramIcon /> TG CEO
+            </a>
           </div>
         </div>
       )}
