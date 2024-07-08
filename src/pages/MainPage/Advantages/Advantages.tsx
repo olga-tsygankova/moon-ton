@@ -102,7 +102,7 @@ export const Advantages = () => {
           top: '60%',
           left: '10%',
           transform: 'rotate(30deg)',
-          transition: 'all 1s ease'
+          transition: 'all 2s ease'
         };
       } else if (stage >= 100 && stage <= 200) {
         bigPlanetStyle = {
@@ -115,7 +115,7 @@ export const Advantages = () => {
         smallPlanetStyle = {
           bottom: '0',
           left: '70%',
-          transition: 'all 1s ease'
+          transition: 'all 2s ease'
         };
       } else if (stage > 200) {
         bigPlanetStyle = {
@@ -128,7 +128,7 @@ export const Advantages = () => {
           top: '20%',
           left: '70%',
           transform: 'rotate(20deg)',
-          transition: 'all 1s ease'
+          transition: 'all 2s ease'
         };
       }
 

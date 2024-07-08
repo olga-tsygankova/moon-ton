@@ -4,6 +4,7 @@ import { FormBtn } from "../../../ui/Buttons/FormBtn";
 import { useNavigate } from "react-router-dom";
 import { PortalDown } from "../../../ui/svg";
 import { PortalDownLine } from "../../../ui/svg/PortalDownLine";
+import ScrollMagic from 'scrollmagic';
 
 export const Product = () => {
   const forDevelopersRef = useRef(null);
@@ -14,7 +15,28 @@ export const Product = () => {
     window.scrollTo(0, 0);
     navigate("/form");
   };
+  const portalDownBeamRef = useRef<HTMLElement>(null);
+  const productContainerRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    // Инициализация ScrollMagic
+    const controller = new ScrollMagic.Controller();
+
+    // Создание сцены
+    const scene = new ScrollMagic.Scene({
+      triggerElement: productContainerRef.current, // элемент, который будет триггером для анимации
+      duration: '100%', // длительность анимации (в данном случае, весь экран)
+      triggerHook: 'onLeave', // точка срабатывания триггера (при выходе элемента за пределы экрана)
+    })
+      .setPin(portalDownBeamRef.current) // элемент, который будет двигаться вместе со скроллом
+      .addTo(controller); // добавление сцены в контроллер
+
+    // Очистка при размонтировании компонента
+    return () => {
+      scene.destroy(true);
+      controller.destroy(true);
+    };
+  }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -48,14 +70,14 @@ export const Product = () => {
   }, []);
 
   return (
-    <div className="product" id="product">
+    <div className="product" id="product" ref={productContainerRef}>
       <div className="portal-down">
         <PortalDown />
       </div>
       <div className="portal-down-line">
         <PortalDownLine />
       </div>
-      <section className="portal-down-beam">
+      <section className="portal-down-beam" ref={portalDownBeamRef}>
         <span></span>
         <span></span>
         <span></span>

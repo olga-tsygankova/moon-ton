@@ -78,7 +78,7 @@
 
 .portal-up-beam span {
   position: absolute;
-  animation: animate-portal-up-beam 3s linear infinite;
+  animation: animate-portal-up-beam 2s linear infinite;
 }
 
 .portal-up-beam span:before {
@@ -90,7 +90,7 @@
   width: 300px;
   height: 3px;
   background: linear-gradient(90deg, #fff, transparent);
-  animation: fadeInButton 2s forwards;
+  animation: fadeInButton 1s forwards;
   animation-delay: 5.5s;
 
 }
@@ -103,7 +103,7 @@
     opacity: 1;
   }
   100% {
-    transform: rotate(270deg) translateX(-870px);
+    transform: rotate(270deg) translateX(-300px);
     opacity: 0;
   }
 }
@@ -113,21 +113,21 @@
   left: -98px; /*правая координата*/
 
   animation-delay: 0.5s; /*задержка анимации*/
-  animation-duration: 3s; /*длительность анимации*/
+  animation-duration: 2s; /*длительность анимации*/
 }
 
 .portal-up-beam span:nth-child(2) {
   top: -450px; /*верхняя координата*/
   left: -1px;
   animation-delay: 0s;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .portal-up-beam span:nth-child(3) {
   top: -450px; /*верхняя координата*/
   left: 94px;
   animation-delay: 1s;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 
@@ -197,7 +197,7 @@
       opacity: 1;
     }
     100% {
-      transform: rotate(270deg) translateX(-900px);
+      transform: rotate(270deg) translateX(-300px);
       opacity: 0;
     }
   }
@@ -232,7 +232,7 @@
       opacity: 1;
     }
     100% {
-      transform: rotate(270deg) translateX(-800px);
+      transform: rotate(270deg) translateX(-400px);
       opacity: 0;
     }
   }

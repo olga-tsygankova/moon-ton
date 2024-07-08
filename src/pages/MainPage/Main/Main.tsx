@@ -3,30 +3,40 @@ import { Header } from '../Header';
 import { TextAnimation } from './TextAnimation';
 import { BridgeBtn } from '../../../ui';
 import { OverviewButton } from '../../../ui/Buttons/OverviewButton';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PortalUpLine } from '../../../ui/svg/PortalUpLine';
+import ScrollMagic, { Scene } from 'scrollmagic';
+
+
 
 export const Main = () => {
-  const [portalPosition, setPortalPosition] = useState(0);
+  const portalUpBeamRef = useRef<HTMLElement>(null);
+  const mainContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY < 800) {
-        setPortalPosition(0 + scrollY * 0.8);
-      } else {
-        setPortalPosition(0);
-      }
-    };
+    // Инициализация ScrollMagic
+    const controller = new ScrollMagic.Controller();
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Создание сцены
+    const scene = new ScrollMagic.Scene({
+      triggerElement: mainContainerRef.current, // элемент, который будет триггером для анимации
+      duration: '65%', // длительность анимации (в данном случае, весь экран)
+      triggerHook: 'onLeave', // точка срабатывания триггера (при выходе элемента за пределы экрана)
+    })
+      .setPin(portalUpBeamRef.current) // элемент, который будет двигаться вместе со скроллом
+      .addTo(controller); // добавление сцены в контроллер
+
+    // Очистка при размонтировании компонента
+    return () => {
+      scene.destroy(true);
+      controller.destroy(true);
+    };
   }, []);
 
   return (
     <div className="main">
       <Header />
-      <div className="main-container">
+      <div className="main-container" ref={mainContainerRef}>
         <TextAnimation />
         <p className="main-subtitle">
           Advanced omnichain interoperability solutions for decentralized
@@ -38,7 +48,7 @@ export const Main = () => {
         </div>
         <section
           className="portal-up-beam"
-          style={{ top: `${portalPosition}px` }}
+          ref={portalUpBeamRef}
         >
           <span></span>
           <span></span>
