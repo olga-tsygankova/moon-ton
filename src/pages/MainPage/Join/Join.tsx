@@ -5,6 +5,7 @@ import { JoinIcon } from '../../../ui/svg';
 
 import './Join.css';
 import { FooterLine } from '../../../ui/svg/FooterLine';
+import ScrollMagic from 'scrollmagic';
 
 const DELAY_LENGTH = 1;
 
@@ -101,9 +102,33 @@ export const Join = () => {
     };
   }, [isAnimating]);
 
+  const portalJoinBeamRef = useRef<HTMLElement>(null);
+  const joinContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Инициализация ScrollMagic
+    const controller = new ScrollMagic.Controller();
+
+    // Создание сцены
+    const scene = new ScrollMagic.Scene({
+      triggerElement: joinContainerRef.current, // элемент, который будет триггером для анимации
+      duration: '100%', // длительность анимации (в данном случае, весь экран)
+      triggerHook: 'onLeave', // точка срабатывания триггера (при выходе элемента за пределы экрана)
+    })
+      .setPin(portalJoinBeamRef.current) // элемент, который будет двигаться вместе со скроллом
+      .addTo(controller); // добавление сцены в контроллер
+
+    // Очистка при размонтировании компонента
+    return () => {
+      scene.destroy(true);
+      controller.destroy(true);
+    };
+  }, []);
+
   return (
-    <>
-      <div className="join" ref={joinRef}>
+    <div ref={joinContainerRef}>
+      <div className="join" ref={joinRef} >
+
         <div className="join-title">
           <h2 id="join-animated-heading">
             Join MoonTON Ecosystem
@@ -117,14 +142,14 @@ export const Join = () => {
           </BlueBtn>
         </div>
       </div>
-      <div className="footer-line">
+      <div className="footer-line" ref={joinContainerRef}>
         <FooterLine/>
       </div>
-      <section className="beam-footer">
+      <section className="beam-footer" ref={portalJoinBeamRef}>
         <span/>
         <span/>
         <span/>
       </section>
-    </>
+    </div>
   );
 };
