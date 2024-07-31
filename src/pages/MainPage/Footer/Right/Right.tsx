@@ -2,6 +2,7 @@ import "./Right.css";
 import { Logo } from "../../Header/Logo/Logo";
 import { TwitterIcon } from '../../../../ui/svg/TwitterIcon';
 import { TelegramIcon } from '../../../../ui/svg/TelegramIcon';
+import React from 'react';
 
 export const Right = () => {
   return (
@@ -29,8 +30,22 @@ export const Right = () => {
         </div>
       </div>
       <div className="right-social">
-        <TwitterIcon/>
-        <TelegramIcon/>
+        <a
+          href="https://x.com/MoonTON_bridge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TwitterIcon/>
+        </a>
+        <a
+          href="https://t.me/moonton_bridge"
+          className="social-links__telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TelegramIcon/>
+        </a>
+
       </div>
     </div>
   );
