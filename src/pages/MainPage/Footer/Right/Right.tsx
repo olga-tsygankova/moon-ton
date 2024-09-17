@@ -8,7 +8,7 @@ export const Right = () => {
   return (
     <div className="right">
       <Logo />
-      <span>contact@moontoon.ai</span>
+      <span>ceo@moonton.io</span>
       <div className="ca_coming-soon">
         <div className="ca_text">
           <span className="ca">CA: </span>
